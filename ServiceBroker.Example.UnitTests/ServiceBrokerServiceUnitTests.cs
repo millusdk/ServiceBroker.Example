@@ -16,15 +16,16 @@ namespace ServiceBroker.Example.UnitTests
     [TestClass]
     public class ServiceBrokerServiceUnitTests
     {
+        #region CallServicesAsync
         [TestMethod]
-        public async Task EmptyListAsyncTest()
+        public async Task CallServicesAsyncEmptyListTest()
         {
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
-            
+
             var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = await sut.CallServicesAsync(new Guid[0], "region", TimeSpan.Zero);
@@ -33,7 +34,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public async Task NullListAsyncTest()
+        public async Task CallServicesAsyncNullListTest()
         {
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
@@ -49,7 +50,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public async Task TimeoutServiceAsyncTest()
+        public async Task CallServicesAsyncTimeoutServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new DynamicServiceInfo
@@ -89,7 +90,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public async Task FailedServiceAsyncTest()
+        public async Task CallServicesAsyncFailedServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new DynamicServiceInfo
@@ -125,7 +126,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public async Task DynamicServiceAsyncTest()
+        public async Task CallServicesAsyncDynamicServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new DynamicServiceInfo
@@ -161,10 +162,13 @@ namespace ServiceBroker.Example.UnitTests
 
             Assert.AreEqual(ServiceResponseStatus.Success, dynamicServiceResponse.Status);
             Assert.AreEqual(serviceResponse, dynamicServiceResponse.Value);
-        }
+        } 
+        #endregion
+
+        #region CallServices
 
         [TestMethod]
-        public void EmptyListTest()
+        public void CallServicesEmptyListTest()
         {
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
@@ -180,7 +184,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void NullListTest()
+        public void CallServicesNullListTest()
         {
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
@@ -196,7 +200,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void TimeoutServiceTest()
+        public void CallServicesTimeoutServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new DynamicServiceInfo
@@ -236,7 +240,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void FailedServiceTest()
+        public void CallServicesFailedServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new DynamicServiceInfo
@@ -272,7 +276,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void DynamicServiceTest()
+        public void CallServicesDynamicServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new DynamicServiceInfo
@@ -311,7 +315,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void CachedServiceTest()
+        public void CallServicesCachedServiceTest()
         {
             Guid serviceGuid = Guid.NewGuid();
             var serviceInfo = new CachedServiceInfo
@@ -348,6 +352,78 @@ namespace ServiceBroker.Example.UnitTests
             Assert.AreEqual(ServiceResponseStatus.Success, dynamicServiceResponse.Status);
             Assert.AreEqual(serviceResponse, dynamicServiceResponse.Value);
         }
+
+        #endregion
+
+        #region CallService
+
+        [TestMethod]
+        public void CallServiceDynamicServiceTest()
+        {
+            Guid serviceId = Guid.NewGuid();
+            var serviceInfo = new DynamicServiceInfo
+            {
+                Id = serviceId,
+            };
+            var serviceAndTokenIds = new List<Guid> { serviceId };
+            var cacheRegion = "region";
+            var serviceResponse = "Service response";
+            var additionalParameters = new List<KeyValuePair<string, string>>();
+
+            var serviceRepository = Substitute.For<IServiceRepository>();
+            var dynamicService = Substitute.For<IDynamicService>();
+            var cachedService = Substitute.For<ICachedService>();
+            var taskScheduler = Substitute.For<ITaskScheduler>();
+            var cache = Substitute.For<ICache>();
+
+            serviceRepository.GetServicesAndTokens(serviceAndTokenIds).ReturnsForAnyArgs(new[] { serviceInfo });
+            dynamicService.CallService(serviceInfo, cacheRegion, CancellationToken.None, additionalParameters)
+                .ReturnsForAnyArgs(Task.FromResult(new ServiceResponse
+                {
+                    Value = serviceResponse
+                }));
+
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+
+            ServiceResponse actual = sut.CallService(serviceId, cacheRegion, TimeSpan.FromMilliseconds(10), additionalParameters);
+
+            serviceRepository.ReceivedWithAnyArgs(1).GetServicesAndTokens(serviceAndTokenIds);
+            dynamicService.ReceivedWithAnyArgs(1).CallService(serviceInfo, cacheRegion, CancellationToken.None, additionalParameters);
+
+            Assert.AreEqual(ServiceResponseStatus.Success, actual.Status);
+            Assert.AreEqual(serviceResponse, actual.Value);
+        }
+
+        [TestMethod]
+        public void CallServiceFaultyServiceTest()
+        {
+            Guid serviceId = Guid.NewGuid();
+            var serviceInfo = new DynamicServiceInfo
+            {
+                Id = serviceId,
+            };
+            var serviceAndTokenIds = new List<Guid> { serviceId };
+            var cacheRegion = "region";
+
+            var serviceRepository = Substitute.For<IServiceRepository>();
+            var dynamicService = Substitute.For<IDynamicService>();
+            var cachedService = Substitute.For<ICachedService>();
+            var taskScheduler = Substitute.For<ITaskScheduler>();
+            var cache = Substitute.For<ICache>();
+
+            serviceRepository.GetServicesAndTokens(serviceAndTokenIds).ReturnsForAnyArgs(new ServiceInfo[0]);
+
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+
+            ServiceResponse actual = sut.CallService(serviceId, cacheRegion, TimeSpan.FromMilliseconds(10), new List<KeyValuePair<string, string>>());
+
+            serviceRepository.ReceivedWithAnyArgs(1).GetServicesAndTokens(serviceAndTokenIds);
+
+            Assert.AreEqual(ServiceResponseStatus.Error, actual.Status);
+            Assert.IsNull(actual.Value);
+        }
+
+        #endregion
 
         [TestMethod]
         public void StartBackgroundServiceCallsTest()
