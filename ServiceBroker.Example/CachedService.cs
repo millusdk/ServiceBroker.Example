@@ -1,5 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Polly.Wrap;
@@ -124,10 +126,12 @@ namespace ServiceBroker.Example
             }
         }
 
+        [ExcludeFromCodeCoverage]
         public bool RemoveSemaphores(string cacheRegion)
         {
             var retVal = true;
-            foreach (string key in _semaphores.Keys)
+            IEnumerable<string> keys = _semaphores.Keys.ToArray();
+            foreach (string key in keys)
             {
                 if (key.StartsWith(cacheRegion))
                 {
