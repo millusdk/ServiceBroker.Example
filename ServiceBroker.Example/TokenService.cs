@@ -281,7 +281,9 @@ namespace ServiceBroker.Example
             XsltCompiler compiler = processor.NewXsltCompiler();
             // create stream from input xslt
             string fullXslt =
-                $"<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\">{xslt}" +
+                "<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\">" +
+                "<xsl:output method=\"text\" />" +
+                $"{xslt}" +
                 $"<xsl:template match=\"/*\" priority=\"0\">{NoMatchString}</xsl:template></xsl:stylesheet>";
             byte[] xsltByteArray = System.Text.Encoding.UTF8.GetBytes(fullXslt);
             var xsltStream = new MemoryStream(xsltByteArray);

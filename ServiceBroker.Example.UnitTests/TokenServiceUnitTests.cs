@@ -311,7 +311,7 @@ namespace ServiceBroker.Example.UnitTests
                     }
                 }
             };
-            string expected = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?>{expectedText}";
+            string expected = $"{expectedText}";
 
             var cache = Substitute.For<ICache>();
 
@@ -568,7 +568,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseRelativeTokenValidToken()
+        public void ParseRelativeTokenValidXPathToken()
         {
             var cacheRegion = "cacheRegion";
             Guid baseTokenId = Guid.NewGuid();
@@ -602,6 +602,44 @@ namespace ServiceBroker.Example.UnitTests
             Assert.AreEqual(TokenResponseStatus.Found, tokenResponse.Status);
             Assert.IsNotNull(tokenResponse.Value);
             Assert.AreEqual(tokenContent, tokenResponse.Value);
+        }
+
+        [TestMethod]
+        public void ParseRelativeTokenValidXsltToken()
+        {
+            var cacheRegion = "cacheRegion";
+            Guid baseTokenId = Guid.NewGuid();
+            Guid relativeTokenId = Guid.NewGuid();
+            var expectedText = "Hello, World!";
+            var baseToken = new TokenInfo
+            {
+                Id = baseTokenId
+            };
+            var relativeToken = new XsltTokenInfo
+            {
+                Id = relativeTokenId,
+                Name = "Test token",
+                Xslt = "<xsl:template match=\"/hello-world\"><xsl:value-of select=\"greeting\"/></xsl:template>"
+            };
+            var index = 1;
+            var cacheEntry = new CacheEntry
+            {
+                Value = $"<hello-world><greeting>{expectedText}</greeting></hello-world><node>b</node>"
+            };
+
+            var cache = Substitute.For<ICache>();
+
+            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+
+            var sut = new TokenService(cache);
+
+            TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
+
+            Assert.IsNotNull(tokenResponse);
+            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(TokenResponseStatus.Found, tokenResponse.Status);
+            Assert.IsNotNull(tokenResponse.Value);
+            Assert.AreEqual(expectedText, tokenResponse.Value);
         }
 
         [TestMethod]
