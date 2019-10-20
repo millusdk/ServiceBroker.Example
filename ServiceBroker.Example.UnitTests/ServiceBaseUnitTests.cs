@@ -33,7 +33,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new ServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters("cacheRegion", new ServiceInfo(), new KeyValuePair<string,string>[0]);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters("cacheRegion", new ServiceInfo(), new KeyValuePair<string, string>[0]);
 
             Assert.IsFalse(actual.Any());
         }
@@ -50,13 +50,13 @@ namespace ServiceBroker.Example.UnitTests
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, Constants.UserIdentifierCacheKey).Returns(new CacheEntry { Value = userIdentifier });
+            cache.Get<string>(cacheRegion, Constants.UserIdentifierCacheKey).Returns(new CacheEntry<string> { Value = userIdentifier });
 
             var sut = new ServiceBaseInstance(cache);
 
             IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(cacheRegion, serviceInfo, null);
 
-            cache.Received(1).Get(cacheRegion, Constants.UserIdentifierCacheKey);
+            cache.Received(1).Get<string>(cacheRegion, Constants.UserIdentifierCacheKey);
             IEnumerable<KeyValuePair<string, string>> keyValuePairs = actual as KeyValuePair<string, string>[] ?? actual.ToArray();
             Assert.IsTrue(keyValuePairs.Any());
             Assert.AreEqual(1, keyValuePairs.Count());
@@ -78,7 +78,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceParameterValue = "Value";
             var serviceInfo = new ServiceInfo
             {
-                AdditionalParameters = new []
+                AdditionalParameters = new[]
                 {
                     new ParameterInfo
                     {
@@ -95,14 +95,14 @@ namespace ServiceBroker.Example.UnitTests
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, Constants.UserIdentifierCacheKey).Returns(new CacheEntry { Value = userIdentifier });
-            cache.Get(cacheRegion, serviceParameterId.ToString()).Returns(new CacheEntry { Value = serviceParameterValue });
+            cache.Get<string>(cacheRegion, Constants.UserIdentifierCacheKey).Returns(new CacheEntry<string> { Value = userIdentifier });
+            cache.Get<string>(cacheRegion, serviceParameterId.ToString()).Returns(new CacheEntry<string> { Value = serviceParameterValue });
 
             var sut = new ServiceBaseInstance(cache);
 
             IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(cacheRegion, serviceInfo, null);
 
-            cache.Received(1).Get(cacheRegion, Constants.UserIdentifierCacheKey);
+            cache.Received(1).Get<string>(cacheRegion, Constants.UserIdentifierCacheKey);
             IEnumerable<KeyValuePair<string, string>> keyValuePairs = actual as KeyValuePair<string, string>[] ?? actual.ToArray();
             Assert.IsTrue(keyValuePairs.Any());
             Assert.AreEqual(2, keyValuePairs.Count());

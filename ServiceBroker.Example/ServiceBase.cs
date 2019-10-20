@@ -37,7 +37,7 @@ namespace ServiceBroker.Example
         {
             List<KeyValuePair<string, string>> pairs = additionalParameters?.ToList() ?? new List<KeyValuePair<string, string>>();
 
-            CacheEntry userIdentifier = Cache.Get(cacheRegion, Common.Constants.UserIdentifierCacheKey);
+            CacheEntry<string> userIdentifier = Cache.Get<string>(cacheRegion, Common.Constants.UserIdentifierCacheKey);
 
             if (userIdentifier != null)
             {
@@ -58,7 +58,7 @@ namespace ServiceBroker.Example
                 .Select(additionalParameter => new
                 {
                     additionalParameter,
-                    parameterValue = Cache.Get(cacheRegion, additionalParameter.Id.ToString())?.Value
+                    parameterValue = Cache.Get<string>(cacheRegion, additionalParameter.Id.ToString())?.Value
                 })
                 .Where(additionalParameter => !string.IsNullOrEmpty(additionalParameter.parameterValue))
                 .Select(additionalParameter => new KeyValuePair<string, string>(additionalParameter.additionalParameter.Name, additionalParameter.parameterValue))

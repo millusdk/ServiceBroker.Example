@@ -184,7 +184,7 @@ namespace ServiceBroker.Example
 
         private TokenResponse GetTokenFromCache(string cacheRegion, TokenInfo tokenInfo)
         {
-            CacheEntry cacheEntry = _cache.Get(cacheRegion, tokenInfo.CacheKey);
+            CacheEntry<string> cacheEntry = _cache.Get<string>(cacheRegion, tokenInfo.CacheKey);
 
             if (cacheEntry != null)
             {

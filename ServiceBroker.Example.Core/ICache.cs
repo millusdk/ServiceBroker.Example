@@ -4,8 +4,8 @@ namespace ServiceBroker.Example.Core
 {
     public interface ICache
     {
-        CacheEntry Get(string cacheRegion, string key);
-        void Set(string cacheRegion, string key, string value);
+        CacheEntry<T> Get<T>(string cacheRegion, string key) where T : class;
+        void Set<T>(string cacheRegion, string key, T value) where T : class;
 
         void ClearRegion(string cacheRegion);
     }

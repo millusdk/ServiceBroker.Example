@@ -40,7 +40,7 @@ namespace ServiceBroker.Example
                     };
                 }
 
-                CacheEntry cacheResult = Cache.Get(cacheRegion, serviceInfo.CacheKey);
+                CacheEntry<string> cacheResult = Cache.Get<string>(cacheRegion, serviceInfo.CacheKey);
 
                 if (cacheResult != null)
                 {
@@ -100,7 +100,7 @@ namespace ServiceBroker.Example
                     }
                     else
                     {
-                        Cache.Set(cacheRegion, serviceInfo.CacheKey, null);
+                        Cache.Set<string>(cacheRegion, serviceInfo.CacheKey, null);
                         serviceResponse.Status = ServiceResponseStatus.Error;
                     }
 

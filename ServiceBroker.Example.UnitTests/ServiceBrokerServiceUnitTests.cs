@@ -399,11 +399,11 @@ namespace ServiceBroker.Example.UnitTests
                 }
             };
             var cacheRegion = "region";
-            var serviceCacheEntry = new CacheEntry
+            var serviceCacheEntry = new CacheEntry<string>
             {
                 Value = $"<node>{tokenContent}</node>"
             };
-            var tokenCacheEntry = new CacheEntry
+            var tokenCacheEntry = new CacheEntry<string>
             {
                 Value = tokenContent
             };
@@ -414,8 +414,8 @@ namespace ServiceBroker.Example.UnitTests
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, serviceGuid.ToString()).Returns(serviceCacheEntry);
-            cache.Get(cacheRegion, tokenId.ToString()).Returns(tokenCacheEntry);
+            cache.Get<string>(cacheRegion, serviceGuid.ToString()).Returns(serviceCacheEntry);
+            cache.Get<string>(cacheRegion, tokenId.ToString()).Returns(tokenCacheEntry);
 
             serviceRepository.GetCachedServices().ReturnsForAnyArgs(new[] { serviceInfo });
 

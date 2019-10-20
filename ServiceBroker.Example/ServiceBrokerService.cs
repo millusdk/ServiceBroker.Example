@@ -61,7 +61,7 @@ namespace ServiceBroker.Example
 
             foreach (CachedServiceInfo cachedService in cachedServices)
             {
-                CacheEntry cacheEntry = _cache.Get(cacheRegion, cachedService.CacheKey);
+                CacheEntry<string> cacheEntry = _cache.Get<string>(cacheRegion, cachedService.CacheKey);
 
                 if (cacheEntry?.Value != null)
                 {
@@ -73,7 +73,7 @@ namespace ServiceBroker.Example
 
                     foreach (TokenInfo token in cachedService.Tokens)
                     {
-                        CacheEntry tokenCacheEntry = _cache.Get(cacheRegion, token.CacheKey);
+                        CacheEntry<string> tokenCacheEntry = _cache.Get<string>(cacheRegion, token.CacheKey);
 
                         if (tokenCacheEntry?.Value != null)
                         {

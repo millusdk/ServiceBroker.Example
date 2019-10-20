@@ -275,7 +275,7 @@ namespace ServiceBroker.Example.UnitTests
             };
 
             var cache = Substitute.For<ICache>();
-            cache.Get(cacheRegion, tokenId.ToString()).Returns(new CacheEntry { Value = expectedText });
+            cache.Get<string>(cacheRegion, tokenId.ToString()).Returns(new CacheEntry<string> { Value = expectedText });
 
             var sut = new TokenService(cache);
 
@@ -514,14 +514,14 @@ namespace ServiceBroker.Example.UnitTests
                 Id = relativeTokenId
             };
             var index = 1;
-            var cacheEntry = new CacheEntry
+            var cacheEntry = new CacheEntry<string>
             {
                 Value = "<a>b"
             };
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+            cache.Get<string>(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
 
             var sut = new TokenService(cache);
 
@@ -548,14 +548,14 @@ namespace ServiceBroker.Example.UnitTests
                 Id = relativeTokenId
             };
             var index = 20;
-            var cacheEntry = new CacheEntry
+            var cacheEntry = new CacheEntry<string>
             {
                 Value = "<node>a</node><node>b</node>"
             };
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+            cache.Get<string>(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
 
             var sut = new TokenService(cache);
 
@@ -584,14 +584,14 @@ namespace ServiceBroker.Example.UnitTests
                 XPath = "/node/text()"
             };
             var index = 1;
-            var cacheEntry = new CacheEntry
+            var cacheEntry = new CacheEntry<string>
             {
                 Value = $"<node>{tokenContent}</node><node>b</node>"
             };
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+            cache.Get<string>(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
 
             var sut = new TokenService(cache);
 
@@ -622,14 +622,14 @@ namespace ServiceBroker.Example.UnitTests
                 Xslt = "<xsl:template match=\"/hello-world\"><xsl:value-of select=\"greeting\"/></xsl:template>"
             };
             var index = 1;
-            var cacheEntry = new CacheEntry
+            var cacheEntry = new CacheEntry<string>
             {
                 Value = $"<hello-world><greeting>{expectedText}</greeting></hello-world><node>b</node>"
             };
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+            cache.Get<string>(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
 
             var sut = new TokenService(cache);
 
@@ -659,14 +659,14 @@ namespace ServiceBroker.Example.UnitTests
                 XPath = "/node1/text()"
             };
             var index = 1;
-            var cacheEntry = new CacheEntry
+            var cacheEntry = new CacheEntry<string>
             {
                 Value = $"<node>{tokenContent}</node><node>b</node>"
             };
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+            cache.Get<string>(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
 
             var sut = new TokenService(cache);
 
@@ -694,14 +694,14 @@ namespace ServiceBroker.Example.UnitTests
                 XPath = "/node1/text()"
             };
             var index = 1;
-            var cacheEntry = new CacheEntry
+            var cacheEntry = new CacheEntry<string>
             {
                 Value = ""
             };
 
             var cache = Substitute.For<ICache>();
 
-            cache.Get(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
+            cache.Get<string>(cacheRegion, baseTokenId.ToString()).Returns(cacheEntry);
 
             var sut = new TokenService(cache);
 

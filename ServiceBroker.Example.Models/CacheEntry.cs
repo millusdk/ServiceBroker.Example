@@ -1,7 +1,7 @@
 ﻿namespace ServiceBroker.Example.Models
 {
-    public class CacheEntry
+    public class CacheEntry<T>
     {
-        public string Value { get; set; }
+        public T Value { get; set; }
     }
 }
