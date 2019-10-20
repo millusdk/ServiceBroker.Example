@@ -32,6 +32,24 @@ namespace ServiceBroker.Example
             return CallServicesAsync(serviceOrTokenIds, cacheRegion, timeout).GetAwaiter().GetResult();
         }
 
+        public ServiceResponse CallService(Guid serviceId, string cacheRegion, TimeSpan timeout, IEnumerable<KeyValuePair<string, string>> additionalParameters)
+        {
+            return CallServiceAsync(serviceId, cacheRegion, timeout, additionalParameters).GetAwaiter().GetResult();
+        }
+
+        public async Task<ServiceResponse> CallServiceAsync(Guid serviceId, string cacheRegion, TimeSpan timeout, IEnumerable<KeyValuePair<string, string>> additionalParameters)
+        {
+            ServiceBrokerResponse serviceBrokerResponse = await CallServicesAsyncInternal(new[] { serviceId }, cacheRegion, timeout, additionalParameters);
+
+            var serviceResponse = serviceBrokerResponse.ServiceResponses.FirstOrDefault();
+
+            return serviceResponse ?? new ServiceResponse
+            {
+                Id = serviceId,
+                Status = ServiceResponseStatus.Error
+            };
+        }
+
         public async Task<ServiceBrokerResponse> CallServicesAsync(IEnumerable<Guid> serviceOrTokenIds, string cacheRegion, TimeSpan timeout)
         {
             return await CallServicesAsyncInternal(serviceOrTokenIds, cacheRegion, timeout, null);
@@ -190,10 +208,10 @@ namespace ServiceBroker.Example
                 switch (service)
                 {
                     case DynamicServiceInfo dynamicServiceInfo:
-                    {
-                        task = _dynamicService.CallService(dynamicServiceInfo, cacheRegion, cancellationToken, additionalParams);
-                        break;
-                    }
+                        {
+                            task = _dynamicService.CallService(dynamicServiceInfo, cacheRegion, cancellationToken, additionalParams);
+                            break;
+                        }
                     case CachedServiceInfo cachedServiceInfo:
                         task = _cachedService.CallService(cachedServiceInfo, cacheRegion, cancellationToken, additionalParams);
                         break;
