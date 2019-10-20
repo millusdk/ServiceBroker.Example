@@ -355,10 +355,9 @@ namespace ServiceBroker.Example.UnitTests
             IEnumerable<TokenResponse> _ = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens).ToArray();
             IEnumerable<TokenResponse> actual = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens).ToArray();
 
-            IEnumerable<TokenResponse> tokenResponses = actual as TokenResponse[] ?? actual.ToArray();
-            Assert.IsTrue(tokenResponses.Any());
+            Assert.IsTrue(actual.Any());
 
-            TokenResponse token = tokenResponses.First();
+            TokenResponse token = actual.First();
 
             Assert.AreEqual(TokenResponseStatus.Found, token.Status);
             Assert.AreEqual(expected, token.Value);
@@ -381,7 +380,6 @@ namespace ServiceBroker.Example.UnitTests
                     }
                 }
             };
-            string expected = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?>{expectedText}";
 
             var cache = Substitute.For<ICache>();
 
