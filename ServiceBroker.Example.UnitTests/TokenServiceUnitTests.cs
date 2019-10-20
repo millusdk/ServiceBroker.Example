@@ -12,10 +12,10 @@ namespace ServiceBroker.Example.UnitTests
     public class TokenServiceUnitTests
     {
 
-        #region ParseTokens
+        #region ParseTokensXpath
 
         [TestMethod]
-        public void ParseTokensEmptyServiceResponseTest()
+        public void ParseTokensXpathEmptyServiceResponseTest()
         {
             var cache = Substitute.For<ICache>();
 
@@ -28,7 +28,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensNullTokenListTest()
+        public void ParseTokensXpathNullTokenListTest()
         {
             var cache = Substitute.For<ICache>();
 
@@ -41,7 +41,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensEmptyTokenListTest()
+        public void ParseTokensXpathEmptyTokenListTest()
         {
             var cache = Substitute.For<ICache>();
 
@@ -53,7 +53,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensNullXpathNodeTest()
+        public void ParseTokensXpathNullXpathNodeTest()
         {
             var xmlDocument = "<test></test>";
             var serviceInfo = new ServiceInfo()
@@ -84,7 +84,7 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensGoodXpathNodeTest()
+        public void ParseTokensXpathGoodXpathNodeTest()
         {
             var xmlDocument = "<test></test>";
             var serviceInfo = new ServiceInfo()
@@ -116,10 +116,10 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensGoodXpathTextTest()
+        public void ParseTokensXpathGoodXpathTextTest()
         {
             var expectedText = "Text";
-            var xmlDocument = $"<test>{expectedText}</test>";
+            string xmlDocument = $"<test>{expectedText}</test>";
             var serviceInfo = new ServiceInfo()
             {
                 Tokens = new[]
@@ -149,10 +149,10 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensBadXpathTextTest()
+        public void ParseTokensXpathBadXpathTextTest()
         {
             var expectedText = "Text";
-            var xmlDocument = $"<test><node>{expectedText}</node></test>";
+            string xmlDocument = $"<test><node>{expectedText}</node></test>";
             var serviceInfo = new ServiceInfo()
             {
                 Tokens = new[]
@@ -182,10 +182,10 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensBadXpathTest()
+        public void ParseTokensXpathBadXpathTest()
         {
             var expectedText = "Text";
-            var xmlDocument = $"<test>{expectedText}</test>";
+            string xmlDocument = $"<test>{expectedText}</test>";
             var serviceInfo = new ServiceInfo()
             {
                 Tokens = new[]
@@ -215,10 +215,10 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensNamespaceRemovalTest()
+        public void ParseTokensXpathNamespaceRemovalTest()
         {
             var expectedText = "Text";
-            var xmlDocument = $"<test xmlns=\"https://example.com/\" xmlns:a=\"https://example.com/\">{expectedText}</test>";
+            string xmlDocument = $"<test xmlns=\"https://example.com/\" xmlns:a=\"https://example.com/\">{expectedText}</test>";
             var serviceInfo = new ServiceInfo()
             {
                 Tokens = new[]
@@ -248,12 +248,12 @@ namespace ServiceBroker.Example.UnitTests
         }
 
         [TestMethod]
-        public void ParseTokensCachedTokenTest()
+        public void ParseTokensXpathCachedTokenTest()
         {
             Guid tokenId = Guid.NewGuid();
             var expectedText = "Text";
             var updatedText = "Update Text";
-            var xmlDocument = $"<test>{updatedText}</test>";
+            string xmlDocument = $"<test>{updatedText}</test>";
             var cacheRegion = "cacheRegion";
             var serviceInfo = new ServiceInfo()
             {
@@ -288,6 +288,110 @@ namespace ServiceBroker.Example.UnitTests
 
             Assert.AreEqual(TokenResponseStatus.Found, token.Status);
             Assert.AreEqual(expectedText, token.Value);
+        }
+
+        #endregion
+
+        #region ParseTokensXslt
+
+        [TestMethod]
+        public void ParseTokensXsltGoodXsltTest()
+        {
+            var expectedText = "Hello, World!";
+            string xmlDocument = $"<?xml version=\"1.0\"?><hello-world><greeting>{expectedText}</greeting></hello-world>";
+            var serviceInfo = new ServiceInfo()
+            {
+                Tokens = new[]
+                {
+                    new XsltTokenInfo
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Test token",
+                        Xslt = "<xsl:template match=\"/hello-world\"><xsl:value-of select=\"greeting\"/></xsl:template>"
+                    }
+                }
+            };
+            string expected = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?>{expectedText}";
+
+            var cache = Substitute.For<ICache>();
+
+            var sut = new TokenService(cache);
+
+            IEnumerable<TokenResponse> actual = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens);
+
+            IEnumerable<TokenResponse> tokenResponses = actual as TokenResponse[] ?? actual.ToArray();
+            Assert.IsTrue(tokenResponses.Any());
+
+            TokenResponse token = tokenResponses.First();
+
+            Assert.AreEqual(TokenResponseStatus.Found, token.Status);
+            Assert.AreEqual(expected, token.Value);
+        }
+
+        [TestMethod]
+        public void ParseTokensXsltBadXsltTest()
+        {
+            var expectedText = "Hello, World!";
+            string xmlDocument = $"<?xml version=\"1.0\"?><hello-world><greeting>{expectedText}</greeting></hello-world>";
+            var serviceInfo = new ServiceInfo()
+            {
+                Tokens = new[]
+                {
+                    new XsltTokenInfo
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Test token",
+                        Xslt = "<xsl:template match=\"/hello-world\"><xsl:value-of select=\"greeting\"/>"
+                    }
+                }
+            };
+            string expected = $"<?xml version=\"1.0\" encoding=\"UTF-8\"?>{expectedText}";
+
+            var cache = Substitute.For<ICache>();
+
+            var sut = new TokenService(cache);
+
+            IEnumerable<TokenResponse> actual = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens);
+
+            IEnumerable<TokenResponse> tokenResponses = actual as TokenResponse[] ?? actual.ToArray();
+            Assert.IsTrue(tokenResponses.Any());
+
+            TokenResponse token = tokenResponses.First();
+
+            Assert.AreEqual(TokenResponseStatus.Error, token.Status);
+            Assert.IsNull(token.Value);
+        }
+
+        [TestMethod]
+        public void ParseTokensXsltNoMatchTest()
+        {
+            string xmlDocument = $"<?xml version=\"1.0\"?><hello-world><greeting>Hello, World!</greeting></hello-world>";
+            var serviceInfo = new ServiceInfo()
+            {
+                Tokens = new[]
+                {
+                    new XsltTokenInfo
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Test token",
+                        Xslt = "<xsl:template match=\"/test\"><xsl:value-of select=\"test2\"/></xsl:template>"
+                    }
+                }
+            };
+
+            var cache = Substitute.For<ICache>();
+
+            var sut = new TokenService(cache);
+
+            IEnumerable<TokenResponse> actual = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens);
+
+            IEnumerable<TokenResponse> tokenResponses = actual as TokenResponse[] ?? actual.ToArray();
+            Assert.IsTrue(tokenResponses.Any());
+
+            TokenResponse token = tokenResponses.First();
+
+            Assert.AreEqual(TokenResponseStatus.NotFound, token.Status);
+            Assert.IsNull(token.Value);
         }
 
         #endregion

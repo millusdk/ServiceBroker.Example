@@ -55,13 +55,13 @@ namespace ServiceBroker.Example
                 return null;
             }
 
-            var cachedServices = _serviceRepository.GetCachedServices();
+            IEnumerable<CachedServiceInfo> cachedServices = _serviceRepository.GetCachedServices();
 
             var tokens = new XElement("tokens");
 
             foreach (CachedServiceInfo cachedService in cachedServices)
             {
-                var cacheEntry = _cache.Get(cacheRegion, cachedService.CacheKey);
+                CacheEntry cacheEntry = _cache.Get(cacheRegion, cachedService.CacheKey);
 
                 if (cacheEntry?.Value != null)
                 {
@@ -73,7 +73,7 @@ namespace ServiceBroker.Example
 
                     foreach (TokenInfo token in cachedService.Tokens)
                     {
-                        var tokenCacheEntry = _cache.Get(cacheRegion, token.CacheKey);
+                        CacheEntry tokenCacheEntry = _cache.Get(cacheRegion, token.CacheKey);
 
                         if (tokenCacheEntry?.Value != null)
                         {

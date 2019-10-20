@@ -82,7 +82,7 @@ namespace ServiceBroker.Example.UnitTests
 
             await httpClientWrapper.ReceivedWithAnyArgs(1).PostAsync(serviceInfo.Endpoint, null, CancellationToken.None);
 
-            var semaphoresRemoved = sut.RemoveSemaphores(cacheRegion);
+            bool semaphoresRemoved = sut.RemoveSemaphores(cacheRegion);
 
             Assert.IsTrue(semaphoresRemoved);
         }

@@ -55,6 +55,7 @@
     <Compile Include="TokenResponse.cs" />
     <Compile Include="TokenResponseStatus.cs" />
     <Compile Include="XPathTokenInfo.cs" />
+    <Compile Include="XsltTokenInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

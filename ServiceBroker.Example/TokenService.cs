@@ -5,15 +5,19 @@ using ServiceBroker.Example.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
+using Saxon.Api;
 
 namespace ServiceBroker.Example
 {
     public class TokenService : ITokenService
     {
         private readonly ICache _cache;
+        // ReSharper disable once ConvertToConstant.Local
+        private static readonly string NoMatchString = "-------NO MATCH-------";
 
         [ExcludeFromCodeCoverage]
         // ReSharper disable once MemberCanBePrivate.Global
@@ -57,27 +61,46 @@ namespace ServiceBroker.Example
                 }
                 else
                 {
-                    if(token is XPathTokenInfo xPathToken)
+                    var tokenResponse = new TokenResponse
                     {
-                        var tokenResponse = new TokenResponse
-                        {
-                            Id = token.Id
-                        };
+                        Id = token.Id
+                    };
 
-                        try
-                        {
-                            var tokenValue = ProcessXpath(serviceResponse, xPathToken.XPath);
-                            tokenResponse.Status = string.IsNullOrEmpty(tokenValue) ? TokenResponseStatus.NotFound : TokenResponseStatus.Found;
-                            tokenResponse.Value = tokenValue;
-                        }
-                        catch(Exception)
-                        {
-                            Log.Warning("Failed to execute token {TokenId}", token.Id);
-                            tokenResponse.Status = TokenResponseStatus.Error;
-                        }
+                    switch (token)
+                    {
+                        case XPathTokenInfo xPathToken:
+                            try
+                            {
+                                string tokenValue = ProcessXpath(serviceResponse, xPathToken.XPath);
+                                tokenResponse.Status = string.IsNullOrEmpty(tokenValue) ? TokenResponseStatus.NotFound : TokenResponseStatus.Found;
+                                tokenResponse.Value = tokenValue;
+                            }
+                            catch(Exception ex)
+                            {
+                                Log.Error(ex,"Failed to execute token {TokenId}", token.Id);
+                                tokenResponse.Status = TokenResponseStatus.Error;
+                            }
 
-                        yield return tokenResponse;
+                            break;
+                        case XsltTokenInfo xsltToken:
+                            try
+                            {
+                                string tokenValue = ProcessXslt(serviceResponse, xsltToken.Xslt);
+                                tokenResponse.Status = string.IsNullOrEmpty(tokenValue)
+                                    ? TokenResponseStatus.NotFound
+                                    : TokenResponseStatus.Found;
+                                tokenResponse.Value = tokenValue;
+                            }
+                            catch (Exception ex)
+                            {
+                                Log.Error(ex, "Failed to execute token {TokenId}", token.Id);
+                                tokenResponse.Status = TokenResponseStatus.Error;
+                            }
+
+                            break;
                     }
+
+                    yield return tokenResponse;
                 }
 
             }
@@ -176,12 +199,31 @@ namespace ServiceBroker.Example
             return null;
         }
 
+        private static XElement RemoveAllNamespaces(XElement element)
+        {
+            object content;
+            if (element.HasElements)
+            {
+                content = element.Elements().Select(RemoveAllNamespaces);
+            }
+            else
+            {
+                content = element.Value;
+            }
+
+            XElement xElement = new XElement(element.Name.LocalName, content);
+
+            xElement.ReplaceAttributes(element.Attributes().Where(attr => (!attr.IsNamespaceDeclaration)));
+
+            return xElement;
+        }
+
         #region Process Xpath
 
         private static string ProcessXpath(string result, string xPath)
         {
             XElement xmlDocumentWithoutNs = RemoveAllNamespaces(XElement.Parse(result));
-            var t = xmlDocumentWithoutNs.ToString();
+            string t = xmlDocumentWithoutNs.ToString();
 
             var xmlDocument = new XmlDocument { PreserveWhitespace = true };
             //xmlDocument.LoadXml(result);
@@ -200,23 +242,51 @@ namespace ServiceBroker.Example
             return xPathNode?.NodeType == XmlNodeType.Text ? xPathNode.Value : xPathNode?.InnerXml;
         }
 
-        private static XElement RemoveAllNamespaces(XElement element)
+        #endregion
+
+        #region Process Xslt
+
+        private static string ProcessXslt(string result, string xslt)
         {
-            object content;
-            if(element.HasElements)
+            XElement xmlDocumentWithoutNs = RemoveAllNamespaces(XElement.Parse(result));
+            string cleanXmlDocument = xmlDocumentWithoutNs.ToString();
+
+            XsltExecutable xsltExecutable = GetXsltExecutable(xslt);
+
+            byte[] xmlByteArray = System.Text.Encoding.UTF8.GetBytes(cleanXmlDocument);
+            var inputStream = new MemoryStream(xmlByteArray);
+            XsltTransformer transformer = xsltExecutable.Load();
+            // Saxon requires to set an Uri for the stream; otherwise setting the input stream fails
+            transformer.SetInputStream(inputStream, new Uri("http://localhost"));
+
+            // run the transformation and save the result to string
+            Serializer serializer = new Processor().NewSerializer();
+            using (var memoryStream = new MemoryStream())
             {
-                content = element.Elements().Select(RemoveAllNamespaces);
+                serializer.SetOutputStream(memoryStream);
+                transformer.Run(serializer);
+                memoryStream.Position = 0;
+                using (var streamReader = new StreamReader(memoryStream))
+                {
+                    result = streamReader.ReadToEnd();
+                }
             }
-            else
-            {
-                content = element.Value;
-            }
 
-            XElement xElement = new XElement(element.Name.LocalName, content);
+            return result.Contains(NoMatchString) ? null : result;
+        }
 
-            xElement.ReplaceAttributes(element.Attributes().Where(attr => (!attr.IsNamespaceDeclaration)));
-
-            return xElement;
+        private static XsltExecutable GetXsltExecutable(string xslt)
+        {
+            var processor = new Processor();
+            XsltCompiler compiler = processor.NewXsltCompiler();
+            // create stream from input xslt
+            string fullXslt =
+                $"<xsl:stylesheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" version=\"1.0\">{xslt}" +
+                $"<xsl:template match=\"/*\" priority=\"0\">{NoMatchString}</xsl:template></xsl:stylesheet>";
+            byte[] xsltByteArray = System.Text.Encoding.UTF8.GetBytes(fullXslt);
+            var xsltStream = new MemoryStream(xsltByteArray);
+            XsltExecutable xsltExecutable = compiler.Compile(xsltStream);
+            return xsltExecutable;
         }
 
         #endregion

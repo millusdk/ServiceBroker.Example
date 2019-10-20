@@ -421,7 +421,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
 
-            var profile = sut.GetUserProfile(cacheRegion);
+            XDocument profile = sut.GetUserProfile(cacheRegion);
 
             Assert.IsNotNull(profile.Root);
 

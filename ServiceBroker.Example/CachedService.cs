@@ -127,7 +127,7 @@ namespace ServiceBroker.Example
         public bool RemoveSemaphores(string cacheRegion)
         {
             var retVal = true;
-            foreach (var key in _semaphores.Keys)
+            foreach (string key in _semaphores.Keys)
             {
                 if (key.StartsWith(cacheRegion))
                 {
