@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example", "ServiceBroker.Example\ServiceBroker.Example.csproj", "{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Core", "ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj", "{C20CA676-E54E-4161-89AD-A58857F20438}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70B7E73D-62FA-4484-BDEA-7B8DD7907246} = {70B7E73D-62FA-4484-BDEA-7B8DD7907246}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.UnitTests", "ServiceBroker.Example.UnitTests\ServiceBroker.Example.UnitTests.csproj", "{EA710E7A-AC39-443B-8A18-6A11D31CE36E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Models", "ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj", "{153B4B13-86B4-4AD5-8354-056D09B755D4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70B7E73D-62FA-4484-BDEA-7B8DD7907246} = {70B7E73D-62FA-4484-BDEA-7B8DD7907246}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Common", "ServiceBroker.Example.Common\ServiceBroker.Example.Common.csproj", "{70B7E73D-62FA-4484-BDEA-7B8DD7907246}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67D035F8-C4B4-4DDD-85CA-D3D4163C5C06}"
+	ProjectSection(SolutionItems) = preProject
+		.runsettings = .runsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.FunctionalTests", "ServiceBroker.Example.FunctionalTests\ServiceBroker.Example.FunctionalTests.csproj", "{5AA63CA3-04F6-4291-A579-EF077DA2C21E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BB8B286E-9DA7-4C93-851B-D5919BC554A6} = {BB8B286E-9DA7-4C93-851B-D5919BC554A6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Mocks", "ServiceBroker.Example.Mocks\ServiceBroker.Example.Mocks.csproj", "{BB8B286E-9DA7-4C93-851B-D5919BC554A6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF} = {8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20CA676-E54E-4161-89AD-A58857F20438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20CA676-E54E-4161-89AD-A58857F20438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20CA676-E54E-4161-89AD-A58857F20438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20CA676-E54E-4161-89AD-A58857F20438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85FB95D9-CE7B-4D9E-ABE2-3A57CECD81B4}
+	EndGlobalSection
+EndGlobal
