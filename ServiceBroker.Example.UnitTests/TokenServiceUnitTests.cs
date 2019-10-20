@@ -5,6 +5,7 @@ using ServiceBroker.Example.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ServiceBroker.Example.Mocks;
 
 namespace ServiceBroker.Example.UnitTests
 {
@@ -318,6 +319,41 @@ namespace ServiceBroker.Example.UnitTests
             var sut = new TokenService(cache);
 
             IEnumerable<TokenResponse> actual = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens);
+
+            IEnumerable<TokenResponse> tokenResponses = actual as TokenResponse[] ?? actual.ToArray();
+            Assert.IsTrue(tokenResponses.Any());
+
+            TokenResponse token = tokenResponses.First();
+
+            Assert.AreEqual(TokenResponseStatus.Found, token.Status);
+            Assert.AreEqual(expected, token.Value);
+        }
+
+        [TestMethod]
+        public void ParseTokensXsltGoodXsltWithCacheTest()
+        {
+            var expectedText = "Hello, World!";
+            string xmlDocument = $"<?xml version=\"1.0\"?><hello-world><greeting>{expectedText}</greeting></hello-world>";
+            var serviceInfo = new ServiceInfo()
+            {
+                Tokens = new[]
+                {
+                    new XsltTokenInfo
+                    {
+                        Id = Guid.NewGuid(),
+                        Name = "Test token",
+                        Xslt = "<xsl:template match=\"/hello-world\"><xsl:value-of select=\"greeting\"/></xsl:template>"
+                    }
+                }
+            };
+            string expected = $"{expectedText}";
+
+            var cache = new CacheMock();
+
+            var sut = new TokenService(cache);
+
+            IEnumerable<TokenResponse> _ = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens).ToArray();
+            IEnumerable<TokenResponse> actual = sut.ParseTokens("cacheRegion", xmlDocument, serviceInfo.Tokens).ToArray();
 
             IEnumerable<TokenResponse> tokenResponses = actual as TokenResponse[] ?? actual.ToArray();
             Assert.IsTrue(tokenResponses.Any());

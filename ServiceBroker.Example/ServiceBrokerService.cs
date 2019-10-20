@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -50,11 +51,6 @@ namespace ServiceBroker.Example
             var doc = new XDocument();
             doc.Add(new XElement("user"));
 
-            if (doc.Root == null)
-            {
-                return null;
-            }
-
             IEnumerable<CachedServiceInfo> cachedServices = _serviceRepository.GetCachedServices();
 
             var tokens = new XElement("tokens");
@@ -63,12 +59,13 @@ namespace ServiceBroker.Example
             {
                 CacheEntry<string> cacheEntry = _cache.Get<string>(cacheRegion, cachedService.CacheKey);
 
-                if (cacheEntry?.Value != null)
+                if (cacheEntry != null && cacheEntry.Value != null)
                 {
                     var serviceNode = new XElement(cachedService.Name);
 
                     LoadValue(cacheEntry.Value, serviceNode);
 
+                    Debug.Assert(doc.Root != null, "doc.Root != null");
                     doc.Root.Add(serviceNode);
 
                     foreach (TokenInfo token in cachedService.Tokens)
@@ -180,7 +177,16 @@ namespace ServiceBroker.Example
                 Task<ServiceResponse> task = null;
 
                 // ReSharper disable once PossibleMultipleEnumeration
-                IEnumerable<KeyValuePair<string, string>> additionalParams = additionalParameters as KeyValuePair<string, string>[] ?? additionalParameters?.ToArray();
+                IEnumerable<KeyValuePair<string, string>> additionalParams = additionalParameters as KeyValuePair<string, string>[];
+                if (additionalParams == null)
+                {
+                    if (additionalParameters != null)
+                    {
+                        // ReSharper disable once PossibleMultipleEnumeration
+                        additionalParams = additionalParameters.ToArray();
+                    }
+                }
+
                 switch (service)
                 {
                     case DynamicServiceInfo dynamicServiceInfo:

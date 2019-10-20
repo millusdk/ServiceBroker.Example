@@ -16,8 +16,10 @@ namespace ServiceBroker.Example
     public class TokenService : ITokenService
     {
         private readonly ICache _cache;
-        // ReSharper disable once ConvertToConstant.Local
+        // ReSharper disable ConvertToConstant.Local
         private static readonly string NoMatchString = "-------NO MATCH-------";
+        private static readonly string XsltCacheRegion = "XSLT";
+        // ReSharper enable ConvertToConstant.Local
 
         [ExcludeFromCodeCoverage]
         // ReSharper disable once MemberCanBePrivate.Global
@@ -246,7 +248,7 @@ namespace ServiceBroker.Example
 
         #region Process Xslt
 
-        private static string ProcessXslt(string result, string xslt)
+        private string ProcessXslt(string result, string xslt)
         {
             XElement xmlDocumentWithoutNs = RemoveAllNamespaces(XElement.Parse(result));
             string cleanXmlDocument = xmlDocumentWithoutNs.ToString();
@@ -275,8 +277,15 @@ namespace ServiceBroker.Example
             return result.Contains(NoMatchString) ? null : result;
         }
 
-        private static XsltExecutable GetXsltExecutable(string xslt)
+        private XsltExecutable GetXsltExecutable(string xslt)
         {
+            var cacheEntry = _cache.Get<XsltExecutable>(XsltCacheRegion, xslt);
+
+            if (cacheEntry?.Value != null)
+            {
+                return cacheEntry.Value;
+            }
+
             var processor = new Processor();
             XsltCompiler compiler = processor.NewXsltCompiler();
             // create stream from input xslt
@@ -288,6 +297,8 @@ namespace ServiceBroker.Example
             byte[] xsltByteArray = System.Text.Encoding.UTF8.GetBytes(fullXslt);
             var xsltStream = new MemoryStream(xsltByteArray);
             XsltExecutable xsltExecutable = compiler.Compile(xsltStream);
+
+            _cache.Set(XsltCacheRegion, xslt, xsltExecutable);
             return xsltExecutable;
         }
 

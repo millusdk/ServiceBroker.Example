@@ -14,6 +14,7 @@
                 <ModulePath>.*FunctionalTests.dll$</ModulePath>
                 <ModulePath>.*UnitTests.dll$</ModulePath>
                 <ModulePath>.*Mocks.dll$</ModulePath>
+                <ModulePath>.*Models.dll$</ModulePath>
               </Exclude>
             </ModulePaths>
             <Attributes>

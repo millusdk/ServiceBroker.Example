@@ -379,33 +379,49 @@ namespace ServiceBroker.Example.UnitTests
         [TestMethod]
         public void GetUserProfileTest()
         {
-            Guid serviceGuid = Guid.NewGuid();
-            Guid tokenId = Guid.NewGuid();
-            var serviceName = "Service1";
-            var tokenName = "Token1";
-            var tokenContent = "content";
-            var serviceInfo = new CachedServiceInfo
+            Guid service1Id = Guid.NewGuid();
+            Guid service2Id = Guid.NewGuid();
+            Guid token1Id = Guid.NewGuid();
+            Guid token2Id = Guid.NewGuid();
+            var service1Name = "Service1";
+            var service2Name = "Service2";
+            var token1Name = "Token1";
+            var token2Name = "Token1";
+            var token1Content = "content";
+            var cachedService1Info = new CachedServiceInfo
             {
-                Id = serviceGuid,
-                Name = serviceName,
+                Id = service1Id,
+                Name = service1Name,
                 Tokens = new []
                 {
                     new XPathTokenInfo
                     {
-                        Id = tokenId,
-                        Name = tokenName,
+                        Id = token1Id,
+                        Name = token1Name,
+                        XPath = "/node/text()"
+                    },
+                    new XPathTokenInfo
+                    {
+                        Id = token2Id,
+                        Name = token2Name,
                         XPath = "/node/text()"
                     }
                 }
             };
+            var cachedService2Info = new CachedServiceInfo
+            {
+                Id = service2Id,
+                Name = service2Name,
+                Tokens = new TokenInfo[0]
+            };
             var cacheRegion = "region";
             var serviceCacheEntry = new CacheEntry<string>
             {
-                Value = $"<node>{tokenContent}</node>"
+                Value = $"<node>{token1Content}</node>"
             };
             var tokenCacheEntry = new CacheEntry<string>
             {
-                Value = tokenContent
+                Value = token1Content
             };
 
             var serviceRepository = Substitute.For<IServiceRepository>();
@@ -414,10 +430,10 @@ namespace ServiceBroker.Example.UnitTests
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
-            cache.Get<string>(cacheRegion, serviceGuid.ToString()).Returns(serviceCacheEntry);
-            cache.Get<string>(cacheRegion, tokenId.ToString()).Returns(tokenCacheEntry);
+            cache.Get<string>(cacheRegion, service1Id.ToString()).Returns(serviceCacheEntry);
+            cache.Get<string>(cacheRegion, token1Id.ToString()).Returns(tokenCacheEntry);
 
-            serviceRepository.GetCachedServices().ReturnsForAnyArgs(new[] { serviceInfo });
+            serviceRepository.GetCachedServices().ReturnsForAnyArgs(new[] { cachedService1Info,  cachedService2Info });
 
             var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
 
@@ -434,7 +450,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceElement = serviceNode as XElement;
             Assert.IsNotNull(serviceElement);
 
-            Assert.AreEqual(serviceName, serviceElement.Name);
+            Assert.AreEqual(service1Name, serviceElement.Name);
         }
     }
 }
