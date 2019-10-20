@@ -7,6 +7,6 @@ namespace ServiceBroker.Example.Core
 {
     public interface IHttpClientWrapper
     {
-        Task<HttpClientResponse> PostAsync(string endpoint, IEnumerable<KeyValuePair<string, string>> postPrameters, CancellationToken cancellationToken);
+        Task<HttpClientResponse> PostAsync(string endpoint, IEnumerable<KeyValuePair<string, string>> postParameters, CancellationToken cancellationToken);
     }
 }
