@@ -83,7 +83,7 @@ namespace ServiceBroker.Example
 
                     LoadValue(cacheEntry.Value, serviceNode);
 
-                    Debug.Assert(doc.Root != null, "doc.Root != null");
+                    // ReSharper disable once PossibleNullReferenceException
                     doc.Root.Add(serviceNode);
 
                     foreach (TokenInfo token in cachedService.Tokens)
@@ -104,6 +104,7 @@ namespace ServiceBroker.Example
 
             if (tokens.HasElements)
             {
+                // ReSharper disable once PossibleNullReferenceException
                 doc.Root.Add(tokens);
             }
 
