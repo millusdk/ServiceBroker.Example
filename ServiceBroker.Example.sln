@@ -3,36 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example", "ServiceBroker.Example\ServiceBroker.Example.csproj", "{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Core", "ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj", "{C20CA676-E54E-4161-89AD-A58857F20438}"
-	ProjectSection(ProjectDependencies) = postProject
-		{70B7E73D-62FA-4484-BDEA-7B8DD7907246} = {70B7E73D-62FA-4484-BDEA-7B8DD7907246}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.UnitTests", "ServiceBroker.Example.UnitTests\ServiceBroker.Example.UnitTests.csproj", "{EA710E7A-AC39-443B-8A18-6A11D31CE36E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Models", "ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj", "{153B4B13-86B4-4AD5-8354-056D09B755D4}"
-	ProjectSection(ProjectDependencies) = postProject
-		{70B7E73D-62FA-4484-BDEA-7B8DD7907246} = {70B7E73D-62FA-4484-BDEA-7B8DD7907246}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Common", "ServiceBroker.Example.Common\ServiceBroker.Example.Common.csproj", "{70B7E73D-62FA-4484-BDEA-7B8DD7907246}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67D035F8-C4B4-4DDD-85CA-D3D4163C5C06}"
 	ProjectSection(SolutionItems) = preProject
 		.runsettings = .runsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.FunctionalTests", "ServiceBroker.Example.FunctionalTests\ServiceBroker.Example.FunctionalTests.csproj", "{5AA63CA3-04F6-4291-A579-EF077DA2C21E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{BB8B286E-9DA7-4C93-851B-D5919BC554A6} = {BB8B286E-9DA7-4C93-851B-D5919BC554A6}
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6183AB66-0964-4B71-827E-720418305922}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Mocks", "ServiceBroker.Example.Mocks\ServiceBroker.Example.Mocks.csproj", "{BB8B286E-9DA7-4C93-851B-D5919BC554A6}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF} = {8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example", "src\ServiceBroker.Example\ServiceBroker.Example.csproj", "{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Models", "src\ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj", "{90827586-F3AB-4368-82A3-1E3510DCFFDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Core", "src\ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj", "{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Common", "src\ServiceBroker.Example.Common\ServiceBroker.Example.Common.csproj", "{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3C7CCC6A-2BC8-478B-8656-1EA0D5A91949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Mocks", "tests\ServiceBroker.Example.Mocks\ServiceBroker.Example.Mocks.csproj", "{51A8F162-14C4-4E83-8D1F-302DC277810F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.FunctionalTests", "tests\ServiceBroker.Example.FunctionalTests\ServiceBroker.Example.FunctionalTests.csproj", "{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.UnitTests", "tests\ServiceBroker.Example.UnitTests\ServiceBroker.Example.UnitTests.csproj", "{00F251B2-E846-44C0-A243-37F9B4C6C01E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,37 +32,46 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CA4368A-652F-4FEB-B0A8-DFD868F8FDBF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C20CA676-E54E-4161-89AD-A58857F20438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C20CA676-E54E-4161-89AD-A58857F20438}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C20CA676-E54E-4161-89AD-A58857F20438}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C20CA676-E54E-4161-89AD-A58857F20438}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA710E7A-AC39-443B-8A18-6A11D31CE36E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{153B4B13-86B4-4AD5-8354-056D09B755D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{70B7E73D-62FA-4484-BDEA-7B8DD7907246}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AA63CA3-04F6-4291-A579-EF077DA2C21E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB8B286E-9DA7-4C93-851B-D5919BC554A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90827586-F3AB-4368-82A3-1E3510DCFFDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90827586-F3AB-4368-82A3-1E3510DCFFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90827586-F3AB-4368-82A3-1E3510DCFFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90827586-F3AB-4368-82A3-1E3510DCFFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A8F162-14C4-4E83-8D1F-302DC277810F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A8F162-14C4-4E83-8D1F-302DC277810F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A8F162-14C4-4E83-8D1F-302DC277810F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A8F162-14C4-4E83-8D1F-302DC277810F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00F251B2-E846-44C0-A243-37F9B4C6C01E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00F251B2-E846-44C0-A243-37F9B4C6C01E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00F251B2-E846-44C0-A243-37F9B4C6C01E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00F251B2-E846-44C0-A243-37F9B4C6C01E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF} = {6183AB66-0964-4B71-827E-720418305922}
+		{90827586-F3AB-4368-82A3-1E3510DCFFDF} = {6183AB66-0964-4B71-827E-720418305922}
+		{ED95A0B7-76B6-482E-9AFF-367CAFC5196D} = {6183AB66-0964-4B71-827E-720418305922}
+		{B38BD3A3-1968-4AF5-841C-3230C86BF8F5} = {6183AB66-0964-4B71-827E-720418305922}
+		{51A8F162-14C4-4E83-8D1F-302DC277810F} = {3C7CCC6A-2BC8-478B-8656-1EA0D5A91949}
+		{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD} = {3C7CCC6A-2BC8-478B-8656-1EA0D5A91949}
+		{00F251B2-E846-44C0-A243-37F9B4C6C01E} = {3C7CCC6A-2BC8-478B-8656-1EA0D5A91949}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85FB95D9-CE7B-4D9E-ABE2-3A57CECD81B4}

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.3.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+    <PackageReference Include="NSubstitute" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj" />
+    <ProjectReference Include="..\..\src\ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj" />
+    <ProjectReference Include="..\..\src\ServiceBroker.Example\ServiceBroker.Example.csproj" />
+    <ProjectReference Include="..\ServiceBroker.Example.Mocks\ServiceBroker.Example.Mocks.csproj" />
+  </ItemGroup>
+
+</Project>

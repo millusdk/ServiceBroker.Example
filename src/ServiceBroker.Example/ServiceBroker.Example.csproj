@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Polly" Version="7.1.1" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceBroker.Example.Common\ServiceBroker.Example.Common.csproj" />
+    <ProjectReference Include="..\ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj" />
+    <ProjectReference Include="..\ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IKVM.OpenJDK.Charsets">
+      <HintPath>..\..\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>..\..\lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security">
+      <HintPath>..\..\lib\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text">
+      <HintPath>..\..\lib\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>..\..\lib\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API">
+      <HintPath>..\..\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime">
+      <HintPath>..\..\lib\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon9he">
+      <HintPath>..\..\lib\saxon9he.dll</HintPath>
+    </Reference>
+    <Reference Include="saxon9he-api">
+      <HintPath>..\..\lib\saxon9he-api.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
