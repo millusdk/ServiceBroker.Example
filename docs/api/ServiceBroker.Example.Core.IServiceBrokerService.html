@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IServiceBrokerService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IServiceBrokerService
+   ">
+    <meta name="generator" content="docfx 2.46.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example.Core.IServiceBrokerService">
+  
+  
+  <h1 id="ServiceBroker_Example_Core_IServiceBrokerService" data-uid="ServiceBroker.Example.Core.IServiceBrokerService" class="text-break">Interface IServiceBrokerService
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ServiceBroker.Example.Core.html">ServiceBroker.Example.Core</a></h6>
+  <h6><strong>Assembly</strong>: ServiceBroker.Example.Core.dll</h6>
+  <h5 id="ServiceBroker_Example_Core_IServiceBrokerService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IServiceBrokerService</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_CallService_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.CallService(System.Guid%2CSystem.String%2CSystem.TimeSpan%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L36">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_Core_IServiceBrokerService_CallService_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallService*"></a>
+  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_CallService_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallService(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallService(Guid, String, TimeSpan, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified service, and returns the result of the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceResponse CallService(Guid serviceId, string cacheRegion, TimeSpan timeout, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; additionalParameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">serviceId</span></td>
+        <td><p>The id of the service to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cacheRegion</span></td>
+        <td><p>he region to use for storing and retrieving values, if required by the service called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Maximum time the service should wait for answers from service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">additionalParameters</span></td>
+        <td><p>Specification of additional parameters to include in the body of any outgoing requests performed as part of the processing of the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ServiceBroker.Example.Models.ServiceResponse.html">ServiceResponse</a></td>
+        <td><p>An object representing the result of the call to the external service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_CallServiceAsync_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync(System.Guid%2CSystem.String%2CSystem.TimeSpan%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L46">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_Core_IServiceBrokerService_CallServiceAsync_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync*"></a>
+  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_CallServiceAsync_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallServiceAsync(Guid, String, TimeSpan, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the specified service, and returns the result of the call.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ServiceResponse&gt; CallServiceAsync(Guid serviceId, string cacheRegion, TimeSpan timeout, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; additionalParameters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">serviceId</span></td>
+        <td><p>The id of the service to call.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cacheRegion</span></td>
+        <td><p>he region to use for storing and retrieving values, if required by the service called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Maximum time the service should wait for answers from service.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">additionalParameters</span></td>
+        <td><p>Specification of additional parameters to include in the body of any outgoing requests performed as part of the processing of the service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.ServiceResponse.html">ServiceResponse</a>&gt;</td>
+        <td><p>An object representing the result of the call to the external service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_CallServices_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L17">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_Core_IServiceBrokerService_CallServices_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallServices*"></a>
+  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_CallServices_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)">CallServices(IEnumerable&lt;Guid&gt;, String, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Calls the services specified by the service and token ids, and returns the results of these calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ServiceBrokerResponse CallServices(IEnumerable&lt;Guid&gt; serviceOrTokenIds, string cacheRegion, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">serviceOrTokenIds</span></td>
+        <td><p>Ids for the services and/or tokens to retrieve information for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cacheRegion</span></td>
+        <td><p>Cache region to use for storing and retrieving values, if required by the services called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Maximum time the services should wait for answers from external services.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ServiceBroker.Example.Models.ServiceBrokerResponse.html">ServiceBrokerResponse</a></td>
+        <td><p>An object representing the result of the calls to the services specified by the service and token ids.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_CallServicesAsync_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L26">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_Core_IServiceBrokerService_CallServicesAsync_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync*"></a>
+  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_CallServicesAsync_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)">CallServicesAsync(IEnumerable&lt;Guid&gt;, String, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Calls the services specified by the service and token ids, and returns the results of these calls.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;ServiceBrokerResponse&gt; CallServicesAsync(IEnumerable&lt;Guid&gt; serviceOrTokenIds, string cacheRegion, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">serviceOrTokenIds</span></td>
+        <td><p>Ids for the services and/or tokens to retrieve information for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cacheRegion</span></td>
+        <td><p>Cache region to use for storing and retrieving values, if required by the services called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Maximum time the service should wait for answers from external services.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.ServiceBrokerResponse.html">ServiceBrokerResponse</a>&gt;</td>
+        <td><p>An object representing the result of the calls to the services specified by the service and token ids.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L54">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_Core_IServiceBrokerService_StartBackgroundServiceCalls_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls*"></a>
+  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)">StartBackgroundServiceCalls(IEnumerable&lt;Guid&gt;, String, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Starts call to the services specified by the service and token ids on a background thread.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void StartBackgroundServiceCalls(IEnumerable&lt;Guid&gt; serviceOrTokenIds, string cacheRegion, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
+        <td><span class="parametername">serviceOrTokenIds</span></td>
+        <td><p>Ids for the services and/or tokens to retrieve information for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">cacheRegion</span></td>
+        <td><p>Cache region to use for storing and retrieving values, if required by the services called.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>Maximum time the services should wait for answers from external services.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

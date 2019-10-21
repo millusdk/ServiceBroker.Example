@@ -1,0 +1,547 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/emr/source/repos/ServiceBroker.Example/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.CachedService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.CachedService.html",
+          "hash": "KIjd9rHcqQQ8KNnuPuASaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Common.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Common.Constants.html",
+          "hash": "DBHbnP3b2Z9uo+585y2hkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.html",
+          "hash": "yvdb6dPU9xShzzeAk/56yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Common.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Common.Extensions.html",
+          "hash": "fK7ALKDIhU9YuSGQBLbwhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Common.html",
+          "hash": "qbMzEN1Nl04BwjDvJPquwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.ICache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.ICache.html",
+          "hash": "bU9oK0HaCQjQrB/ZLDYEUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.ICachedService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.ICachedService.html",
+          "hash": "ZHV0Ro4Hl5nlCRT8VRe70A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.IDynamicService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.IDynamicService.html",
+          "hash": "5YhOLd8aStVsVDbDyM8l0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.IHttpClientWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.IHttpClientWrapper.html",
+          "hash": "ibtGDq6/yO+WCSZ3Bhcwtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.IServiceBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.IServiceBase.html",
+          "hash": "TJwKOIoVMkw/Y0nuWHOTJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.IServiceBrokerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.IServiceBrokerService.html",
+          "hash": "WFK+yLdq0AhRCRQ3tTiVdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.IServiceRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.IServiceRepository.html",
+          "hash": "XtaX+bk5Fy5/uWCFoRcAnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.ITaskScheduler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.ITaskScheduler.html",
+          "hash": "3fi6MTWc3BMcJgS84S/YOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.ITokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.ITokenService.html",
+          "hash": "mIEtEvwN5lK/ZMUVf/2Zsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Core.html",
+          "hash": "zVmzoX8NMHF6P2UldBHd5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.DynamicService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.DynamicService.html",
+          "hash": "xXmDG6nX61Mv8pQipMjFAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.CacheEntry-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.CacheEntry-1.html",
+          "hash": "XvcjX1TmAFsJyAZ+MnHM7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.CachedServiceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.CachedServiceInfo.html",
+          "hash": "ynP59JeL7Wn7PWoJlMTlJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.DynamicServiceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.DynamicServiceInfo.html",
+          "hash": "uk277mUFhZLRaVmWDFaRMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.HttpClientResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.HttpClientResponse.html",
+          "hash": "DRuGTaop18uBFbaPgs8y4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.ParameterInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.ParameterInfo.html",
+          "hash": "rdNc4W2MXLgZAMIQIj5P6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.ServiceBrokerResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.ServiceBrokerResponse.html",
+          "hash": "bRc5qav1G3u9wPmaCh/a/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.ServiceInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.ServiceInfo.html",
+          "hash": "/YB8UXSRvbz7Fd8qK1p28g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.ServiceResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.ServiceResponse.html",
+          "hash": "B5u5lHXZ1MDRmwC3ZF/JkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.ServiceResponseStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.ServiceResponseStatus.html",
+          "hash": "+wwr6Hxf5zE2+yCY0QgdIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.TokenInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.TokenInfo.html",
+          "hash": "aLrZ8LIn9FKHtzJSHWYz+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.TokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.TokenResponse.html",
+          "hash": "iA/sYmNzEFBJYVHKtz59NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.TokenResponseStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.TokenResponseStatus.html",
+          "hash": "EpMrXZzlxSoqBGBScqlTyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.XPathTokenInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.XPathTokenInfo.html",
+          "hash": "oJCx0FwC8I250OIeDU6LzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.XsltTokenInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.XsltTokenInfo.html",
+          "hash": "N+Q6QPafEt4Aq99qeZ2JQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.html",
+          "hash": "1YFzkkvJEJDrfUoJe3p5Nw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.ServiceBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.ServiceBase.html",
+          "hash": "4T15ECz6J89rJnDSqLptoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.ServiceBrokerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.ServiceBrokerService.html",
+          "hash": "qGgwumaGrnFFNHlcHwmCzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.TokenService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.TokenService.html",
+          "hash": "b9oHVStlh000XqCp8e3l5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.html",
+          "hash": "lP9BvFq6w+3jBEoAg9me9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "3Al9YfPvF9S6i6cFr5qU0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "neWokuaPbvTRAxuGFcFumw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "qOeKpwt31789MkVcwuw8tw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "co8YiiPfMCe+nuXn/OcWyQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
+          "incrementalPhase": "build",
+          "total_file_count": 35,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

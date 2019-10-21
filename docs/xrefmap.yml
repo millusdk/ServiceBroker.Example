@@ -1,0 +1,1214 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: ServiceBroker.Example
+  name: ServiceBroker.Example
+  href: api/ServiceBroker.Example.html
+  commentId: N:ServiceBroker.Example
+  fullName: ServiceBroker.Example
+  nameWithType: ServiceBroker.Example
+- uid: ServiceBroker.Example.CachedService
+  name: CachedService
+  href: api/ServiceBroker.Example.CachedService.html
+  commentId: T:ServiceBroker.Example.CachedService
+  fullName: ServiceBroker.Example.CachedService
+  nameWithType: CachedService
+- uid: ServiceBroker.Example.CachedService.#ctor(ServiceBroker.Example.Core.ICache,ServiceBroker.Example.Core.IHttpClientWrapper,ServiceBroker.Example.Core.ITokenService)
+  name: CachedService(ICache, IHttpClientWrapper, ITokenService)
+  href: api/ServiceBroker.Example.CachedService.html#ServiceBroker_Example_CachedService__ctor_ServiceBroker_Example_Core_ICache_ServiceBroker_Example_Core_IHttpClientWrapper_ServiceBroker_Example_Core_ITokenService_
+  commentId: M:ServiceBroker.Example.CachedService.#ctor(ServiceBroker.Example.Core.ICache,ServiceBroker.Example.Core.IHttpClientWrapper,ServiceBroker.Example.Core.ITokenService)
+  fullName: ServiceBroker.Example.CachedService.CachedService(ServiceBroker.Example.Core.ICache, ServiceBroker.Example.Core.IHttpClientWrapper, ServiceBroker.Example.Core.ITokenService)
+  nameWithType: CachedService.CachedService(ICache, IHttpClientWrapper, ITokenService)
+- uid: ServiceBroker.Example.CachedService.#ctor*
+  name: CachedService
+  href: api/ServiceBroker.Example.CachedService.html#ServiceBroker_Example_CachedService__ctor_
+  commentId: Overload:ServiceBroker.Example.CachedService.#ctor
+  isSpec: "True"
+  fullName: ServiceBroker.Example.CachedService.CachedService
+  nameWithType: CachedService.CachedService
+- uid: ServiceBroker.Example.CachedService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.CachedService.html#ServiceBroker_Example_CachedService_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.CachedService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.CachedService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.CachedService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: CachedService.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: CachedService.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.CachedService.CallServiceInternal*
+  name: CallServiceInternal
+  href: api/ServiceBroker.Example.CachedService.html#ServiceBroker_Example_CachedService_CallServiceInternal_
+  commentId: Overload:ServiceBroker.Example.CachedService.CallServiceInternal
+  isSpec: "True"
+  fullName: ServiceBroker.Example.CachedService.CallServiceInternal
+  nameWithType: CachedService.CallServiceInternal
+- uid: ServiceBroker.Example.CachedService.RemoveSemaphores(System.String)
+  name: RemoveSemaphores(String)
+  href: api/ServiceBroker.Example.CachedService.html#ServiceBroker_Example_CachedService_RemoveSemaphores_System_String_
+  commentId: M:ServiceBroker.Example.CachedService.RemoveSemaphores(System.String)
+  fullName: ServiceBroker.Example.CachedService.RemoveSemaphores(System.String)
+  nameWithType: CachedService.RemoveSemaphores(String)
+- uid: ServiceBroker.Example.CachedService.RemoveSemaphores*
+  name: RemoveSemaphores
+  href: api/ServiceBroker.Example.CachedService.html#ServiceBroker_Example_CachedService_RemoveSemaphores_
+  commentId: Overload:ServiceBroker.Example.CachedService.RemoveSemaphores
+  isSpec: "True"
+  fullName: ServiceBroker.Example.CachedService.RemoveSemaphores
+  nameWithType: CachedService.RemoveSemaphores
+- uid: ServiceBroker.Example.Common
+  name: ServiceBroker.Example.Common
+  href: api/ServiceBroker.Example.Common.html
+  commentId: N:ServiceBroker.Example.Common
+  fullName: ServiceBroker.Example.Common
+  nameWithType: ServiceBroker.Example.Common
+- uid: ServiceBroker.Example.Common.Constants
+  name: Constants
+  href: api/ServiceBroker.Example.Common.Constants.html
+  commentId: T:ServiceBroker.Example.Common.Constants
+  fullName: ServiceBroker.Example.Common.Constants
+  nameWithType: Constants
+- uid: ServiceBroker.Example.Common.Constants.UserIdentifierCacheKey
+  name: UserIdentifierCacheKey
+  href: api/ServiceBroker.Example.Common.Constants.html#ServiceBroker_Example_Common_Constants_UserIdentifierCacheKey
+  commentId: F:ServiceBroker.Example.Common.Constants.UserIdentifierCacheKey
+  fullName: ServiceBroker.Example.Common.Constants.UserIdentifierCacheKey
+  nameWithType: Constants.UserIdentifierCacheKey
+- uid: ServiceBroker.Example.Common.Constants.UserIdentifierPostKey
+  name: UserIdentifierPostKey
+  href: api/ServiceBroker.Example.Common.Constants.html#ServiceBroker_Example_Common_Constants_UserIdentifierPostKey
+  commentId: F:ServiceBroker.Example.Common.Constants.UserIdentifierPostKey
+  fullName: ServiceBroker.Example.Common.Constants.UserIdentifierPostKey
+  nameWithType: Constants.UserIdentifierPostKey
+- uid: ServiceBroker.Example.Common.Extensions
+  name: ServiceBroker.Example.Common.Extensions
+  href: api/ServiceBroker.Example.Common.Extensions.html
+  commentId: N:ServiceBroker.Example.Common.Extensions
+  fullName: ServiceBroker.Example.Common.Extensions
+  nameWithType: ServiceBroker.Example.Common.Extensions
+- uid: ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions
+  name: HttpStatusCodeExtensions
+  href: api/ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.html
+  commentId: T:ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions
+  fullName: ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions
+  nameWithType: HttpStatusCodeExtensions
+- uid: ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.IsOkStatus(System.Net.HttpStatusCode)
+  name: IsOkStatus(HttpStatusCode)
+  href: api/ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.html#ServiceBroker_Example_Common_Extensions_HttpStatusCodeExtensions_IsOkStatus_System_Net_HttpStatusCode_
+  commentId: M:ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.IsOkStatus(System.Net.HttpStatusCode)
+  fullName: ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.IsOkStatus(System.Net.HttpStatusCode)
+  nameWithType: HttpStatusCodeExtensions.IsOkStatus(HttpStatusCode)
+- uid: ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.IsOkStatus*
+  name: IsOkStatus
+  href: api/ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.html#ServiceBroker_Example_Common_Extensions_HttpStatusCodeExtensions_IsOkStatus_
+  commentId: Overload:ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.IsOkStatus
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.IsOkStatus
+  nameWithType: HttpStatusCodeExtensions.IsOkStatus
+- uid: ServiceBroker.Example.Core
+  name: ServiceBroker.Example.Core
+  href: api/ServiceBroker.Example.Core.html
+  commentId: N:ServiceBroker.Example.Core
+  fullName: ServiceBroker.Example.Core
+  nameWithType: ServiceBroker.Example.Core
+- uid: ServiceBroker.Example.Core.ICache
+  name: ICache
+  href: api/ServiceBroker.Example.Core.ICache.html
+  commentId: T:ServiceBroker.Example.Core.ICache
+  fullName: ServiceBroker.Example.Core.ICache
+  nameWithType: ICache
+- uid: ServiceBroker.Example.Core.ICache.ClearRegion(System.String)
+  name: ClearRegion(String)
+  href: api/ServiceBroker.Example.Core.ICache.html#ServiceBroker_Example_Core_ICache_ClearRegion_System_String_
+  commentId: M:ServiceBroker.Example.Core.ICache.ClearRegion(System.String)
+  fullName: ServiceBroker.Example.Core.ICache.ClearRegion(System.String)
+  nameWithType: ICache.ClearRegion(String)
+- uid: ServiceBroker.Example.Core.ICache.ClearRegion*
+  name: ClearRegion
+  href: api/ServiceBroker.Example.Core.ICache.html#ServiceBroker_Example_Core_ICache_ClearRegion_
+  commentId: Overload:ServiceBroker.Example.Core.ICache.ClearRegion
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ICache.ClearRegion
+  nameWithType: ICache.ClearRegion
+- uid: ServiceBroker.Example.Core.ICache.Get*
+  name: Get
+  href: api/ServiceBroker.Example.Core.ICache.html#ServiceBroker_Example_Core_ICache_Get_
+  commentId: Overload:ServiceBroker.Example.Core.ICache.Get
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ICache.Get
+  nameWithType: ICache.Get
+- uid: ServiceBroker.Example.Core.ICache.Get``1(System.String,System.String)
+  name: Get<T>(String, String)
+  href: api/ServiceBroker.Example.Core.ICache.html#ServiceBroker_Example_Core_ICache_Get__1_System_String_System_String_
+  commentId: M:ServiceBroker.Example.Core.ICache.Get``1(System.String,System.String)
+  name.vb: Get(Of T)(String, String)
+  fullName: ServiceBroker.Example.Core.ICache.Get<T>(System.String, System.String)
+  fullName.vb: ServiceBroker.Example.Core.ICache.Get(Of T)(System.String, System.String)
+  nameWithType: ICache.Get<T>(String, String)
+  nameWithType.vb: ICache.Get(Of T)(String, String)
+- uid: ServiceBroker.Example.Core.ICache.Set*
+  name: Set
+  href: api/ServiceBroker.Example.Core.ICache.html#ServiceBroker_Example_Core_ICache_Set_
+  commentId: Overload:ServiceBroker.Example.Core.ICache.Set
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ICache.Set
+  nameWithType: ICache.Set
+- uid: ServiceBroker.Example.Core.ICache.Set``1(System.String,System.String,``0)
+  name: Set<T>(String, String, T)
+  href: api/ServiceBroker.Example.Core.ICache.html#ServiceBroker_Example_Core_ICache_Set__1_System_String_System_String___0_
+  commentId: M:ServiceBroker.Example.Core.ICache.Set``1(System.String,System.String,``0)
+  name.vb: Set(Of T)(String, String, T)
+  fullName: ServiceBroker.Example.Core.ICache.Set<T>(System.String, System.String, T)
+  fullName.vb: ServiceBroker.Example.Core.ICache.Set(Of T)(System.String, System.String, T)
+  nameWithType: ICache.Set<T>(String, String, T)
+  nameWithType.vb: ICache.Set(Of T)(String, String, T)
+- uid: ServiceBroker.Example.Core.ICachedService
+  name: ICachedService
+  href: api/ServiceBroker.Example.Core.ICachedService.html
+  commentId: T:ServiceBroker.Example.Core.ICachedService
+  fullName: ServiceBroker.Example.Core.ICachedService
+  nameWithType: ICachedService
+- uid: ServiceBroker.Example.Core.ICachedService.RemoveSemaphores(System.String)
+  name: RemoveSemaphores(String)
+  href: api/ServiceBroker.Example.Core.ICachedService.html#ServiceBroker_Example_Core_ICachedService_RemoveSemaphores_System_String_
+  commentId: M:ServiceBroker.Example.Core.ICachedService.RemoveSemaphores(System.String)
+  fullName: ServiceBroker.Example.Core.ICachedService.RemoveSemaphores(System.String)
+  nameWithType: ICachedService.RemoveSemaphores(String)
+- uid: ServiceBroker.Example.Core.ICachedService.RemoveSemaphores*
+  name: RemoveSemaphores
+  href: api/ServiceBroker.Example.Core.ICachedService.html#ServiceBroker_Example_Core_ICachedService_RemoveSemaphores_
+  commentId: Overload:ServiceBroker.Example.Core.ICachedService.RemoveSemaphores
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ICachedService.RemoveSemaphores
+  nameWithType: ICachedService.RemoveSemaphores
+- uid: ServiceBroker.Example.Core.IDynamicService
+  name: IDynamicService
+  href: api/ServiceBroker.Example.Core.IDynamicService.html
+  commentId: T:ServiceBroker.Example.Core.IDynamicService
+  fullName: ServiceBroker.Example.Core.IDynamicService
+  nameWithType: IDynamicService
+- uid: ServiceBroker.Example.Core.IHttpClientWrapper
+  name: IHttpClientWrapper
+  href: api/ServiceBroker.Example.Core.IHttpClientWrapper.html
+  commentId: T:ServiceBroker.Example.Core.IHttpClientWrapper
+  fullName: ServiceBroker.Example.Core.IHttpClientWrapper
+  nameWithType: IHttpClientWrapper
+- uid: ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)
+  name: PostAsync(String, IEnumerable<KeyValuePair<String, String>>, CancellationToken)
+  href: api/ServiceBroker.Example.Core.IHttpClientWrapper.html#ServiceBroker_Example_Core_IHttpClientWrapper_PostAsync_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___System_Threading_CancellationToken_
+  commentId: M:ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync(System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Threading.CancellationToken)
+  name.vb: PostAsync(String, IEnumerable(Of KeyValuePair(Of String, String)), CancellationToken)
+  fullName: ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync(System.String, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>, System.Threading.CancellationToken)
+  fullName.vb: ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync(System.String, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)), System.Threading.CancellationToken)
+  nameWithType: IHttpClientWrapper.PostAsync(String, IEnumerable<KeyValuePair<String, String>>, CancellationToken)
+  nameWithType.vb: IHttpClientWrapper.PostAsync(String, IEnumerable(Of KeyValuePair(Of String, String)), CancellationToken)
+- uid: ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync*
+  name: PostAsync
+  href: api/ServiceBroker.Example.Core.IHttpClientWrapper.html#ServiceBroker_Example_Core_IHttpClientWrapper_PostAsync_
+  commentId: Overload:ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IHttpClientWrapper.PostAsync
+  nameWithType: IHttpClientWrapper.PostAsync
+- uid: ServiceBroker.Example.Core.IServiceBase
+  name: IServiceBase
+  href: api/ServiceBroker.Example.Core.IServiceBase.html
+  commentId: T:ServiceBroker.Example.Core.IServiceBase
+  fullName: ServiceBroker.Example.Core.IServiceBase
+  nameWithType: IServiceBase
+- uid: ServiceBroker.Example.Core.IServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallService(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.Core.IServiceBase.html#ServiceBroker_Example_Core_IServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.Core.IServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallService(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.Core.IServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.Core.IServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: IServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: IServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.Core.IServiceBase.CallService*
+  name: CallService
+  href: api/ServiceBroker.Example.Core.IServiceBase.html#ServiceBroker_Example_Core_IServiceBase_CallService_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBase.CallService
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBase.CallService
+  nameWithType: IServiceBase.CallService
+- uid: ServiceBroker.Example.Core.IServiceBrokerService
+  name: IServiceBrokerService
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html
+  commentId: T:ServiceBroker.Example.Core.IServiceBrokerService
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService
+  nameWithType: IServiceBrokerService
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallService(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallService(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallService_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.Core.IServiceBrokerService.CallService(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallService(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallService(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.Core.IServiceBrokerService.CallService(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: IServiceBrokerService.CallService(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: IServiceBrokerService.CallService(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallService*
+  name: CallService
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallService_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBrokerService.CallService
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallService
+  nameWithType: IServiceBrokerService.CallService
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallServiceAsync(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallServiceAsync_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallServiceAsync(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: IServiceBrokerService.CallServiceAsync(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: IServiceBrokerService.CallServiceAsync(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync*
+  name: CallServiceAsync
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallServiceAsync_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServiceAsync
+  nameWithType: IServiceBrokerService.CallServiceAsync
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name: CallServices(IEnumerable<Guid>, String, TimeSpan)
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallServices_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
+  commentId: M:ServiceBroker.Example.Core.IServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name.vb: CallServices(IEnumerable(Of Guid), String, TimeSpan)
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable<System.Guid>, System.String, System.TimeSpan)
+  fullName.vb: ServiceBroker.Example.Core.IServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable(Of System.Guid), System.String, System.TimeSpan)
+  nameWithType: IServiceBrokerService.CallServices(IEnumerable<Guid>, String, TimeSpan)
+  nameWithType.vb: IServiceBrokerService.CallServices(IEnumerable(Of Guid), String, TimeSpan)
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallServices*
+  name: CallServices
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallServices_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBrokerService.CallServices
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServices
+  nameWithType: IServiceBrokerService.CallServices
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name: CallServicesAsync(IEnumerable<Guid>, String, TimeSpan)
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallServicesAsync_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
+  commentId: M:ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name.vb: CallServicesAsync(IEnumerable(Of Guid), String, TimeSpan)
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable<System.Guid>, System.String, System.TimeSpan)
+  fullName.vb: ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable(Of System.Guid), System.String, System.TimeSpan)
+  nameWithType: IServiceBrokerService.CallServicesAsync(IEnumerable<Guid>, String, TimeSpan)
+  nameWithType.vb: IServiceBrokerService.CallServicesAsync(IEnumerable(Of Guid), String, TimeSpan)
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync*
+  name: CallServicesAsync
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_CallServicesAsync_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync
+  nameWithType: IServiceBrokerService.CallServicesAsync
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name: StartBackgroundServiceCalls(IEnumerable<Guid>, String, TimeSpan)
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
+  commentId: M:ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name.vb: StartBackgroundServiceCalls(IEnumerable(Of Guid), String, TimeSpan)
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable<System.Guid>, System.String, System.TimeSpan)
+  fullName.vb: ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable(Of System.Guid), System.String, System.TimeSpan)
+  nameWithType: IServiceBrokerService.StartBackgroundServiceCalls(IEnumerable<Guid>, String, TimeSpan)
+  nameWithType.vb: IServiceBrokerService.StartBackgroundServiceCalls(IEnumerable(Of Guid), String, TimeSpan)
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls*
+  name: StartBackgroundServiceCalls
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_StartBackgroundServiceCalls_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls
+  nameWithType: IServiceBrokerService.StartBackgroundServiceCalls
+- uid: ServiceBroker.Example.Core.IServiceRepository
+  name: IServiceRepository
+  href: api/ServiceBroker.Example.Core.IServiceRepository.html
+  commentId: T:ServiceBroker.Example.Core.IServiceRepository
+  fullName: ServiceBroker.Example.Core.IServiceRepository
+  nameWithType: IServiceRepository
+- uid: ServiceBroker.Example.Core.IServiceRepository.GetCachedServices
+  name: GetCachedServices()
+  href: api/ServiceBroker.Example.Core.IServiceRepository.html#ServiceBroker_Example_Core_IServiceRepository_GetCachedServices
+  commentId: M:ServiceBroker.Example.Core.IServiceRepository.GetCachedServices
+  fullName: ServiceBroker.Example.Core.IServiceRepository.GetCachedServices()
+  nameWithType: IServiceRepository.GetCachedServices()
+- uid: ServiceBroker.Example.Core.IServiceRepository.GetCachedServices*
+  name: GetCachedServices
+  href: api/ServiceBroker.Example.Core.IServiceRepository.html#ServiceBroker_Example_Core_IServiceRepository_GetCachedServices_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceRepository.GetCachedServices
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceRepository.GetCachedServices
+  nameWithType: IServiceRepository.GetCachedServices
+- uid: ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens(System.Collections.Generic.IEnumerable{System.Guid})
+  name: GetServicesAndTokens(IEnumerable<Guid>)
+  href: api/ServiceBroker.Example.Core.IServiceRepository.html#ServiceBroker_Example_Core_IServiceRepository_GetServicesAndTokens_System_Collections_Generic_IEnumerable_System_Guid__
+  commentId: M:ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens(System.Collections.Generic.IEnumerable{System.Guid})
+  name.vb: GetServicesAndTokens(IEnumerable(Of Guid))
+  fullName: ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens(System.Collections.Generic.IEnumerable<System.Guid>)
+  fullName.vb: ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens(System.Collections.Generic.IEnumerable(Of System.Guid))
+  nameWithType: IServiceRepository.GetServicesAndTokens(IEnumerable<Guid>)
+  nameWithType.vb: IServiceRepository.GetServicesAndTokens(IEnumerable(Of Guid))
+- uid: ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens*
+  name: GetServicesAndTokens
+  href: api/ServiceBroker.Example.Core.IServiceRepository.html#ServiceBroker_Example_Core_IServiceRepository_GetServicesAndTokens_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceRepository.GetServicesAndTokens
+  nameWithType: IServiceRepository.GetServicesAndTokens
+- uid: ServiceBroker.Example.Core.ITaskScheduler
+  name: ITaskScheduler
+  href: api/ServiceBroker.Example.Core.ITaskScheduler.html
+  commentId: T:ServiceBroker.Example.Core.ITaskScheduler
+  fullName: ServiceBroker.Example.Core.ITaskScheduler
+  nameWithType: ITaskScheduler
+- uid: ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem(System.Action{System.Threading.CancellationToken})
+  name: QueueBackgroundWorkItem(Action<CancellationToken>)
+  href: api/ServiceBroker.Example.Core.ITaskScheduler.html#ServiceBroker_Example_Core_ITaskScheduler_QueueBackgroundWorkItem_System_Action_System_Threading_CancellationToken__
+  commentId: M:ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem(System.Action{System.Threading.CancellationToken})
+  name.vb: QueueBackgroundWorkItem(Action(Of CancellationToken))
+  fullName: ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem(System.Action<System.Threading.CancellationToken>)
+  fullName.vb: ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem(System.Action(Of System.Threading.CancellationToken))
+  nameWithType: ITaskScheduler.QueueBackgroundWorkItem(Action<CancellationToken>)
+  nameWithType.vb: ITaskScheduler.QueueBackgroundWorkItem(Action(Of CancellationToken))
+- uid: ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem*
+  name: QueueBackgroundWorkItem
+  href: api/ServiceBroker.Example.Core.ITaskScheduler.html#ServiceBroker_Example_Core_ITaskScheduler_QueueBackgroundWorkItem_
+  commentId: Overload:ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ITaskScheduler.QueueBackgroundWorkItem
+  nameWithType: ITaskScheduler.QueueBackgroundWorkItem
+- uid: ServiceBroker.Example.Core.ITokenService
+  name: ITokenService
+  href: api/ServiceBroker.Example.Core.ITokenService.html
+  commentId: T:ServiceBroker.Example.Core.ITokenService
+  fullName: ServiceBroker.Example.Core.ITokenService
+  nameWithType: ITokenService
+- uid: ServiceBroker.Example.Core.ITokenService.ParseRelativeToken(System.String,ServiceBroker.Example.Models.TokenInfo,ServiceBroker.Example.Models.TokenInfo,System.Int32)
+  name: ParseRelativeToken(String, TokenInfo, TokenInfo, Int32)
+  href: api/ServiceBroker.Example.Core.ITokenService.html#ServiceBroker_Example_Core_ITokenService_ParseRelativeToken_System_String_ServiceBroker_Example_Models_TokenInfo_ServiceBroker_Example_Models_TokenInfo_System_Int32_
+  commentId: M:ServiceBroker.Example.Core.ITokenService.ParseRelativeToken(System.String,ServiceBroker.Example.Models.TokenInfo,ServiceBroker.Example.Models.TokenInfo,System.Int32)
+  fullName: ServiceBroker.Example.Core.ITokenService.ParseRelativeToken(System.String, ServiceBroker.Example.Models.TokenInfo, ServiceBroker.Example.Models.TokenInfo, System.Int32)
+  nameWithType: ITokenService.ParseRelativeToken(String, TokenInfo, TokenInfo, Int32)
+- uid: ServiceBroker.Example.Core.ITokenService.ParseRelativeToken*
+  name: ParseRelativeToken
+  href: api/ServiceBroker.Example.Core.ITokenService.html#ServiceBroker_Example_Core_ITokenService_ParseRelativeToken_
+  commentId: Overload:ServiceBroker.Example.Core.ITokenService.ParseRelativeToken
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ITokenService.ParseRelativeToken
+  nameWithType: ITokenService.ParseRelativeToken
+- uid: ServiceBroker.Example.Core.ITokenService.ParseTokens(System.String,System.String,System.Collections.Generic.IEnumerable{ServiceBroker.Example.Models.TokenInfo})
+  name: ParseTokens(String, String, IEnumerable<TokenInfo>)
+  href: api/ServiceBroker.Example.Core.ITokenService.html#ServiceBroker_Example_Core_ITokenService_ParseTokens_System_String_System_String_System_Collections_Generic_IEnumerable_ServiceBroker_Example_Models_TokenInfo__
+  commentId: M:ServiceBroker.Example.Core.ITokenService.ParseTokens(System.String,System.String,System.Collections.Generic.IEnumerable{ServiceBroker.Example.Models.TokenInfo})
+  name.vb: ParseTokens(String, String, IEnumerable(Of TokenInfo))
+  fullName: ServiceBroker.Example.Core.ITokenService.ParseTokens(System.String, System.String, System.Collections.Generic.IEnumerable<ServiceBroker.Example.Models.TokenInfo>)
+  fullName.vb: ServiceBroker.Example.Core.ITokenService.ParseTokens(System.String, System.String, System.Collections.Generic.IEnumerable(Of ServiceBroker.Example.Models.TokenInfo))
+  nameWithType: ITokenService.ParseTokens(String, String, IEnumerable<TokenInfo>)
+  nameWithType.vb: ITokenService.ParseTokens(String, String, IEnumerable(Of TokenInfo))
+- uid: ServiceBroker.Example.Core.ITokenService.ParseTokens*
+  name: ParseTokens
+  href: api/ServiceBroker.Example.Core.ITokenService.html#ServiceBroker_Example_Core_ITokenService_ParseTokens_
+  commentId: Overload:ServiceBroker.Example.Core.ITokenService.ParseTokens
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.ITokenService.ParseTokens
+  nameWithType: ITokenService.ParseTokens
+- uid: ServiceBroker.Example.DynamicService
+  name: DynamicService
+  href: api/ServiceBroker.Example.DynamicService.html
+  commentId: T:ServiceBroker.Example.DynamicService
+  fullName: ServiceBroker.Example.DynamicService
+  nameWithType: DynamicService
+- uid: ServiceBroker.Example.DynamicService.#ctor(ServiceBroker.Example.Core.ICache,ServiceBroker.Example.Core.IHttpClientWrapper,ServiceBroker.Example.Core.ITokenService)
+  name: DynamicService(ICache, IHttpClientWrapper, ITokenService)
+  href: api/ServiceBroker.Example.DynamicService.html#ServiceBroker_Example_DynamicService__ctor_ServiceBroker_Example_Core_ICache_ServiceBroker_Example_Core_IHttpClientWrapper_ServiceBroker_Example_Core_ITokenService_
+  commentId: M:ServiceBroker.Example.DynamicService.#ctor(ServiceBroker.Example.Core.ICache,ServiceBroker.Example.Core.IHttpClientWrapper,ServiceBroker.Example.Core.ITokenService)
+  fullName: ServiceBroker.Example.DynamicService.DynamicService(ServiceBroker.Example.Core.ICache, ServiceBroker.Example.Core.IHttpClientWrapper, ServiceBroker.Example.Core.ITokenService)
+  nameWithType: DynamicService.DynamicService(ICache, IHttpClientWrapper, ITokenService)
+- uid: ServiceBroker.Example.DynamicService.#ctor*
+  name: DynamicService
+  href: api/ServiceBroker.Example.DynamicService.html#ServiceBroker_Example_DynamicService__ctor_
+  commentId: Overload:ServiceBroker.Example.DynamicService.#ctor
+  isSpec: "True"
+  fullName: ServiceBroker.Example.DynamicService.DynamicService
+  nameWithType: DynamicService.DynamicService
+- uid: ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.DynamicService.html#ServiceBroker_Example_DynamicService_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: DynamicService.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: DynamicService.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.DynamicService.CallServiceInternal*
+  name: CallServiceInternal
+  href: api/ServiceBroker.Example.DynamicService.html#ServiceBroker_Example_DynamicService_CallServiceInternal_
+  commentId: Overload:ServiceBroker.Example.DynamicService.CallServiceInternal
+  isSpec: "True"
+  fullName: ServiceBroker.Example.DynamicService.CallServiceInternal
+  nameWithType: DynamicService.CallServiceInternal
+- uid: ServiceBroker.Example.Models
+  name: ServiceBroker.Example.Models
+  href: api/ServiceBroker.Example.Models.html
+  commentId: N:ServiceBroker.Example.Models
+  fullName: ServiceBroker.Example.Models
+  nameWithType: ServiceBroker.Example.Models
+- uid: ServiceBroker.Example.Models.CachedServiceInfo
+  name: CachedServiceInfo
+  href: api/ServiceBroker.Example.Models.CachedServiceInfo.html
+  commentId: T:ServiceBroker.Example.Models.CachedServiceInfo
+  fullName: ServiceBroker.Example.Models.CachedServiceInfo
+  nameWithType: CachedServiceInfo
+- uid: ServiceBroker.Example.Models.CacheEntry`1
+  name: CacheEntry<T>
+  href: api/ServiceBroker.Example.Models.CacheEntry-1.html
+  commentId: T:ServiceBroker.Example.Models.CacheEntry`1
+  name.vb: CacheEntry(Of T)
+  fullName: ServiceBroker.Example.Models.CacheEntry<T>
+  fullName.vb: ServiceBroker.Example.Models.CacheEntry(Of T)
+  nameWithType: CacheEntry<T>
+  nameWithType.vb: CacheEntry(Of T)
+- uid: ServiceBroker.Example.Models.CacheEntry`1.Value
+  name: Value
+  href: api/ServiceBroker.Example.Models.CacheEntry-1.html#ServiceBroker_Example_Models_CacheEntry_1_Value
+  commentId: P:ServiceBroker.Example.Models.CacheEntry`1.Value
+  fullName: ServiceBroker.Example.Models.CacheEntry<T>.Value
+  fullName.vb: ServiceBroker.Example.Models.CacheEntry(Of T).Value
+  nameWithType: CacheEntry<T>.Value
+  nameWithType.vb: CacheEntry(Of T).Value
+- uid: ServiceBroker.Example.Models.CacheEntry`1.Value*
+  name: Value
+  href: api/ServiceBroker.Example.Models.CacheEntry-1.html#ServiceBroker_Example_Models_CacheEntry_1_Value_
+  commentId: Overload:ServiceBroker.Example.Models.CacheEntry`1.Value
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.CacheEntry<T>.Value
+  fullName.vb: ServiceBroker.Example.Models.CacheEntry(Of T).Value
+  nameWithType: CacheEntry<T>.Value
+  nameWithType.vb: CacheEntry(Of T).Value
+- uid: ServiceBroker.Example.Models.DynamicServiceInfo
+  name: DynamicServiceInfo
+  href: api/ServiceBroker.Example.Models.DynamicServiceInfo.html
+  commentId: T:ServiceBroker.Example.Models.DynamicServiceInfo
+  fullName: ServiceBroker.Example.Models.DynamicServiceInfo
+  nameWithType: DynamicServiceInfo
+- uid: ServiceBroker.Example.Models.HttpClientResponse
+  name: HttpClientResponse
+  href: api/ServiceBroker.Example.Models.HttpClientResponse.html
+  commentId: T:ServiceBroker.Example.Models.HttpClientResponse
+  fullName: ServiceBroker.Example.Models.HttpClientResponse
+  nameWithType: HttpClientResponse
+- uid: ServiceBroker.Example.Models.HttpClientResponse.HttpStatusCode
+  name: HttpStatusCode
+  href: api/ServiceBroker.Example.Models.HttpClientResponse.html#ServiceBroker_Example_Models_HttpClientResponse_HttpStatusCode
+  commentId: P:ServiceBroker.Example.Models.HttpClientResponse.HttpStatusCode
+  fullName: ServiceBroker.Example.Models.HttpClientResponse.HttpStatusCode
+  nameWithType: HttpClientResponse.HttpStatusCode
+- uid: ServiceBroker.Example.Models.HttpClientResponse.HttpStatusCode*
+  name: HttpStatusCode
+  href: api/ServiceBroker.Example.Models.HttpClientResponse.html#ServiceBroker_Example_Models_HttpClientResponse_HttpStatusCode_
+  commentId: Overload:ServiceBroker.Example.Models.HttpClientResponse.HttpStatusCode
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.HttpClientResponse.HttpStatusCode
+  nameWithType: HttpClientResponse.HttpStatusCode
+- uid: ServiceBroker.Example.Models.HttpClientResponse.Response
+  name: Response
+  href: api/ServiceBroker.Example.Models.HttpClientResponse.html#ServiceBroker_Example_Models_HttpClientResponse_Response
+  commentId: P:ServiceBroker.Example.Models.HttpClientResponse.Response
+  fullName: ServiceBroker.Example.Models.HttpClientResponse.Response
+  nameWithType: HttpClientResponse.Response
+- uid: ServiceBroker.Example.Models.HttpClientResponse.Response*
+  name: Response
+  href: api/ServiceBroker.Example.Models.HttpClientResponse.html#ServiceBroker_Example_Models_HttpClientResponse_Response_
+  commentId: Overload:ServiceBroker.Example.Models.HttpClientResponse.Response
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.HttpClientResponse.Response
+  nameWithType: HttpClientResponse.Response
+- uid: ServiceBroker.Example.Models.ParameterInfo
+  name: ParameterInfo
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html
+  commentId: T:ServiceBroker.Example.Models.ParameterInfo
+  fullName: ServiceBroker.Example.Models.ParameterInfo
+  nameWithType: ParameterInfo
+- uid: ServiceBroker.Example.Models.ParameterInfo.Id
+  name: Id
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Id
+  commentId: P:ServiceBroker.Example.Models.ParameterInfo.Id
+  fullName: ServiceBroker.Example.Models.ParameterInfo.Id
+  nameWithType: ParameterInfo.Id
+- uid: ServiceBroker.Example.Models.ParameterInfo.Id*
+  name: Id
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Id_
+  commentId: Overload:ServiceBroker.Example.Models.ParameterInfo.Id
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ParameterInfo.Id
+  nameWithType: ParameterInfo.Id
+- uid: ServiceBroker.Example.Models.ParameterInfo.Name
+  name: Name
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Name
+  commentId: P:ServiceBroker.Example.Models.ParameterInfo.Name
+  fullName: ServiceBroker.Example.Models.ParameterInfo.Name
+  nameWithType: ParameterInfo.Name
+- uid: ServiceBroker.Example.Models.ParameterInfo.Name*
+  name: Name
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Name_
+  commentId: Overload:ServiceBroker.Example.Models.ParameterInfo.Name
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ParameterInfo.Name
+  nameWithType: ParameterInfo.Name
+- uid: ServiceBroker.Example.Models.ServiceBrokerResponse
+  name: ServiceBrokerResponse
+  href: api/ServiceBroker.Example.Models.ServiceBrokerResponse.html
+  commentId: T:ServiceBroker.Example.Models.ServiceBrokerResponse
+  fullName: ServiceBroker.Example.Models.ServiceBrokerResponse
+  nameWithType: ServiceBrokerResponse
+- uid: ServiceBroker.Example.Models.ServiceBrokerResponse.ServiceResponses
+  name: ServiceResponses
+  href: api/ServiceBroker.Example.Models.ServiceBrokerResponse.html#ServiceBroker_Example_Models_ServiceBrokerResponse_ServiceResponses
+  commentId: P:ServiceBroker.Example.Models.ServiceBrokerResponse.ServiceResponses
+  fullName: ServiceBroker.Example.Models.ServiceBrokerResponse.ServiceResponses
+  nameWithType: ServiceBrokerResponse.ServiceResponses
+- uid: ServiceBroker.Example.Models.ServiceBrokerResponse.ServiceResponses*
+  name: ServiceResponses
+  href: api/ServiceBroker.Example.Models.ServiceBrokerResponse.html#ServiceBroker_Example_Models_ServiceBrokerResponse_ServiceResponses_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceBrokerResponse.ServiceResponses
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceBrokerResponse.ServiceResponses
+  nameWithType: ServiceBrokerResponse.ServiceResponses
+- uid: ServiceBroker.Example.Models.ServiceInfo
+  name: ServiceInfo
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html
+  commentId: T:ServiceBroker.Example.Models.ServiceInfo
+  fullName: ServiceBroker.Example.Models.ServiceInfo
+  nameWithType: ServiceInfo
+- uid: ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters
+  name: AdditionalParameters
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_AdditionalParameters
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters
+  fullName: ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters
+  nameWithType: ServiceInfo.AdditionalParameters
+- uid: ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters*
+  name: AdditionalParameters
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_AdditionalParameters_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters
+  nameWithType: ServiceInfo.AdditionalParameters
+- uid: ServiceBroker.Example.Models.ServiceInfo.BreakDuration
+  name: BreakDuration
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_BreakDuration
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.BreakDuration
+  fullName: ServiceBroker.Example.Models.ServiceInfo.BreakDuration
+  nameWithType: ServiceInfo.BreakDuration
+- uid: ServiceBroker.Example.Models.ServiceInfo.BreakDuration*
+  name: BreakDuration
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_BreakDuration_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.BreakDuration
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.BreakDuration
+  nameWithType: ServiceInfo.BreakDuration
+- uid: ServiceBroker.Example.Models.ServiceInfo.CacheKey
+  name: CacheKey
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_CacheKey
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.CacheKey
+  fullName: ServiceBroker.Example.Models.ServiceInfo.CacheKey
+  nameWithType: ServiceInfo.CacheKey
+- uid: ServiceBroker.Example.Models.ServiceInfo.CacheKey*
+  name: CacheKey
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_CacheKey_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.CacheKey
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.CacheKey
+  nameWithType: ServiceInfo.CacheKey
+- uid: ServiceBroker.Example.Models.ServiceInfo.Endpoint
+  name: Endpoint
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Endpoint
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.Endpoint
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Endpoint
+  nameWithType: ServiceInfo.Endpoint
+- uid: ServiceBroker.Example.Models.ServiceInfo.Endpoint*
+  name: Endpoint
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Endpoint_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.Endpoint
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Endpoint
+  nameWithType: ServiceInfo.Endpoint
+- uid: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
+  name: ExceptionCount
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_ExceptionCount
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
+  fullName: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
+  nameWithType: ServiceInfo.ExceptionCount
+- uid: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount*
+  name: ExceptionCount
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_ExceptionCount_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
+  nameWithType: ServiceInfo.ExceptionCount
+- uid: ServiceBroker.Example.Models.ServiceInfo.Id
+  name: Id
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Id
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.Id
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Id
+  nameWithType: ServiceInfo.Id
+- uid: ServiceBroker.Example.Models.ServiceInfo.Id*
+  name: Id
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Id_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.Id
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Id
+  nameWithType: ServiceInfo.Id
+- uid: ServiceBroker.Example.Models.ServiceInfo.Name
+  name: Name
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Name
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.Name
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Name
+  nameWithType: ServiceInfo.Name
+- uid: ServiceBroker.Example.Models.ServiceInfo.Name*
+  name: Name
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Name_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.Name
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Name
+  nameWithType: ServiceInfo.Name
+- uid: ServiceBroker.Example.Models.ServiceInfo.Timeout
+  name: Timeout
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Timeout
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.Timeout
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Timeout
+  nameWithType: ServiceInfo.Timeout
+- uid: ServiceBroker.Example.Models.ServiceInfo.Timeout*
+  name: Timeout
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Timeout_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.Timeout
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Timeout
+  nameWithType: ServiceInfo.Timeout
+- uid: ServiceBroker.Example.Models.ServiceInfo.Tokens
+  name: Tokens
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Tokens
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.Tokens
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Tokens
+  nameWithType: ServiceInfo.Tokens
+- uid: ServiceBroker.Example.Models.ServiceInfo.Tokens*
+  name: Tokens
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Tokens_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.Tokens
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.Tokens
+  nameWithType: ServiceInfo.Tokens
+- uid: ServiceBroker.Example.Models.ServiceResponse
+  name: ServiceResponse
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html
+  commentId: T:ServiceBroker.Example.Models.ServiceResponse
+  fullName: ServiceBroker.Example.Models.ServiceResponse
+  nameWithType: ServiceResponse
+- uid: ServiceBroker.Example.Models.ServiceResponse.Id
+  name: Id
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Id
+  commentId: P:ServiceBroker.Example.Models.ServiceResponse.Id
+  fullName: ServiceBroker.Example.Models.ServiceResponse.Id
+  nameWithType: ServiceResponse.Id
+- uid: ServiceBroker.Example.Models.ServiceResponse.Id*
+  name: Id
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Id_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceResponse.Id
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceResponse.Id
+  nameWithType: ServiceResponse.Id
+- uid: ServiceBroker.Example.Models.ServiceResponse.Status
+  name: Status
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Status
+  commentId: P:ServiceBroker.Example.Models.ServiceResponse.Status
+  fullName: ServiceBroker.Example.Models.ServiceResponse.Status
+  nameWithType: ServiceResponse.Status
+- uid: ServiceBroker.Example.Models.ServiceResponse.Status*
+  name: Status
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Status_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceResponse.Status
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceResponse.Status
+  nameWithType: ServiceResponse.Status
+- uid: ServiceBroker.Example.Models.ServiceResponse.TokenResponses
+  name: TokenResponses
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_TokenResponses
+  commentId: P:ServiceBroker.Example.Models.ServiceResponse.TokenResponses
+  fullName: ServiceBroker.Example.Models.ServiceResponse.TokenResponses
+  nameWithType: ServiceResponse.TokenResponses
+- uid: ServiceBroker.Example.Models.ServiceResponse.TokenResponses*
+  name: TokenResponses
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_TokenResponses_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceResponse.TokenResponses
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceResponse.TokenResponses
+  nameWithType: ServiceResponse.TokenResponses
+- uid: ServiceBroker.Example.Models.ServiceResponse.Value
+  name: Value
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Value
+  commentId: P:ServiceBroker.Example.Models.ServiceResponse.Value
+  fullName: ServiceBroker.Example.Models.ServiceResponse.Value
+  nameWithType: ServiceResponse.Value
+- uid: ServiceBroker.Example.Models.ServiceResponse.Value*
+  name: Value
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Value_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceResponse.Value
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceResponse.Value
+  nameWithType: ServiceResponse.Value
+- uid: ServiceBroker.Example.Models.ServiceResponseStatus
+  name: ServiceResponseStatus
+  href: api/ServiceBroker.Example.Models.ServiceResponseStatus.html
+  commentId: T:ServiceBroker.Example.Models.ServiceResponseStatus
+  fullName: ServiceBroker.Example.Models.ServiceResponseStatus
+  nameWithType: ServiceResponseStatus
+- uid: ServiceBroker.Example.Models.ServiceResponseStatus.Error
+  name: Error
+  href: api/ServiceBroker.Example.Models.ServiceResponseStatus.html#ServiceBroker_Example_Models_ServiceResponseStatus_Error
+  commentId: F:ServiceBroker.Example.Models.ServiceResponseStatus.Error
+  fullName: ServiceBroker.Example.Models.ServiceResponseStatus.Error
+  nameWithType: ServiceResponseStatus.Error
+- uid: ServiceBroker.Example.Models.ServiceResponseStatus.Success
+  name: Success
+  href: api/ServiceBroker.Example.Models.ServiceResponseStatus.html#ServiceBroker_Example_Models_ServiceResponseStatus_Success
+  commentId: F:ServiceBroker.Example.Models.ServiceResponseStatus.Success
+  fullName: ServiceBroker.Example.Models.ServiceResponseStatus.Success
+  nameWithType: ServiceResponseStatus.Success
+- uid: ServiceBroker.Example.Models.ServiceResponseStatus.Timeout
+  name: Timeout
+  href: api/ServiceBroker.Example.Models.ServiceResponseStatus.html#ServiceBroker_Example_Models_ServiceResponseStatus_Timeout
+  commentId: F:ServiceBroker.Example.Models.ServiceResponseStatus.Timeout
+  fullName: ServiceBroker.Example.Models.ServiceResponseStatus.Timeout
+  nameWithType: ServiceResponseStatus.Timeout
+- uid: ServiceBroker.Example.Models.TokenInfo
+  name: TokenInfo
+  href: api/ServiceBroker.Example.Models.TokenInfo.html
+  commentId: T:ServiceBroker.Example.Models.TokenInfo
+  fullName: ServiceBroker.Example.Models.TokenInfo
+  nameWithType: TokenInfo
+- uid: ServiceBroker.Example.Models.TokenInfo.CacheKey
+  name: CacheKey
+  href: api/ServiceBroker.Example.Models.TokenInfo.html#ServiceBroker_Example_Models_TokenInfo_CacheKey
+  commentId: P:ServiceBroker.Example.Models.TokenInfo.CacheKey
+  fullName: ServiceBroker.Example.Models.TokenInfo.CacheKey
+  nameWithType: TokenInfo.CacheKey
+- uid: ServiceBroker.Example.Models.TokenInfo.CacheKey*
+  name: CacheKey
+  href: api/ServiceBroker.Example.Models.TokenInfo.html#ServiceBroker_Example_Models_TokenInfo_CacheKey_
+  commentId: Overload:ServiceBroker.Example.Models.TokenInfo.CacheKey
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenInfo.CacheKey
+  nameWithType: TokenInfo.CacheKey
+- uid: ServiceBroker.Example.Models.TokenInfo.Id
+  name: Id
+  href: api/ServiceBroker.Example.Models.TokenInfo.html#ServiceBroker_Example_Models_TokenInfo_Id
+  commentId: P:ServiceBroker.Example.Models.TokenInfo.Id
+  fullName: ServiceBroker.Example.Models.TokenInfo.Id
+  nameWithType: TokenInfo.Id
+- uid: ServiceBroker.Example.Models.TokenInfo.Id*
+  name: Id
+  href: api/ServiceBroker.Example.Models.TokenInfo.html#ServiceBroker_Example_Models_TokenInfo_Id_
+  commentId: Overload:ServiceBroker.Example.Models.TokenInfo.Id
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenInfo.Id
+  nameWithType: TokenInfo.Id
+- uid: ServiceBroker.Example.Models.TokenInfo.Name
+  name: Name
+  href: api/ServiceBroker.Example.Models.TokenInfo.html#ServiceBroker_Example_Models_TokenInfo_Name
+  commentId: P:ServiceBroker.Example.Models.TokenInfo.Name
+  fullName: ServiceBroker.Example.Models.TokenInfo.Name
+  nameWithType: TokenInfo.Name
+- uid: ServiceBroker.Example.Models.TokenInfo.Name*
+  name: Name
+  href: api/ServiceBroker.Example.Models.TokenInfo.html#ServiceBroker_Example_Models_TokenInfo_Name_
+  commentId: Overload:ServiceBroker.Example.Models.TokenInfo.Name
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenInfo.Name
+  nameWithType: TokenInfo.Name
+- uid: ServiceBroker.Example.Models.TokenResponse
+  name: TokenResponse
+  href: api/ServiceBroker.Example.Models.TokenResponse.html
+  commentId: T:ServiceBroker.Example.Models.TokenResponse
+  fullName: ServiceBroker.Example.Models.TokenResponse
+  nameWithType: TokenResponse
+- uid: ServiceBroker.Example.Models.TokenResponse.CacheKey
+  name: CacheKey
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_CacheKey
+  commentId: P:ServiceBroker.Example.Models.TokenResponse.CacheKey
+  fullName: ServiceBroker.Example.Models.TokenResponse.CacheKey
+  nameWithType: TokenResponse.CacheKey
+- uid: ServiceBroker.Example.Models.TokenResponse.CacheKey*
+  name: CacheKey
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_CacheKey_
+  commentId: Overload:ServiceBroker.Example.Models.TokenResponse.CacheKey
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenResponse.CacheKey
+  nameWithType: TokenResponse.CacheKey
+- uid: ServiceBroker.Example.Models.TokenResponse.Id
+  name: Id
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Id
+  commentId: P:ServiceBroker.Example.Models.TokenResponse.Id
+  fullName: ServiceBroker.Example.Models.TokenResponse.Id
+  nameWithType: TokenResponse.Id
+- uid: ServiceBroker.Example.Models.TokenResponse.Id*
+  name: Id
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Id_
+  commentId: Overload:ServiceBroker.Example.Models.TokenResponse.Id
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenResponse.Id
+  nameWithType: TokenResponse.Id
+- uid: ServiceBroker.Example.Models.TokenResponse.Status
+  name: Status
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Status
+  commentId: P:ServiceBroker.Example.Models.TokenResponse.Status
+  fullName: ServiceBroker.Example.Models.TokenResponse.Status
+  nameWithType: TokenResponse.Status
+- uid: ServiceBroker.Example.Models.TokenResponse.Status*
+  name: Status
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Status_
+  commentId: Overload:ServiceBroker.Example.Models.TokenResponse.Status
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenResponse.Status
+  nameWithType: TokenResponse.Status
+- uid: ServiceBroker.Example.Models.TokenResponse.Value
+  name: Value
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Value
+  commentId: P:ServiceBroker.Example.Models.TokenResponse.Value
+  fullName: ServiceBroker.Example.Models.TokenResponse.Value
+  nameWithType: TokenResponse.Value
+- uid: ServiceBroker.Example.Models.TokenResponse.Value*
+  name: Value
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Value_
+  commentId: Overload:ServiceBroker.Example.Models.TokenResponse.Value
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenResponse.Value
+  nameWithType: TokenResponse.Value
+- uid: ServiceBroker.Example.Models.TokenResponseStatus
+  name: TokenResponseStatus
+  href: api/ServiceBroker.Example.Models.TokenResponseStatus.html
+  commentId: T:ServiceBroker.Example.Models.TokenResponseStatus
+  fullName: ServiceBroker.Example.Models.TokenResponseStatus
+  nameWithType: TokenResponseStatus
+- uid: ServiceBroker.Example.Models.TokenResponseStatus.Error
+  name: Error
+  href: api/ServiceBroker.Example.Models.TokenResponseStatus.html#ServiceBroker_Example_Models_TokenResponseStatus_Error
+  commentId: F:ServiceBroker.Example.Models.TokenResponseStatus.Error
+  fullName: ServiceBroker.Example.Models.TokenResponseStatus.Error
+  nameWithType: TokenResponseStatus.Error
+- uid: ServiceBroker.Example.Models.TokenResponseStatus.Found
+  name: Found
+  href: api/ServiceBroker.Example.Models.TokenResponseStatus.html#ServiceBroker_Example_Models_TokenResponseStatus_Found
+  commentId: F:ServiceBroker.Example.Models.TokenResponseStatus.Found
+  fullName: ServiceBroker.Example.Models.TokenResponseStatus.Found
+  nameWithType: TokenResponseStatus.Found
+- uid: ServiceBroker.Example.Models.TokenResponseStatus.NotFound
+  name: NotFound
+  href: api/ServiceBroker.Example.Models.TokenResponseStatus.html#ServiceBroker_Example_Models_TokenResponseStatus_NotFound
+  commentId: F:ServiceBroker.Example.Models.TokenResponseStatus.NotFound
+  fullName: ServiceBroker.Example.Models.TokenResponseStatus.NotFound
+  nameWithType: TokenResponseStatus.NotFound
+- uid: ServiceBroker.Example.Models.XPathTokenInfo
+  name: XPathTokenInfo
+  href: api/ServiceBroker.Example.Models.XPathTokenInfo.html
+  commentId: T:ServiceBroker.Example.Models.XPathTokenInfo
+  fullName: ServiceBroker.Example.Models.XPathTokenInfo
+  nameWithType: XPathTokenInfo
+- uid: ServiceBroker.Example.Models.XPathTokenInfo.XPath
+  name: XPath
+  href: api/ServiceBroker.Example.Models.XPathTokenInfo.html#ServiceBroker_Example_Models_XPathTokenInfo_XPath
+  commentId: P:ServiceBroker.Example.Models.XPathTokenInfo.XPath
+  fullName: ServiceBroker.Example.Models.XPathTokenInfo.XPath
+  nameWithType: XPathTokenInfo.XPath
+- uid: ServiceBroker.Example.Models.XPathTokenInfo.XPath*
+  name: XPath
+  href: api/ServiceBroker.Example.Models.XPathTokenInfo.html#ServiceBroker_Example_Models_XPathTokenInfo_XPath_
+  commentId: Overload:ServiceBroker.Example.Models.XPathTokenInfo.XPath
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.XPathTokenInfo.XPath
+  nameWithType: XPathTokenInfo.XPath
+- uid: ServiceBroker.Example.Models.XsltTokenInfo
+  name: XsltTokenInfo
+  href: api/ServiceBroker.Example.Models.XsltTokenInfo.html
+  commentId: T:ServiceBroker.Example.Models.XsltTokenInfo
+  fullName: ServiceBroker.Example.Models.XsltTokenInfo
+  nameWithType: XsltTokenInfo
+- uid: ServiceBroker.Example.Models.XsltTokenInfo.Xslt
+  name: Xslt
+  href: api/ServiceBroker.Example.Models.XsltTokenInfo.html#ServiceBroker_Example_Models_XsltTokenInfo_Xslt
+  commentId: P:ServiceBroker.Example.Models.XsltTokenInfo.Xslt
+  fullName: ServiceBroker.Example.Models.XsltTokenInfo.Xslt
+  nameWithType: XsltTokenInfo.Xslt
+- uid: ServiceBroker.Example.Models.XsltTokenInfo.Xslt*
+  name: Xslt
+  href: api/ServiceBroker.Example.Models.XsltTokenInfo.html#ServiceBroker_Example_Models_XsltTokenInfo_Xslt_
+  commentId: Overload:ServiceBroker.Example.Models.XsltTokenInfo.Xslt
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.XsltTokenInfo.Xslt
+  nameWithType: XsltTokenInfo.Xslt
+- uid: ServiceBroker.Example.ServiceBase
+  name: ServiceBase
+  href: api/ServiceBroker.Example.ServiceBase.html
+  commentId: T:ServiceBroker.Example.ServiceBase
+  fullName: ServiceBroker.Example.ServiceBase
+  nameWithType: ServiceBase
+- uid: ServiceBroker.Example.ServiceBase.#ctor(ServiceBroker.Example.Core.ICache)
+  name: ServiceBase(ICache)
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase__ctor_ServiceBroker_Example_Core_ICache_
+  commentId: M:ServiceBroker.Example.ServiceBase.#ctor(ServiceBroker.Example.Core.ICache)
+  fullName: ServiceBroker.Example.ServiceBase.ServiceBase(ServiceBroker.Example.Core.ICache)
+  nameWithType: ServiceBase.ServiceBase(ICache)
+- uid: ServiceBroker.Example.ServiceBase.#ctor*
+  name: ServiceBase
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase__ctor_
+  commentId: Overload:ServiceBroker.Example.ServiceBase.#ctor
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBase.ServiceBase
+  nameWithType: ServiceBase.ServiceBase
+- uid: ServiceBroker.Example.ServiceBase.Cache
+  name: Cache
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_Cache
+  commentId: F:ServiceBroker.Example.ServiceBase.Cache
+  fullName: ServiceBroker.Example.ServiceBase.Cache
+  nameWithType: ServiceBase.Cache
+- uid: ServiceBroker.Example.ServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallService(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.ServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallService(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.ServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.ServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: ServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: ServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.ServiceBase.CallService*
+  name: CallService
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallService_
+  commentId: Overload:ServiceBroker.Example.ServiceBase.CallService
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBase.CallService
+  nameWithType: ServiceBase.CallService
+- uid: ServiceBroker.Example.ServiceBase.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.ServiceBase.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.ServiceBase.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.ServiceBase.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Threading.CancellationToken, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: ServiceBase.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: ServiceBase.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.ServiceBase.CallServiceInternal*
+  name: CallServiceInternal
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallServiceInternal_
+  commentId: Overload:ServiceBroker.Example.ServiceBase.CallServiceInternal
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBase.CallServiceInternal
+  nameWithType: ServiceBase.CallServiceInternal
+- uid: ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy(ServiceBroker.Example.Models.ServiceInfo)
+  name: GetCircuitBreakerPolicy(ServiceInfo)
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetCircuitBreakerPolicy_ServiceBroker_Example_Models_ServiceInfo_
+  commentId: M:ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy(ServiceBroker.Example.Models.ServiceInfo)
+  fullName: ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy(ServiceBroker.Example.Models.ServiceInfo)
+  nameWithType: ServiceBase.GetCircuitBreakerPolicy(ServiceInfo)
+- uid: ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy*
+  name: GetCircuitBreakerPolicy
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetCircuitBreakerPolicy_
+  commentId: Overload:ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy
+  nameWithType: ServiceBase.GetCircuitBreakerPolicy
+- uid: ServiceBroker.Example.ServiceBase.GetPostParameters(System.String,ServiceBroker.Example.Models.ServiceInfo,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: GetPostParameters(String, ServiceInfo, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_System_String_ServiceBroker_Example_Models_ServiceInfo_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.ServiceBase.GetPostParameters(System.String,ServiceBroker.Example.Models.ServiceInfo,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: GetPostParameters(String, ServiceInfo, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.ServiceBase.GetPostParameters(System.String, ServiceBroker.Example.Models.ServiceInfo, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.ServiceBase.GetPostParameters(System.String, ServiceBroker.Example.Models.ServiceInfo, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: ServiceBase.GetPostParameters(String, ServiceInfo, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: ServiceBase.GetPostParameters(String, ServiceInfo, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.ServiceBase.GetPostParameters*
+  name: GetPostParameters
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_
+  commentId: Overload:ServiceBroker.Example.ServiceBase.GetPostParameters
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBase.GetPostParameters
+  nameWithType: ServiceBase.GetPostParameters
+- uid: ServiceBroker.Example.ServiceBase.Log
+  name: Log
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_Log
+  commentId: P:ServiceBroker.Example.ServiceBase.Log
+  fullName: ServiceBroker.Example.ServiceBase.Log
+  nameWithType: ServiceBase.Log
+- uid: ServiceBroker.Example.ServiceBase.Log*
+  name: Log
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_Log_
+  commentId: Overload:ServiceBroker.Example.ServiceBase.Log
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBase.Log
+  nameWithType: ServiceBase.Log
+- uid: ServiceBroker.Example.ServiceBrokerService
+  name: ServiceBrokerService
+  href: api/ServiceBroker.Example.ServiceBrokerService.html
+  commentId: T:ServiceBroker.Example.ServiceBrokerService
+  fullName: ServiceBroker.Example.ServiceBrokerService
+  nameWithType: ServiceBrokerService
+- uid: ServiceBroker.Example.ServiceBrokerService.#ctor(ServiceBroker.Example.Core.IServiceRepository,ServiceBroker.Example.Core.IDynamicService,ServiceBroker.Example.Core.ICachedService,ServiceBroker.Example.Core.ITaskScheduler,ServiceBroker.Example.Core.ICache)
+  name: ServiceBrokerService(IServiceRepository, IDynamicService, ICachedService, ITaskScheduler, ICache)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService__ctor_ServiceBroker_Example_Core_IServiceRepository_ServiceBroker_Example_Core_IDynamicService_ServiceBroker_Example_Core_ICachedService_ServiceBroker_Example_Core_ITaskScheduler_ServiceBroker_Example_Core_ICache_
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.#ctor(ServiceBroker.Example.Core.IServiceRepository,ServiceBroker.Example.Core.IDynamicService,ServiceBroker.Example.Core.ICachedService,ServiceBroker.Example.Core.ITaskScheduler,ServiceBroker.Example.Core.ICache)
+  fullName: ServiceBroker.Example.ServiceBrokerService.ServiceBrokerService(ServiceBroker.Example.Core.IServiceRepository, ServiceBroker.Example.Core.IDynamicService, ServiceBroker.Example.Core.ICachedService, ServiceBroker.Example.Core.ITaskScheduler, ServiceBroker.Example.Core.ICache)
+  nameWithType: ServiceBrokerService.ServiceBrokerService(IServiceRepository, IDynamicService, ICachedService, ITaskScheduler, ICache)
+- uid: ServiceBroker.Example.ServiceBrokerService.#ctor*
+  name: ServiceBrokerService
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService__ctor_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.#ctor
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.ServiceBrokerService
+  nameWithType: ServiceBrokerService.ServiceBrokerService
+- uid: ServiceBroker.Example.ServiceBrokerService.CallService(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallService(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallService_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.CallService(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallService(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallService(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.ServiceBrokerService.CallService(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: ServiceBrokerService.CallService(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: ServiceBrokerService.CallService(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.ServiceBrokerService.CallService*
+  name: CallService
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallService_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.CallService
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallService
+  nameWithType: ServiceBrokerService.CallService
+- uid: ServiceBroker.Example.ServiceBrokerService.CallServiceAsync(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: CallServiceAsync(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallServiceAsync_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.CallServiceAsync(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: CallServiceAsync(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallServiceAsync(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.ServiceBrokerService.CallServiceAsync(System.Guid, System.String, System.TimeSpan, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: ServiceBrokerService.CallServiceAsync(Guid, String, TimeSpan, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: ServiceBrokerService.CallServiceAsync(Guid, String, TimeSpan, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.ServiceBrokerService.CallServiceAsync*
+  name: CallServiceAsync
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallServiceAsync_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.CallServiceAsync
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallServiceAsync
+  nameWithType: ServiceBrokerService.CallServiceAsync
+- uid: ServiceBroker.Example.ServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name: CallServices(IEnumerable<Guid>, String, TimeSpan)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallServices_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name.vb: CallServices(IEnumerable(Of Guid), String, TimeSpan)
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable<System.Guid>, System.String, System.TimeSpan)
+  fullName.vb: ServiceBroker.Example.ServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable(Of System.Guid), System.String, System.TimeSpan)
+  nameWithType: ServiceBrokerService.CallServices(IEnumerable<Guid>, String, TimeSpan)
+  nameWithType.vb: ServiceBrokerService.CallServices(IEnumerable(Of Guid), String, TimeSpan)
+- uid: ServiceBroker.Example.ServiceBrokerService.CallServices*
+  name: CallServices
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallServices_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.CallServices
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallServices
+  nameWithType: ServiceBrokerService.CallServices
+- uid: ServiceBroker.Example.ServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name: CallServicesAsync(IEnumerable<Guid>, String, TimeSpan)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallServicesAsync_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name.vb: CallServicesAsync(IEnumerable(Of Guid), String, TimeSpan)
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable<System.Guid>, System.String, System.TimeSpan)
+  fullName.vb: ServiceBroker.Example.ServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable(Of System.Guid), System.String, System.TimeSpan)
+  nameWithType: ServiceBrokerService.CallServicesAsync(IEnumerable<Guid>, String, TimeSpan)
+  nameWithType.vb: ServiceBrokerService.CallServicesAsync(IEnumerable(Of Guid), String, TimeSpan)
+- uid: ServiceBroker.Example.ServiceBrokerService.CallServicesAsync*
+  name: CallServicesAsync
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_CallServicesAsync_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.CallServicesAsync
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.CallServicesAsync
+  nameWithType: ServiceBrokerService.CallServicesAsync
+- uid: ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String)
+  name: GetUserProfile(String)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_GetUserProfile_System_String_
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String)
+  fullName: ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String)
+  nameWithType: ServiceBrokerService.GetUserProfile(String)
+- uid: ServiceBroker.Example.ServiceBrokerService.GetUserProfile*
+  name: GetUserProfile
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_GetUserProfile_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.GetUserProfile
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.GetUserProfile
+  nameWithType: ServiceBrokerService.GetUserProfile
+- uid: ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name: StartBackgroundServiceCalls(IEnumerable<Guid>, String, TimeSpan)
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
+  commentId: M:ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
+  name.vb: StartBackgroundServiceCalls(IEnumerable(Of Guid), String, TimeSpan)
+  fullName: ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable<System.Guid>, System.String, System.TimeSpan)
+  fullName.vb: ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable(Of System.Guid), System.String, System.TimeSpan)
+  nameWithType: ServiceBrokerService.StartBackgroundServiceCalls(IEnumerable<Guid>, String, TimeSpan)
+  nameWithType.vb: ServiceBrokerService.StartBackgroundServiceCalls(IEnumerable(Of Guid), String, TimeSpan)
+- uid: ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls*
+  name: StartBackgroundServiceCalls
+  href: api/ServiceBroker.Example.ServiceBrokerService.html#ServiceBroker_Example_ServiceBrokerService_StartBackgroundServiceCalls_
+  commentId: Overload:ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls
+  isSpec: "True"
+  fullName: ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls
+  nameWithType: ServiceBrokerService.StartBackgroundServiceCalls
+- uid: ServiceBroker.Example.TokenService
+  name: TokenService
+  href: api/ServiceBroker.Example.TokenService.html
+  commentId: T:ServiceBroker.Example.TokenService
+  fullName: ServiceBroker.Example.TokenService
+  nameWithType: TokenService
+- uid: ServiceBroker.Example.TokenService.#ctor(ServiceBroker.Example.Core.ICache)
+  name: TokenService(ICache)
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService__ctor_ServiceBroker_Example_Core_ICache_
+  commentId: M:ServiceBroker.Example.TokenService.#ctor(ServiceBroker.Example.Core.ICache)
+  fullName: ServiceBroker.Example.TokenService.TokenService(ServiceBroker.Example.Core.ICache)
+  nameWithType: TokenService.TokenService(ICache)
+- uid: ServiceBroker.Example.TokenService.#ctor*
+  name: TokenService
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService__ctor_
+  commentId: Overload:ServiceBroker.Example.TokenService.#ctor
+  isSpec: "True"
+  fullName: ServiceBroker.Example.TokenService.TokenService
+  nameWithType: TokenService.TokenService
+- uid: ServiceBroker.Example.TokenService.Log
+  name: Log
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService_Log
+  commentId: P:ServiceBroker.Example.TokenService.Log
+  fullName: ServiceBroker.Example.TokenService.Log
+  nameWithType: TokenService.Log
+- uid: ServiceBroker.Example.TokenService.Log*
+  name: Log
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService_Log_
+  commentId: Overload:ServiceBroker.Example.TokenService.Log
+  isSpec: "True"
+  fullName: ServiceBroker.Example.TokenService.Log
+  nameWithType: TokenService.Log
+- uid: ServiceBroker.Example.TokenService.ParseRelativeToken(System.String,ServiceBroker.Example.Models.TokenInfo,ServiceBroker.Example.Models.TokenInfo,System.Int32)
+  name: ParseRelativeToken(String, TokenInfo, TokenInfo, Int32)
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService_ParseRelativeToken_System_String_ServiceBroker_Example_Models_TokenInfo_ServiceBroker_Example_Models_TokenInfo_System_Int32_
+  commentId: M:ServiceBroker.Example.TokenService.ParseRelativeToken(System.String,ServiceBroker.Example.Models.TokenInfo,ServiceBroker.Example.Models.TokenInfo,System.Int32)
+  fullName: ServiceBroker.Example.TokenService.ParseRelativeToken(System.String, ServiceBroker.Example.Models.TokenInfo, ServiceBroker.Example.Models.TokenInfo, System.Int32)
+  nameWithType: TokenService.ParseRelativeToken(String, TokenInfo, TokenInfo, Int32)
+- uid: ServiceBroker.Example.TokenService.ParseRelativeToken*
+  name: ParseRelativeToken
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService_ParseRelativeToken_
+  commentId: Overload:ServiceBroker.Example.TokenService.ParseRelativeToken
+  isSpec: "True"
+  fullName: ServiceBroker.Example.TokenService.ParseRelativeToken
+  nameWithType: TokenService.ParseRelativeToken
+- uid: ServiceBroker.Example.TokenService.ParseTokens(System.String,System.String,System.Collections.Generic.IEnumerable{ServiceBroker.Example.Models.TokenInfo})
+  name: ParseTokens(String, String, IEnumerable<TokenInfo>)
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService_ParseTokens_System_String_System_String_System_Collections_Generic_IEnumerable_ServiceBroker_Example_Models_TokenInfo__
+  commentId: M:ServiceBroker.Example.TokenService.ParseTokens(System.String,System.String,System.Collections.Generic.IEnumerable{ServiceBroker.Example.Models.TokenInfo})
+  name.vb: ParseTokens(String, String, IEnumerable(Of TokenInfo))
+  fullName: ServiceBroker.Example.TokenService.ParseTokens(System.String, System.String, System.Collections.Generic.IEnumerable<ServiceBroker.Example.Models.TokenInfo>)
+  fullName.vb: ServiceBroker.Example.TokenService.ParseTokens(System.String, System.String, System.Collections.Generic.IEnumerable(Of ServiceBroker.Example.Models.TokenInfo))
+  nameWithType: TokenService.ParseTokens(String, String, IEnumerable<TokenInfo>)
+  nameWithType.vb: TokenService.ParseTokens(String, String, IEnumerable(Of TokenInfo))
+- uid: ServiceBroker.Example.TokenService.ParseTokens*
+  name: ParseTokens
+  href: api/ServiceBroker.Example.TokenService.html#ServiceBroker_Example_TokenService_ParseTokens_
+  commentId: Overload:ServiceBroker.Example.TokenService.ParseTokens
+  isSpec: "True"
+  fullName: ServiceBroker.Example.TokenService.ParseTokens
+  nameWithType: TokenService.ParseTokens

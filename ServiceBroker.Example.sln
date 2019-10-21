@@ -10,21 +10,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6183AB66-0964-4B71-827E-720418305922}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example", "src\ServiceBroker.Example\ServiceBroker.Example.csproj", "{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example", "src\ServiceBroker.Example\ServiceBroker.Example.csproj", "{7EB1E9F4-0374-4A82-9F01-5554BEBDA4EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Models", "src\ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj", "{90827586-F3AB-4368-82A3-1E3510DCFFDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example.Models", "src\ServiceBroker.Example.Models\ServiceBroker.Example.Models.csproj", "{90827586-F3AB-4368-82A3-1E3510DCFFDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Core", "src\ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj", "{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example.Core", "src\ServiceBroker.Example.Core\ServiceBroker.Example.Core.csproj", "{ED95A0B7-76B6-482E-9AFF-367CAFC5196D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Common", "src\ServiceBroker.Example.Common\ServiceBroker.Example.Common.csproj", "{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example.Common", "src\ServiceBroker.Example.Common\ServiceBroker.Example.Common.csproj", "{B38BD3A3-1968-4AF5-841C-3230C86BF8F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3C7CCC6A-2BC8-478B-8656-1EA0D5A91949}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.Mocks", "tests\ServiceBroker.Example.Mocks\ServiceBroker.Example.Mocks.csproj", "{51A8F162-14C4-4E83-8D1F-302DC277810F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example.Mocks", "tests\ServiceBroker.Example.Mocks\ServiceBroker.Example.Mocks.csproj", "{51A8F162-14C4-4E83-8D1F-302DC277810F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.FunctionalTests", "tests\ServiceBroker.Example.FunctionalTests\ServiceBroker.Example.FunctionalTests.csproj", "{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example.FunctionalTests", "tests\ServiceBroker.Example.FunctionalTests\ServiceBroker.Example.FunctionalTests.csproj", "{11CB1312-BAE4-45BB-9FB1-F164E5F6BBCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBroker.Example.UnitTests", "tests\ServiceBroker.Example.UnitTests\ServiceBroker.Example.UnitTests.csproj", "{00F251B2-E846-44C0-A243-37F9B4C6C01E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBroker.Example.UnitTests", "tests\ServiceBroker.Example.UnitTests\ServiceBroker.Example.UnitTests.csproj", "{00F251B2-E846-44C0-A243-37F9B4C6C01E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
