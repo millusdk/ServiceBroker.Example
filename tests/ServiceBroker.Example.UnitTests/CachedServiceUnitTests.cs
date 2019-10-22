@@ -21,8 +21,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(100)
             };
             var httpClientResponse = new HttpClientResponse
@@ -54,8 +57,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(100)
             };
             var httpClientResponse = new HttpClientResponse
@@ -96,8 +102,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(100)
             };
             var httpClientResponse = new HttpClientResponse
@@ -135,8 +144,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(100)
             };
             var httpClientResponse = new HttpClientResponse

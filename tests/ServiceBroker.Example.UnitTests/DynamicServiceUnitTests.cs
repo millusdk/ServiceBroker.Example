@@ -55,8 +55,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(100)
             };
             var httpClientResponse = new HttpClientResponse
@@ -87,8 +90,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1)
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                }
             };
 
             var cache = Substitute.For<ICache>();
@@ -113,8 +119,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(1)
             };
             var httpClientResponse = new HttpClientResponse
@@ -149,8 +158,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromSeconds(1000),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromSeconds(1000)
+                },
                 Timeout = TimeSpan.FromSeconds(100)
             };
             var httpClientResponse = new HttpClientResponse
@@ -189,8 +201,11 @@ namespace ServiceBroker.Example.UnitTests
                 Name = "Service",
                 Id = Guid.NewGuid(),
                 Endpoint = "Endpoint",
-                ExceptionCount = 1,
-                BreakDuration = TimeSpan.FromMilliseconds(1),
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                    BreakDuration = TimeSpan.FromMilliseconds(1)
+                },
                 Timeout = TimeSpan.FromMilliseconds(100)
             };
             var httpClientResponse = new HttpClientResponse
@@ -208,7 +223,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new DynamicService(cache, httpClientWrapper, tokenService);
 
-            
+
             ServiceResponse actual = await sut.CallService(serviceInfo, cacheRegion, cancellationToken, null);
 
             Assert.AreEqual(ServiceResponseStatus.Error, actual.Status);

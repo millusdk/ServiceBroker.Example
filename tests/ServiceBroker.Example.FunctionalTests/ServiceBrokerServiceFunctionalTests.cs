@@ -27,8 +27,11 @@ namespace ServiceBroker.Example.FunctionalTests
                 Id = serviceId,
                 Endpoint = endpoint,
                 Timeout = TimeSpan.FromMilliseconds(5),
-                ExceptionCount = 1,
-                Tokens = new []
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1,
+                },
+                Tokens = new[]
                 {
                     new XPathTokenInfo
                     {
@@ -95,7 +98,10 @@ namespace ServiceBroker.Example.FunctionalTests
                 Id = service1Id,
                 Endpoint = endpoint1,
                 Timeout = TimeSpan.FromMilliseconds(5),
-                ExceptionCount = 1,
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1
+                },
                 Tokens = new[]
                 {
                     new XPathTokenInfo
@@ -111,7 +117,10 @@ namespace ServiceBroker.Example.FunctionalTests
                 Id = service2Id,
                 Endpoint = endpoint2,
                 Timeout = TimeSpan.FromMilliseconds(5),
-                ExceptionCount = 1,
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1
+                },
                 Tokens = new[]
                 {
                     new XPathTokenInfo
@@ -144,12 +153,12 @@ namespace ServiceBroker.Example.FunctionalTests
             {
                 var endpointArg = callInfo.ArgAt<string>(0);
 
-                if(endpointArg.Equals(endpoint1))
+                if (endpointArg.Equals(endpoint1))
                 {
                     return httpClientResponse1;
                 }
 
-                if(endpointArg.Equals(endpoint2))
+                if (endpointArg.Equals(endpoint2))
                 {
                     return httpClientResponse2;
                 }
@@ -208,7 +217,10 @@ namespace ServiceBroker.Example.FunctionalTests
                 Id = serviceId,
                 Endpoint = endpoint,
                 Timeout = TimeSpan.FromMilliseconds(5),
-                ExceptionCount = 1,
+                CircuitBreakerInfo = new CircuitBreakerInfo
+                {
+                    ExceptionCount = 1
+                },
                 Tokens = new[]
                 {
                     new XPathTokenInfo

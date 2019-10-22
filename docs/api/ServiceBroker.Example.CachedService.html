@@ -73,7 +73,8 @@
   
   <h1 id="ServiceBroker_Example_CachedService" data-uid="ServiceBroker.Example.CachedService" class="text-break">Class CachedService
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An external service wrapper which saves the values returned from the external service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the external service.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -95,7 +96,7 @@
       <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_Log">ServiceBase.Log</a>
     </div>
     <div>
-      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_System_String_ServiceBroker_Example_Models_ServiceInfo_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">ServiceBase.GetPostParameters(String, ServiceInfo, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
+      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">ServiceBase.GetPostParameters(ServiceInfo, String, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
     </div>
     <div>
       <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetCircuitBreakerPolicy_ServiceBroker_Example_Models_ServiceInfo_">ServiceBase.GetCircuitBreakerPolicy(ServiceInfo)</a>
@@ -138,7 +139,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_CachedService__ctor_ServiceBroker_Example_Core_ICache_ServiceBroker_Example_Core_IHttpClientWrapper_ServiceBroker_Example_Core_ITokenService_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.CachedService.%23ctor(ServiceBroker.Example.Core.ICache%2CServiceBroker.Example.Core.IHttpClientWrapper%2CServiceBroker.Example.Core.ITokenService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L21">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L24">View Source</a>
   </span>
   <a id="ServiceBroker_Example_CachedService__ctor_" data-uid="ServiceBroker.Example.CachedService.#ctor*"></a>
   <h4 id="ServiceBroker_Example_CachedService__ctor_ServiceBroker_Example_Core_ICache_ServiceBroker_Example_Core_IHttpClientWrapper_ServiceBroker_Example_Core_ITokenService_" data-uid="ServiceBroker.Example.CachedService.#ctor(ServiceBroker.Example.Core.ICache,ServiceBroker.Example.Core.IHttpClientWrapper,ServiceBroker.Example.Core.ITokenService)">CachedService(ICache, IHttpClientWrapper, ITokenService)</h4>
@@ -182,11 +183,12 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_CachedService_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.CachedService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo%2CSystem.String%2CSystem.Threading.CancellationToken%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L27">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L38">View Source</a>
   </span>
   <a id="ServiceBroker_Example_CachedService_CallServiceInternal_" data-uid="ServiceBroker.Example.CachedService.CallServiceInternal*"></a>
   <h4 id="ServiceBroker_Example_CachedService_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.CachedService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>This method performs the call to the external service if no value is available in the cache.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -205,22 +207,26 @@
       <tr>
         <td><a class="xref" href="ServiceBroker.Example.Models.ServiceInfo.html">ServiceInfo</a></td>
         <td><span class="parametername">serviceInfo</span></td>
-        <td></td>
+        <td><p>Information about the service to call</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">cacheRegion</span></td>
-        <td></td>
+        <td><p>The cache region to look for an existing response and to look for values for post parameters under in</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>Cancellation token to cancel the request</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><span class="parametername">additionalParameters</span></td>
-        <td></td>
+        <td><p>Additional post parameters to include in the request body</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -235,7 +241,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.ServiceResponse.html">ServiceResponse</a>&gt;</td>
-        <td></td>
+        <td><p>A service response representing the result of the call to the external service</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -246,11 +253,12 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_CachedService_RemoveSemaphores_System_String_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.CachedService.RemoveSemaphores(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L129">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L145">View Source</a>
   </span>
   <a id="ServiceBroker_Example_CachedService_RemoveSemaphores_" data-uid="ServiceBroker.Example.CachedService.RemoveSemaphores*"></a>
   <h4 id="ServiceBroker_Example_CachedService_RemoveSemaphores_System_String_" data-uid="ServiceBroker.Example.CachedService.RemoveSemaphores(System.String)">RemoveSemaphores(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Removes all cached semaphores (lock objects) stored under the specified cache region.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -269,7 +277,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">cacheRegion</span></td>
-        <td></td>
+        <td><p>The cache region to remove semaphores for</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -284,7 +293,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>A bool signifying whether all semaphores where removed successfully</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -306,7 +316,7 @@
                     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_CachedService.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.CachedService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/CachedService.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

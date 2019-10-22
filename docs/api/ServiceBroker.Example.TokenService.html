@@ -73,7 +73,8 @@
   
   <h1 id="ServiceBroker_Example_TokenService" data-uid="ServiceBroker.Example.TokenService" class="text-break">Class TokenService
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A service handling parsing and evaluating tokens.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -121,7 +122,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_TokenService__ctor_ServiceBroker_Example_Core_ICache_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.TokenService.%23ctor(ServiceBroker.Example.Core.ICache)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L28">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L34">View Source</a>
   </span>
   <a id="ServiceBroker_Example_TokenService__ctor_" data-uid="ServiceBroker.Example.TokenService.#ctor*"></a>
   <h4 id="ServiceBroker_Example_TokenService__ctor_ServiceBroker_Example_Core_ICache_" data-uid="ServiceBroker.Example.TokenService.#ctor(ServiceBroker.Example.Core.ICache)">TokenService(ICache)</h4>
@@ -155,11 +156,12 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_TokenService_Log.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.TokenService.Log%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L24">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L30">View Source</a>
   </span>
   <a id="ServiceBroker_Example_TokenService_Log_" data-uid="ServiceBroker.Example.TokenService.Log*"></a>
   <h4 id="ServiceBroker_Example_TokenService_Log" data-uid="ServiceBroker.Example.TokenService.Log">Log</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Log used to write information about the result of evaluating tokens. Defaults to a null logger.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -187,11 +189,12 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_TokenService_ParseRelativeToken_System_String_ServiceBroker_Example_Models_TokenInfo_ServiceBroker_Example_Models_TokenInfo_System_Int32_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.TokenService.ParseRelativeToken(System.String%2CServiceBroker.Example.Models.TokenInfo%2CServiceBroker.Example.Models.TokenInfo%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L111">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L133">View Source</a>
   </span>
   <a id="ServiceBroker_Example_TokenService_ParseRelativeToken_" data-uid="ServiceBroker.Example.TokenService.ParseRelativeToken*"></a>
   <h4 id="ServiceBroker_Example_TokenService_ParseRelativeToken_System_String_ServiceBroker_Example_Models_TokenInfo_ServiceBroker_Example_Models_TokenInfo_System_Int32_" data-uid="ServiceBroker.Example.TokenService.ParseRelativeToken(System.String,ServiceBroker.Example.Models.TokenInfo,ServiceBroker.Example.Models.TokenInfo,System.Int32)">ParseRelativeToken(String, TokenInfo, TokenInfo, Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Evaluates a token on the partial cached value of another token.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -210,22 +213,26 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">cacheRegion</span></td>
-        <td></td>
+        <td><p>The cache region to read the outer token value from.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="ServiceBroker.Example.Models.TokenInfo.html">TokenInfo</a></td>
         <td><span class="parametername">baseToken</span></td>
-        <td></td>
+        <td><p>The outer token whose content the inner token should be evaluated on.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="ServiceBroker.Example.Models.TokenInfo.html">TokenInfo</a></td>
         <td><span class="parametername">relativeToken</span></td>
-        <td></td>
+        <td><p>The inner token to evaluate on the partial content of the outer token.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>The index for the element in the outer token to apply the inner token to.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -240,7 +247,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="ServiceBroker.Example.Models.TokenResponse.html">TokenResponse</a></td>
-        <td></td>
+        <td><p>A token response containing information about whether the evaluation of the token succeeded.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -249,11 +257,13 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_TokenService_ParseTokens_System_String_System_String_System_Collections_Generic_IEnumerable_ServiceBroker_Example_Models_TokenInfo__.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.TokenService.ParseTokens(System.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BServiceBroker.Example.Models.TokenInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L33">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L47">View Source</a>
   </span>
   <a id="ServiceBroker_Example_TokenService_ParseTokens_" data-uid="ServiceBroker.Example.TokenService.ParseTokens*"></a>
   <h4 id="ServiceBroker_Example_TokenService_ParseTokens_System_String_System_String_System_Collections_Generic_IEnumerable_ServiceBroker_Example_Models_TokenInfo__" data-uid="ServiceBroker.Example.TokenService.ParseTokens(System.String,System.String,System.Collections.Generic.IEnumerable{ServiceBroker.Example.Models.TokenInfo})">ParseTokens(String, String, IEnumerable&lt;TokenInfo&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Evaluates the specified tokens on the service response.
+If the value of a token is available in the cache, it is retrieved from there.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -272,17 +282,20 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">cacheRegion</span></td>
-        <td></td>
+        <td><p>The cache region to look for token values under.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">serviceResponse</span></td>
-        <td></td>
+        <td><p>The response from the service to evaluate the tokens on.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.TokenInfo.html">TokenInfo</a>&gt;</td>
         <td><span class="parametername">tokens</span></td>
-        <td></td>
+        <td><p>The tokens to evaluate on the service response.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -297,7 +310,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.TokenResponse.html">TokenResponse</a>&gt;</td>
-        <td></td>
+        <td><p>A list of the results</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -316,7 +330,7 @@
                     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_TokenService.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.TokenService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/TokenService.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

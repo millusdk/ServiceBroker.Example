@@ -17,6 +17,9 @@ using Polly.Fallback;
 
 namespace ServiceBroker.Example
 {
+    /// <summary>
+    /// An abstract service used as the base implementation for the different service types
+    /// </summary>
     public abstract class ServiceBase : IServiceBase
     {
         private static readonly ConcurrentDictionary<string, AsyncPolicyWrap<ServiceResponse>> CircuitBreakerPolicies =
@@ -24,7 +27,11 @@ namespace ServiceBroker.Example
 
         protected readonly ICache Cache;
 
+        /// <summary>
+        /// Log used to write information about the result of the requests. Defaults to a null logger.
+        /// </summary>
         [ExcludeFromCodeCoverage]
+        // ReSharper disable once MemberCanBeProtected.Global
         public ILogger Log { get; set; } = Logger.None;
 
         protected ServiceBase(ICache cache)
@@ -32,8 +39,15 @@ namespace ServiceBroker.Example
             Cache = cache;
         }
 
-        public IEnumerable<KeyValuePair<string, string>> GetPostParameters(string cacheRegion,
-            ServiceInfo serviceInfo, IEnumerable<KeyValuePair<string, string>> additionalParameters)
+        /// <summary>
+        /// Generates a list of KeyValuePairs to use as the post body for the request to an external service
+        /// </summary>
+        /// <param name="serviceInfo">Information about the service to generate parameters for</param>
+        /// <param name="cacheRegion">The cache region to look for values for post parameters under in</param>
+        /// <param name="additionalParameters">Additional post parameters to include in the generated list in addition to the ones defined on the service info</param>
+        /// <returns>List of key value pairs to use as post parameters in the body of a request</returns>
+        public IEnumerable<KeyValuePair<string, string>> GetPostParameters(ServiceInfo serviceInfo, string cacheRegion,
+            IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             List<KeyValuePair<string, string>> pairs = additionalParameters?.ToList() ?? new List<KeyValuePair<string, string>>();
 
@@ -58,7 +72,7 @@ namespace ServiceBroker.Example
                 .Select(additionalParameter => new
                 {
                     additionalParameter,
-                    parameterValue = Cache.Get<string>(cacheRegion, additionalParameter.Id.ToString())?.Value
+                    parameterValue = Cache.Get<string>(cacheRegion, additionalParameter.TokenId.ToString())?.Value
                 })
                 .Where(additionalParameter => !string.IsNullOrEmpty(additionalParameter.parameterValue))
                 .Select(additionalParameter => new KeyValuePair<string, string>(additionalParameter.additionalParameter.Name, additionalParameter.parameterValue))
@@ -70,6 +84,11 @@ namespace ServiceBroker.Example
             return pairs;
         }
 
+        /// <summary>
+        /// Generates the circuit breaker policy for a service.
+        /// </summary>
+        /// <param name="serviceInfo">The service to generate the circuit breaker policy for</param>
+        /// <returns>The circuit policy</returns>
         protected AsyncPolicyWrap<ServiceResponse> GetCircuitBreakerPolicy(ServiceInfo serviceInfo)
         {
             return CircuitBreakerPolicies.GetOrAdd(serviceInfo.CacheKey, _ =>
@@ -84,8 +103,8 @@ namespace ServiceBroker.Example
                     .Handle<TimeoutRejectedException>()
                     .OrResult(resultPredicate: serviceResponse => serviceResponse.Status == ServiceResponseStatus.Error)
                     .CircuitBreakerAsync(
-                        handledEventsAllowedBeforeBreaking: serviceInfo.ExceptionCount,
-                        durationOfBreak: serviceInfo.BreakDuration,
+                        handledEventsAllowedBeforeBreaking: serviceInfo.CircuitBreakerInfo.ExceptionCount,
+                        durationOfBreak: serviceInfo.CircuitBreakerInfo.BreakDuration,
                         onBreak: (__, ___) =>
                         {
                             Log.Warning("Service ({ServiceName}) has reached its threshold for the circuit breaker and the circuit has been opened", serviceInfo.Name);
@@ -107,7 +126,7 @@ namespace ServiceBroker.Example
                             return Task.FromResult(new ServiceResponse
                             {
                                 Status = ServiceResponseStatus.Timeout,
-                                Id = serviceInfo.Id
+                                ServiceId = serviceInfo.Id
                             });
                         });
                 AsyncPolicyWrap<ServiceResponse> timeoutFallbackPolicyWrappingCircuitBreaker = timeoutFallbackPolicy
@@ -121,7 +140,7 @@ namespace ServiceBroker.Example
                             return Task.FromResult(new ServiceResponse
                             {
                                 Status = ServiceResponseStatus.Error,
-                                Id = serviceInfo.Id
+                                ServiceId = serviceInfo.Id
                             });
                         });
                 AsyncPolicyWrap<ServiceResponse> exceptionFallbackPolicyWrappingTimeoutFallback = exceptionFallbackPolicy
@@ -133,6 +152,14 @@ namespace ServiceBroker.Example
             });
         }
 
+        /// <summary>
+        /// Calls the service specified in the service info parameter.
+        /// </summary>
+        /// <param name="serviceInfo">Information about the service to call</param>
+        /// <param name="cacheRegion">The cache region to use for cache lookups</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the request</param>
+        /// <param name="additionalParameters">Additional post parameters to include in the request body</param>
+        /// <returns></returns>
         public async Task<ServiceResponse> CallService(ServiceInfo serviceInfo, string cacheRegion,
             CancellationToken cancellationToken, IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {

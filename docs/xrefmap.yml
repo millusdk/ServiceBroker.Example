@@ -300,6 +300,19 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Core.IServiceBrokerService.CallServicesAsync
   nameWithType: IServiceBrokerService.CallServicesAsync
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String)
+  name: GetUserProfile(String)
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_System_String_
+  commentId: M:ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String)
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String)
+  nameWithType: IServiceBrokerService.GetUserProfile(String)
+- uid: ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile*
+  name: GetUserProfile
+  href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_
+  commentId: Overload:ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile
+  nameWithType: IServiceBrokerService.GetUserProfile
 - uid: ServiceBroker.Example.Core.IServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)
   name: StartBackgroundServiceCalls(IEnumerable<Guid>, String, TimeSpan)
   href: api/ServiceBroker.Example.Core.IServiceBrokerService.html#ServiceBroker_Example_Core_IServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_
@@ -481,6 +494,38 @@ references:
   fullName.vb: ServiceBroker.Example.Models.CacheEntry(Of T).Value
   nameWithType: CacheEntry<T>.Value
   nameWithType.vb: CacheEntry(Of T).Value
+- uid: ServiceBroker.Example.Models.CircuitBreakerInfo
+  name: CircuitBreakerInfo
+  href: api/ServiceBroker.Example.Models.CircuitBreakerInfo.html
+  commentId: T:ServiceBroker.Example.Models.CircuitBreakerInfo
+  fullName: ServiceBroker.Example.Models.CircuitBreakerInfo
+  nameWithType: CircuitBreakerInfo
+- uid: ServiceBroker.Example.Models.CircuitBreakerInfo.BreakDuration
+  name: BreakDuration
+  href: api/ServiceBroker.Example.Models.CircuitBreakerInfo.html#ServiceBroker_Example_Models_CircuitBreakerInfo_BreakDuration
+  commentId: P:ServiceBroker.Example.Models.CircuitBreakerInfo.BreakDuration
+  fullName: ServiceBroker.Example.Models.CircuitBreakerInfo.BreakDuration
+  nameWithType: CircuitBreakerInfo.BreakDuration
+- uid: ServiceBroker.Example.Models.CircuitBreakerInfo.BreakDuration*
+  name: BreakDuration
+  href: api/ServiceBroker.Example.Models.CircuitBreakerInfo.html#ServiceBroker_Example_Models_CircuitBreakerInfo_BreakDuration_
+  commentId: Overload:ServiceBroker.Example.Models.CircuitBreakerInfo.BreakDuration
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.CircuitBreakerInfo.BreakDuration
+  nameWithType: CircuitBreakerInfo.BreakDuration
+- uid: ServiceBroker.Example.Models.CircuitBreakerInfo.ExceptionCount
+  name: ExceptionCount
+  href: api/ServiceBroker.Example.Models.CircuitBreakerInfo.html#ServiceBroker_Example_Models_CircuitBreakerInfo_ExceptionCount
+  commentId: P:ServiceBroker.Example.Models.CircuitBreakerInfo.ExceptionCount
+  fullName: ServiceBroker.Example.Models.CircuitBreakerInfo.ExceptionCount
+  nameWithType: CircuitBreakerInfo.ExceptionCount
+- uid: ServiceBroker.Example.Models.CircuitBreakerInfo.ExceptionCount*
+  name: ExceptionCount
+  href: api/ServiceBroker.Example.Models.CircuitBreakerInfo.html#ServiceBroker_Example_Models_CircuitBreakerInfo_ExceptionCount_
+  commentId: Overload:ServiceBroker.Example.Models.CircuitBreakerInfo.ExceptionCount
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.CircuitBreakerInfo.ExceptionCount
+  nameWithType: CircuitBreakerInfo.ExceptionCount
 - uid: ServiceBroker.Example.Models.DynamicServiceInfo
   name: DynamicServiceInfo
   href: api/ServiceBroker.Example.Models.DynamicServiceInfo.html
@@ -525,19 +570,6 @@ references:
   commentId: T:ServiceBroker.Example.Models.ParameterInfo
   fullName: ServiceBroker.Example.Models.ParameterInfo
   nameWithType: ParameterInfo
-- uid: ServiceBroker.Example.Models.ParameterInfo.Id
-  name: Id
-  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Id
-  commentId: P:ServiceBroker.Example.Models.ParameterInfo.Id
-  fullName: ServiceBroker.Example.Models.ParameterInfo.Id
-  nameWithType: ParameterInfo.Id
-- uid: ServiceBroker.Example.Models.ParameterInfo.Id*
-  name: Id
-  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Id_
-  commentId: Overload:ServiceBroker.Example.Models.ParameterInfo.Id
-  isSpec: "True"
-  fullName: ServiceBroker.Example.Models.ParameterInfo.Id
-  nameWithType: ParameterInfo.Id
 - uid: ServiceBroker.Example.Models.ParameterInfo.Name
   name: Name
   href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_Name
@@ -551,6 +583,19 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Models.ParameterInfo.Name
   nameWithType: ParameterInfo.Name
+- uid: ServiceBroker.Example.Models.ParameterInfo.TokenId
+  name: TokenId
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_TokenId
+  commentId: P:ServiceBroker.Example.Models.ParameterInfo.TokenId
+  fullName: ServiceBroker.Example.Models.ParameterInfo.TokenId
+  nameWithType: ParameterInfo.TokenId
+- uid: ServiceBroker.Example.Models.ParameterInfo.TokenId*
+  name: TokenId
+  href: api/ServiceBroker.Example.Models.ParameterInfo.html#ServiceBroker_Example_Models_ParameterInfo_TokenId_
+  commentId: Overload:ServiceBroker.Example.Models.ParameterInfo.TokenId
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ParameterInfo.TokenId
+  nameWithType: ParameterInfo.TokenId
 - uid: ServiceBroker.Example.Models.ServiceBrokerResponse
   name: ServiceBrokerResponse
   href: api/ServiceBroker.Example.Models.ServiceBrokerResponse.html
@@ -589,19 +634,6 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters
   nameWithType: ServiceInfo.AdditionalParameters
-- uid: ServiceBroker.Example.Models.ServiceInfo.BreakDuration
-  name: BreakDuration
-  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_BreakDuration
-  commentId: P:ServiceBroker.Example.Models.ServiceInfo.BreakDuration
-  fullName: ServiceBroker.Example.Models.ServiceInfo.BreakDuration
-  nameWithType: ServiceInfo.BreakDuration
-- uid: ServiceBroker.Example.Models.ServiceInfo.BreakDuration*
-  name: BreakDuration
-  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_BreakDuration_
-  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.BreakDuration
-  isSpec: "True"
-  fullName: ServiceBroker.Example.Models.ServiceInfo.BreakDuration
-  nameWithType: ServiceInfo.BreakDuration
 - uid: ServiceBroker.Example.Models.ServiceInfo.CacheKey
   name: CacheKey
   href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_CacheKey
@@ -615,6 +647,19 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Models.ServiceInfo.CacheKey
   nameWithType: ServiceInfo.CacheKey
+- uid: ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo
+  name: CircuitBreakerInfo
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_CircuitBreakerInfo
+  commentId: P:ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo
+  fullName: ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo
+  nameWithType: ServiceInfo.CircuitBreakerInfo
+- uid: ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo*
+  name: CircuitBreakerInfo
+  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_CircuitBreakerInfo_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo
+  nameWithType: ServiceInfo.CircuitBreakerInfo
 - uid: ServiceBroker.Example.Models.ServiceInfo.Endpoint
   name: Endpoint
   href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Endpoint
@@ -628,19 +673,6 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Models.ServiceInfo.Endpoint
   nameWithType: ServiceInfo.Endpoint
-- uid: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
-  name: ExceptionCount
-  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_ExceptionCount
-  commentId: P:ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
-  fullName: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
-  nameWithType: ServiceInfo.ExceptionCount
-- uid: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount*
-  name: ExceptionCount
-  href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_ExceptionCount_
-  commentId: Overload:ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
-  isSpec: "True"
-  fullName: ServiceBroker.Example.Models.ServiceInfo.ExceptionCount
-  nameWithType: ServiceInfo.ExceptionCount
 - uid: ServiceBroker.Example.Models.ServiceInfo.Id
   name: Id
   href: api/ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Id
@@ -699,19 +731,19 @@ references:
   commentId: T:ServiceBroker.Example.Models.ServiceResponse
   fullName: ServiceBroker.Example.Models.ServiceResponse
   nameWithType: ServiceResponse
-- uid: ServiceBroker.Example.Models.ServiceResponse.Id
-  name: Id
-  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Id
-  commentId: P:ServiceBroker.Example.Models.ServiceResponse.Id
-  fullName: ServiceBroker.Example.Models.ServiceResponse.Id
-  nameWithType: ServiceResponse.Id
-- uid: ServiceBroker.Example.Models.ServiceResponse.Id*
-  name: Id
-  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Id_
-  commentId: Overload:ServiceBroker.Example.Models.ServiceResponse.Id
+- uid: ServiceBroker.Example.Models.ServiceResponse.ServiceId
+  name: ServiceId
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_ServiceId
+  commentId: P:ServiceBroker.Example.Models.ServiceResponse.ServiceId
+  fullName: ServiceBroker.Example.Models.ServiceResponse.ServiceId
+  nameWithType: ServiceResponse.ServiceId
+- uid: ServiceBroker.Example.Models.ServiceResponse.ServiceId*
+  name: ServiceId
+  href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_ServiceId_
+  commentId: Overload:ServiceBroker.Example.Models.ServiceResponse.ServiceId
   isSpec: "True"
-  fullName: ServiceBroker.Example.Models.ServiceResponse.Id
-  nameWithType: ServiceResponse.Id
+  fullName: ServiceBroker.Example.Models.ServiceResponse.ServiceId
+  nameWithType: ServiceResponse.ServiceId
 - uid: ServiceBroker.Example.Models.ServiceResponse.Status
   name: Status
   href: api/ServiceBroker.Example.Models.ServiceResponse.html#ServiceBroker_Example_Models_ServiceResponse_Status
@@ -839,19 +871,6 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Models.TokenResponse.CacheKey
   nameWithType: TokenResponse.CacheKey
-- uid: ServiceBroker.Example.Models.TokenResponse.Id
-  name: Id
-  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Id
-  commentId: P:ServiceBroker.Example.Models.TokenResponse.Id
-  fullName: ServiceBroker.Example.Models.TokenResponse.Id
-  nameWithType: TokenResponse.Id
-- uid: ServiceBroker.Example.Models.TokenResponse.Id*
-  name: Id
-  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Id_
-  commentId: Overload:ServiceBroker.Example.Models.TokenResponse.Id
-  isSpec: "True"
-  fullName: ServiceBroker.Example.Models.TokenResponse.Id
-  nameWithType: TokenResponse.Id
 - uid: ServiceBroker.Example.Models.TokenResponse.Status
   name: Status
   href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Status
@@ -865,6 +884,19 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.Models.TokenResponse.Status
   nameWithType: TokenResponse.Status
+- uid: ServiceBroker.Example.Models.TokenResponse.TokenId
+  name: TokenId
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_TokenId
+  commentId: P:ServiceBroker.Example.Models.TokenResponse.TokenId
+  fullName: ServiceBroker.Example.Models.TokenResponse.TokenId
+  nameWithType: TokenResponse.TokenId
+- uid: ServiceBroker.Example.Models.TokenResponse.TokenId*
+  name: TokenId
+  href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_TokenId_
+  commentId: Overload:ServiceBroker.Example.Models.TokenResponse.TokenId
+  isSpec: "True"
+  fullName: ServiceBroker.Example.Models.TokenResponse.TokenId
+  nameWithType: TokenResponse.TokenId
 - uid: ServiceBroker.Example.Models.TokenResponse.Value
   name: Value
   href: api/ServiceBroker.Example.Models.TokenResponse.html#ServiceBroker_Example_Models_TokenResponse_Value
@@ -1010,15 +1042,15 @@ references:
   isSpec: "True"
   fullName: ServiceBroker.Example.ServiceBase.GetCircuitBreakerPolicy
   nameWithType: ServiceBase.GetCircuitBreakerPolicy
-- uid: ServiceBroker.Example.ServiceBase.GetPostParameters(System.String,ServiceBroker.Example.Models.ServiceInfo,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
-  name: GetPostParameters(String, ServiceInfo, IEnumerable<KeyValuePair<String, String>>)
-  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_System_String_ServiceBroker_Example_Models_ServiceInfo_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
-  commentId: M:ServiceBroker.Example.ServiceBase.GetPostParameters(System.String,ServiceBroker.Example.Models.ServiceInfo,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
-  name.vb: GetPostParameters(String, ServiceInfo, IEnumerable(Of KeyValuePair(Of String, String)))
-  fullName: ServiceBroker.Example.ServiceBase.GetPostParameters(System.String, ServiceBroker.Example.Models.ServiceInfo, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
-  fullName.vb: ServiceBroker.Example.ServiceBase.GetPostParameters(System.String, ServiceBroker.Example.Models.ServiceInfo, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
-  nameWithType: ServiceBase.GetPostParameters(String, ServiceInfo, IEnumerable<KeyValuePair<String, String>>)
-  nameWithType.vb: ServiceBase.GetPostParameters(String, ServiceInfo, IEnumerable(Of KeyValuePair(Of String, String)))
+- uid: ServiceBroker.Example.ServiceBase.GetPostParameters(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name: GetPostParameters(ServiceInfo, String, IEnumerable<KeyValuePair<String, String>>)
+  href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___
+  commentId: M:ServiceBroker.Example.ServiceBase.GetPostParameters(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  name.vb: GetPostParameters(ServiceInfo, String, IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName: ServiceBroker.Example.ServiceBase.GetPostParameters(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  fullName.vb: ServiceBroker.Example.ServiceBase.GetPostParameters(ServiceBroker.Example.Models.ServiceInfo, System.String, System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  nameWithType: ServiceBase.GetPostParameters(ServiceInfo, String, IEnumerable<KeyValuePair<String, String>>)
+  nameWithType.vb: ServiceBase.GetPostParameters(ServiceInfo, String, IEnumerable(Of KeyValuePair(Of String, String)))
 - uid: ServiceBroker.Example.ServiceBase.GetPostParameters*
   name: GetPostParameters
   href: api/ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_

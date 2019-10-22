@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.CachedService.html",
-          "hash": "KIjd9rHcqQQ8KNnuPuASaA=="
+          "hash": "RNjD+xeNbIciRsflieRz4g=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Common.Constants.html",
-          "hash": "DBHbnP3b2Z9uo+585y2hkw=="
+          "hash": "OJtZ0RMEiony5cSlcVUjAg=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Common.Extensions.HttpStatusCodeExtensions.html",
-          "hash": "yvdb6dPU9xShzzeAk/56yg=="
+          "hash": "zI3lnpV3H15afMQq4cPO7g=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Common.Extensions.html",
-          "hash": "fK7ALKDIhU9YuSGQBLbwhw=="
+          "hash": "Gvm3GUnWNkJUxkDJu8BB0Q=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Common.html",
-          "hash": "qbMzEN1Nl04BwjDvJPquwA=="
+          "hash": "XziOgaoKgGmiQJsdz6eJJw=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Core.IServiceBrokerService.html",
-          "hash": "WFK+yLdq0AhRCRQ3tTiVdg=="
+          "hash": "4xLWNYAykDpPeaPxj1ffXw=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Core.html",
-          "hash": "zVmzoX8NMHF6P2UldBHd5g=="
+          "hash": "xiSH/0zJrtZ2Rjzqn2Mxiw=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.DynamicService.html",
-          "hash": "xXmDG6nX61Mv8pQipMjFAw=="
+          "hash": "60rUBV/cgXowTRYlexsHPg=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.CacheEntry-1.html",
-          "hash": "XvcjX1TmAFsJyAZ+MnHM7w=="
+          "hash": "sQO3WwdMHFxeZ8FMckBZkg=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,19 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.CachedServiceInfo.html",
-          "hash": "ynP59JeL7Wn7PWoJlMTlJw=="
+          "hash": "UWCczLAE2k2lYuE/B6NCeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ServiceBroker.Example.Models.CircuitBreakerInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ServiceBroker.Example.Models.CircuitBreakerInfo.html",
+          "hash": "C4MBA3pPCsJbQeERNWnDkQ=="
         }
       },
       "is_incremental": false,
@@ -225,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.DynamicServiceInfo.html",
-          "hash": "uk277mUFhZLRaVmWDFaRMg=="
+          "hash": "SvQ1LXRXmqJ4h5nUHHUsIw=="
         }
       },
       "is_incremental": false,
@@ -237,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.HttpClientResponse.html",
-          "hash": "DRuGTaop18uBFbaPgs8y4w=="
+          "hash": "oNUVUFe/iNs4+9cLfpG9qw=="
         }
       },
       "is_incremental": false,
@@ -249,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.ParameterInfo.html",
-          "hash": "rdNc4W2MXLgZAMIQIj5P6g=="
+          "hash": "RN/gh5NttCxF6ZRs8ZKMRQ=="
         }
       },
       "is_incremental": false,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.ServiceBrokerResponse.html",
-          "hash": "bRc5qav1G3u9wPmaCh/a/g=="
+          "hash": "Lc3xBrxCO7A0Dg/wxHS3Rg=="
         }
       },
       "is_incremental": false,
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.ServiceInfo.html",
-          "hash": "/YB8UXSRvbz7Fd8qK1p28g=="
+          "hash": "MIcL20V7ukGHJFl+lFpjGA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.ServiceResponse.html",
-          "hash": "B5u5lHXZ1MDRmwC3ZF/JkA=="
+          "hash": "pz01F9yS9rm6Cum/caPymA=="
         }
       },
       "is_incremental": false,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.ServiceResponseStatus.html",
-          "hash": "+wwr6Hxf5zE2+yCY0QgdIw=="
+          "hash": "PVyktc0yaSBa3/xjZliSkQ=="
         }
       },
       "is_incremental": false,
@@ -309,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.TokenInfo.html",
-          "hash": "aLrZ8LIn9FKHtzJSHWYz+w=="
+          "hash": "HUdWXBUuW2rERGdQ1DCc/A=="
         }
       },
       "is_incremental": false,
@@ -321,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.TokenResponse.html",
-          "hash": "iA/sYmNzEFBJYVHKtz59NA=="
+          "hash": "dnKFXdbeTNCzt4MkAsauPA=="
         }
       },
       "is_incremental": false,
@@ -333,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.TokenResponseStatus.html",
-          "hash": "EpMrXZzlxSoqBGBScqlTyw=="
+          "hash": "JpxrW0w4APBcuRuFjTY2Yg=="
         }
       },
       "is_incremental": false,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.XPathTokenInfo.html",
-          "hash": "oJCx0FwC8I250OIeDU6LzQ=="
+          "hash": "xSVmKpsFL8wXt9PUMYwb0g=="
         }
       },
       "is_incremental": false,
@@ -357,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.XsltTokenInfo.html",
-          "hash": "N+Q6QPafEt4Aq99qeZ2JQw=="
+          "hash": "JU0YwFNmHGu11CP+XCoIRQ=="
         }
       },
       "is_incremental": false,
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.Models.html",
-          "hash": "1YFzkkvJEJDrfUoJe3p5Nw=="
+          "hash": "jt0b1J6kcPYQCPBHRK1DCg=="
         }
       },
       "is_incremental": false,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.ServiceBase.html",
-          "hash": "4T15ECz6J89rJnDSqLptoQ=="
+          "hash": "cdAPQ7vYoPKJzm+88h13Ww=="
         }
       },
       "is_incremental": false,
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.ServiceBrokerService.html",
-          "hash": "qGgwumaGrnFFNHlcHwmCzA=="
+          "hash": "uPFZJ/7wQjlsnVDe0b8sFQ=="
         }
       },
       "is_incremental": false,
@@ -405,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.TokenService.html",
-          "hash": "b9oHVStlh000XqCp8e3l5A=="
+          "hash": "hNt+dd0Cbk40E9kuxDHD5w=="
         }
       },
       "is_incremental": false,
@@ -417,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ServiceBroker.Example.html",
-          "hash": "lP9BvFq6w+3jBEoAg9me9Q=="
+          "hash": "MrSf8XGFDlFt5PCdD/0GQw=="
         }
       },
       "is_incremental": false,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "neWokuaPbvTRAxuGFcFumw=="
+          "hash": "OwLkHTty8BowwWPYKDv2Eg=="
         }
       },
       "is_incremental": false,
@@ -456,7 +468,7 @@
           "hash": "qOeKpwt31789MkVcwuw8tw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -480,7 +492,7 @@
           "hash": "co8YiiPfMCe+nuXn/OcWyQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -519,11 +531,10 @@
           "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 35,
-          "skipped_file_count": 0
+          "total_file_count": 36,
+          "skipped_file_count": 36
         }
       }
     },

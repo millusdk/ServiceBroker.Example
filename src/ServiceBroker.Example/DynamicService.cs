@@ -10,6 +10,9 @@ using Polly.Wrap;
 
 namespace ServiceBroker.Example
 {
+    /// <summary>
+    /// An external service wrapper, where the external service should be called every time wrapper is called.
+    /// </summary>
     public class DynamicService : ServiceBase, IDynamicService
     {
         private readonly IHttpClientWrapper _httpClientWrapper;
@@ -21,12 +24,20 @@ namespace ServiceBroker.Example
             _tokenService = tokenService;
         }
 
+        /// <summary>
+        /// Calls the external service and returns the result.
+        /// </summary>
+        /// <param name="serviceInfo">Information about the service to call</param>
+        /// <param name="cacheRegion">The cache region to look for values for post parameters under in</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the request</param>
+        /// <param name="additionalParameters">Additional post parameters to include in the request body</param>
+        /// <returns>A service response representing the result of the call to the external service</returns>
         protected override async Task<ServiceResponse> CallServiceInternal(ServiceInfo serviceInfo, string cacheRegion,
             CancellationToken cancellationToken, IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             var serviceResponse = new ServiceResponse
             {
-                Id = serviceInfo.Id
+                ServiceId = serviceInfo.Id
             };
 
             try
@@ -35,7 +46,7 @@ namespace ServiceBroker.Example
 
                 return await breaker.ExecuteAsync(async (cancelToken) =>
                 {
-                    IEnumerable<KeyValuePair<string, string>> postParameters = GetPostParameters(cacheRegion, serviceInfo, additionalParameters);
+                    IEnumerable<KeyValuePair<string, string>> postParameters = GetPostParameters(serviceInfo, cacheRegion, additionalParameters);
 
                     HttpClientResponse response = await _httpClientWrapper.PostAsync(serviceInfo.Endpoint, postParameters, cancelToken);
 

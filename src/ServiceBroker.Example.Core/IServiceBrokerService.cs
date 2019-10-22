@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using ServiceBroker.Example.Models;
 
 namespace ServiceBroker.Example.Core
 {
+    /// <summary>
+    /// A service broker wrapping calls to multiple external services, running them in parallel, handling timeouts for the service calls, and returning a combined result.
+    /// </summary>
     public interface IServiceBrokerService
     {
         /// <summary>
@@ -52,5 +56,12 @@ namespace ServiceBroker.Example.Core
         /// <param name="cacheRegion">Cache region to use for storing and retrieving values, if required by the services called.</param>
         /// <param name="timeout">Maximum time the services should wait for answers from external services.</param>
         void StartBackgroundServiceCalls(IEnumerable<Guid> serviceOrTokenIds, string cacheRegion, TimeSpan timeout);
+
+        /// <summary>
+        /// Generates an xml document containing all the data returned from external services
+        /// </summary>
+        /// <param name="cacheRegion">The cache region to look for service and token data under</param>
+        /// <returns>The user profile containing the responses from the services</returns>
+        XDocument GetUserProfile(string cacheRegion);
     }
 }

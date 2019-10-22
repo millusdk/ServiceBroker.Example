@@ -11,6 +11,9 @@ using ServiceBroker.Example.Models;
 
 namespace ServiceBroker.Example
 {
+    /// <summary>
+    /// An external service wrapper which saves the values returned from the external service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the external service.
+    /// </summary>
     public class CachedService : ServiceBase, ICachedService
     {
         private readonly IHttpClientWrapper _httpClientWrapper;
@@ -24,6 +27,14 @@ namespace ServiceBroker.Example
             _tokenService = tokenService;
         }
 
+        /// <summary>
+        /// This method performs the call to the external service if no value is available in the cache.
+        /// </summary>
+        /// <param name="serviceInfo">Information about the service to call</param>
+        /// <param name="cacheRegion">The cache region to look for an existing response and to look for values for post parameters under in</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the request</param>
+        /// <param name="additionalParameters">Additional post parameters to include in the request body</param>
+        /// <returns>A service response representing the result of the call to the external service</returns>
         protected override async Task<ServiceResponse> CallServiceInternal(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken,
             IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
@@ -37,7 +48,7 @@ namespace ServiceBroker.Example
                 {
                     return new ServiceResponse
                     {
-                        Id = serviceInfo.Id,
+                        ServiceId = serviceInfo.Id,
                         Status = ServiceResponseStatus.Timeout
                     };
                 }
@@ -51,7 +62,7 @@ namespace ServiceBroker.Example
 
                     ServiceResponse serviceResponse = new ServiceResponse
                     {
-                        Id = serviceInfo.Id,
+                        ServiceId = serviceInfo.Id,
                         Status = ServiceResponseStatus.Success,
                         Value = cacheResult.Value
                     };
@@ -77,13 +88,13 @@ namespace ServiceBroker.Example
                 return await breaker.ExecuteAsync(async (cancelToken) =>
                 {
                     IEnumerable<KeyValuePair<string, string>> postParameters =
-                        GetPostParameters(cacheRegion, serviceInfo, additionalParameters);
+                        GetPostParameters(serviceInfo, cacheRegion, additionalParameters);
 
                     HttpClientResponse response =
                         await _httpClientWrapper.PostAsync(serviceInfo.Endpoint, postParameters, cancelToken);
                     var serviceResponse = new ServiceResponse
                     {
-                        Id = serviceInfo.Id
+                        ServiceId = serviceInfo.Id
                     };
 
                     if (response.HttpStatusCode.IsOkStatus())
@@ -113,7 +124,7 @@ namespace ServiceBroker.Example
             {
                 return new ServiceResponse
                 {
-                    Id = serviceInfo.Id,
+                    ServiceId = serviceInfo.Id,
                     Status = ServiceResponseStatus.Timeout
                 };
             }
@@ -126,6 +137,11 @@ namespace ServiceBroker.Example
             }
         }
 
+        /// <summary>
+        /// Removes all cached semaphores (lock objects) stored under the specified cache region.
+        /// </summary>
+        /// <param name="cacheRegion">The cache region to remove semaphores for</param>
+        /// <returns>A bool signifying whether all semaphores where removed successfully</returns>
         [ExcludeFromCodeCoverage]
         public bool RemoveSemaphores(string cacheRegion)
         {

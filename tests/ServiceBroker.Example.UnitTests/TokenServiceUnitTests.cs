@@ -528,7 +528,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.NotFound, tokenResponse.Status);
             Assert.IsNull(tokenResponse.Value);
         }
@@ -562,7 +562,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.Error, tokenResponse.Status);
             Assert.IsNull(tokenResponse.Value);
         }
@@ -596,7 +596,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.NotFound, tokenResponse.Status);
             Assert.IsNull(tokenResponse.Value);
         }
@@ -632,7 +632,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.Found, tokenResponse.Status);
             Assert.IsNotNull(tokenResponse.Value);
             Assert.AreEqual(tokenContent, tokenResponse.Value);
@@ -670,7 +670,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.Found, tokenResponse.Status);
             Assert.IsNotNull(tokenResponse.Value);
             Assert.AreEqual(expectedText, tokenResponse.Value);
@@ -707,7 +707,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.NotFound, tokenResponse.Status);
             Assert.IsNull(tokenResponse.Value);
         }
@@ -742,7 +742,7 @@ namespace ServiceBroker.Example.UnitTests
             TokenResponse tokenResponse = sut.ParseRelativeToken(cacheRegion, baseToken, relativeToken, index);
 
             Assert.IsNotNull(tokenResponse);
-            Assert.AreEqual(relativeTokenId, tokenResponse.Id);
+            Assert.AreEqual(relativeTokenId, tokenResponse.TokenId);
             Assert.AreEqual(TokenResponseStatus.NotFound, tokenResponse.Status);
             Assert.IsNull(tokenResponse.Value);
         }

@@ -94,7 +94,8 @@ The interface is an abstraction exposing only the subset of features from a cach
       <section><p>A base interface used for all external service types. Exposes the methods that must be implemented by all external service types.</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Core.IServiceBrokerService.html">IServiceBrokerService</a></h4>
-      <section></section>
+      <section><p>A service broker wrapping calls to multiple external services, running them in parallel, handling timeouts for the service calls, and returning a combined result.</p>
+</section>
       <h4><a class="xref" href="ServiceBroker.Example.Core.IServiceRepository.html">IServiceRepository</a></h4>
       <section><p>This interface represents a repository tha tis able to load data about one or more external services and/or tokens from a data source.</p>
 </section>

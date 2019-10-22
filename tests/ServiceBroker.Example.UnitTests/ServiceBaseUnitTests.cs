@@ -21,7 +21,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new ServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters("cacheRegion", new ServiceInfo(), null);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(new ServiceInfo(), "cacheRegion", null);
 
             Assert.IsFalse(actual.Any());
         }
@@ -33,7 +33,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new ServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters("cacheRegion", new ServiceInfo(), new KeyValuePair<string, string>[0]);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(new ServiceInfo(), "cacheRegion", new KeyValuePair<string, string>[0]);
 
             Assert.IsFalse(actual.Any());
         }
@@ -54,7 +54,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new ServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(cacheRegion, serviceInfo, null);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(serviceInfo, cacheRegion, null);
 
             cache.Received(1).Get<string>(cacheRegion, Constants.UserIdentifierCacheKey);
             IEnumerable<KeyValuePair<string, string>> keyValuePairs = actual as KeyValuePair<string, string>[] ?? actual.ToArray();
@@ -82,12 +82,12 @@ namespace ServiceBroker.Example.UnitTests
                 {
                     new ParameterInfo
                     {
-                        Id = serviceParameterId,
+                        TokenId = serviceParameterId,
                         Name = serviceParameterKey
                     },
                     new ParameterInfo
                     {
-                        Id = nonExistingServiceParameterId,
+                        TokenId = nonExistingServiceParameterId,
                         Name = serviceParameterKey
                     }
                 }
@@ -100,7 +100,7 @@ namespace ServiceBroker.Example.UnitTests
 
             var sut = new ServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(cacheRegion, serviceInfo, null);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(serviceInfo, cacheRegion, null);
 
             cache.Received(1).Get<string>(cacheRegion, Constants.UserIdentifierCacheKey);
             IEnumerable<KeyValuePair<string, string>> keyValuePairs = actual as KeyValuePair<string, string>[] ?? actual.ToArray();

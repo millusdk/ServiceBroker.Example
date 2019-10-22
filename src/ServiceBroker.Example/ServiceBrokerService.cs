@@ -10,6 +10,9 @@ using ServiceBroker.Example.Models;
 
 namespace ServiceBroker.Example
 {
+    /// <summary>
+    /// A service broker wrapping calls to multiple external services, running them in parallel, handling timeouts for the service calls, and returning a combined result.
+    /// </summary>
     public class ServiceBrokerService : IServiceBrokerService
     {
         private readonly IServiceRepository _serviceRepository;
@@ -27,16 +30,51 @@ namespace ServiceBroker.Example
             _cache = cache;
         }
 
+        /// <summary>
+        /// Calls the services specified by the service and token ids, and returns the results of these calls.
+        /// </summary>
+        /// <param name="serviceOrTokenIds">Ids for the services and/or tokens to retrieve information for.</param>
+        /// <param name="cacheRegion">Cache region to use for storing and retrieving values, if required by the services called.</param>
+        /// <param name="timeout">Maximum time the services should wait for answers from external services.</param>
+        /// <returns>An object representing the result of the calls to the services specified by the service and token ids.</returns>
         public ServiceBrokerResponse CallServices(IEnumerable<Guid> serviceOrTokenIds, string cacheRegion, TimeSpan timeout)
         {
             return CallServicesAsync(serviceOrTokenIds, cacheRegion, timeout).GetAwaiter().GetResult();
         }
 
+        /// <summary>
+        /// Calls the services specified by the service and token ids, and returns the results of these calls.
+        /// </summary>
+        /// <param name="serviceOrTokenIds">Ids for the services and/or tokens to retrieve information for.</param>
+        /// <param name="cacheRegion">Cache region to use for storing and retrieving values, if required by the services called.</param>
+        /// <param name="timeout">Maximum time the service should wait for answers from external services.</param>
+        /// <returns>An object representing the result of the calls to the services specified by the service and token ids.</returns>
+        public async Task<ServiceBrokerResponse> CallServicesAsync(IEnumerable<Guid> serviceOrTokenIds, string cacheRegion, TimeSpan timeout)
+        {
+            return await CallServicesAsyncInternal(serviceOrTokenIds, cacheRegion, timeout, null);
+        }
+
+        /// <summary>
+        /// Calls the specified service, and returns the result of the call.
+        /// </summary>
+        /// <param name="serviceId">The id of the service to call.</param>
+        /// <param name="cacheRegion">he region to use for storing and retrieving values, if required by the service called.</param>
+        /// <param name="timeout">Maximum time the service should wait for answers from service.</param>
+        /// <param name="additionalParameters">Specification of additional parameters to include in the body of any outgoing requests performed as part of the processing of the service.</param>
+        /// <returns>An object representing the result of the call to the external service.</returns>
         public ServiceResponse CallService(Guid serviceId, string cacheRegion, TimeSpan timeout, IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             return CallServiceAsync(serviceId, cacheRegion, timeout, additionalParameters).GetAwaiter().GetResult();
         }
 
+        /// <summary>
+        /// Calls the specified service, and returns the result of the call.
+        /// </summary>
+        /// <param name="serviceId">The id of the service to call.</param>
+        /// <param name="cacheRegion">he region to use for storing and retrieving values, if required by the service called.</param>
+        /// <param name="timeout">Maximum time the service should wait for answers from service.</param>
+        /// <param name="additionalParameters">Specification of additional parameters to include in the body of any outgoing requests performed as part of the processing of the service.</param>
+        /// <returns>An object representing the result of the call to the external service.</returns>
         public async Task<ServiceResponse> CallServiceAsync(Guid serviceId, string cacheRegion, TimeSpan timeout, IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             ServiceBrokerResponse serviceBrokerResponse = await CallServicesAsyncInternal(new[] { serviceId }, cacheRegion, timeout, additionalParameters);
@@ -45,16 +83,17 @@ namespace ServiceBroker.Example
 
             return serviceResponse ?? new ServiceResponse
             {
-                Id = serviceId,
+                ServiceId = serviceId,
                 Status = ServiceResponseStatus.Error
             };
         }
 
-        public async Task<ServiceBrokerResponse> CallServicesAsync(IEnumerable<Guid> serviceOrTokenIds, string cacheRegion, TimeSpan timeout)
-        {
-            return await CallServicesAsyncInternal(serviceOrTokenIds, cacheRegion, timeout, null);
-        }
-
+        /// <summary>
+        /// Starts call to the services specified by the service and token ids on a background thread.
+        /// </summary>
+        /// <param name="serviceOrTokenIds">Ids for the services and/or tokens to retrieve information for.</param>
+        /// <param name="cacheRegion">Cache region to use for storing and retrieving values, if required by the services called.</param>
+        /// <param name="timeout">Maximum time the services should wait for answers from external services.</param>
         public void StartBackgroundServiceCalls(IEnumerable<Guid> serviceOrTokenIds, string cacheRegion,
             TimeSpan timeout)
         {
@@ -64,6 +103,11 @@ namespace ServiceBroker.Example
                 });
         }
 
+        /// <summary>
+        /// Generates an xml document containing all the data returned from external services
+        /// </summary>
+        /// <param name="cacheRegion">The cache region to look for service and token data under</param>
+        /// <returns>The user profile containing the responses from the services</returns>
         public XDocument GetUserProfile(string cacheRegion)
         {
             var doc = new XDocument();

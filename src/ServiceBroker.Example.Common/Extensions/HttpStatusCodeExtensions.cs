@@ -2,8 +2,16 @@
 
 namespace ServiceBroker.Example.Common.Extensions
 {
+    /// <summary>
+    /// Extensions for the HttpStatusCode enum
+    /// </summary>
     public static class HttpStatusCodeExtensions
     {
+        /// <summary>
+        /// Returns whether the status code is a 2XX code
+        /// </summary>
+        /// <param name="httpStatusCode"></param>
+        /// <returns></returns>
         public static bool IsOkStatus(this HttpStatusCode httpStatusCode)
         {
             switch (httpStatusCode)
