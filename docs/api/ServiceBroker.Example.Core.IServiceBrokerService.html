@@ -346,19 +346,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_System_String_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L65">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IServiceBrokerService.cs/#L66">View Source</a>
   </span>
   <a id="ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile*"></a>
-  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_System_String_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String)">GetUserProfile(String)</h4>
+  <h4 id="ServiceBroker_Example_Core_IServiceBrokerService_GetUserProfile_System_String_System_Boolean_" data-uid="ServiceBroker.Example.Core.IServiceBrokerService.GetUserProfile(System.String,System.Boolean)">GetUserProfile(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Generates an xml document containing all the data returned from external services</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">XDocument GetUserProfile(string cacheRegion)</code></pre>
+    <pre><code class="lang-csharp hljs">XDocument GetUserProfile(string cacheRegion, bool forVisualization)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -375,6 +375,11 @@
         <td><span class="parametername">cacheRegion</span></td>
         <td><p>The cache region to look for service and token data under</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forVisualization</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

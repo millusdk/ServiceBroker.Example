@@ -6,6 +6,9 @@ using ServiceBroker.Example.Models;
 
 namespace ServiceBroker.Example
 {
+    /// <summary>
+    /// A service that always returns the same answer no matter which user the service is called for
+    /// </summary>
     public class StaticService : ServiceBase, IStaticService
     {
         private readonly ICache _cache;
@@ -17,6 +20,14 @@ namespace ServiceBroker.Example
             _tokenService = tokenService;
         }
 
+        /// <summary>
+        /// Returns the configured data for the service
+        /// </summary>
+        /// <param name="serviceInfo">The service to be called</param>
+        /// <param name="cacheRegion">The cache region to store/retrieve values from if applicable</param>
+        /// <param name="cancellationToken">Cancellation token used to cancel the request to the service.</param>
+        /// <param name="additionalParameters">Additional parameters to include in the request if they have a value available in the cache.</param>
+        /// <returns></returns>
         public override Task<ServiceResponse> CallService(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             if (!(serviceInfo is StaticServiceInfo staticServiceInfo))

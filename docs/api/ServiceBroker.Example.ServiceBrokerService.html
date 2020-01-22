@@ -119,18 +119,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService__ctor_ServiceBroker_Example_Core_IServiceRepository_ServiceBroker_Example_Core_IDynamicService_ServiceBroker_Example_Core_ICachedService_ServiceBroker_Example_Core_ITaskScheduler_ServiceBroker_Example_Core_ICache_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.%23ctor(ServiceBroker.Example.Core.IServiceRepository%2CServiceBroker.Example.Core.IDynamicService%2CServiceBroker.Example.Core.ICachedService%2CServiceBroker.Example.Core.ITaskScheduler%2CServiceBroker.Example.Core.ICache)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService__ctor_ServiceBroker_Example_Core_IServiceRepository_ServiceBroker_Example_Core_IDynamicService_ServiceBroker_Example_Core_ICachedService_ServiceBroker_Example_Core_IStaticService_ServiceBroker_Example_Core_ITaskScheduler_ServiceBroker_Example_Core_ICache_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.%23ctor(ServiceBroker.Example.Core.IServiceRepository%2CServiceBroker.Example.Core.IDynamicService%2CServiceBroker.Example.Core.ICachedService%2CServiceBroker.Example.Core.IStaticService%2CServiceBroker.Example.Core.ITaskScheduler%2CServiceBroker.Example.Core.ICache)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L24">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L25">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService__ctor_" data-uid="ServiceBroker.Example.ServiceBrokerService.#ctor*"></a>
-  <h4 id="ServiceBroker_Example_ServiceBrokerService__ctor_ServiceBroker_Example_Core_IServiceRepository_ServiceBroker_Example_Core_IDynamicService_ServiceBroker_Example_Core_ICachedService_ServiceBroker_Example_Core_ITaskScheduler_ServiceBroker_Example_Core_ICache_" data-uid="ServiceBroker.Example.ServiceBrokerService.#ctor(ServiceBroker.Example.Core.IServiceRepository,ServiceBroker.Example.Core.IDynamicService,ServiceBroker.Example.Core.ICachedService,ServiceBroker.Example.Core.ITaskScheduler,ServiceBroker.Example.Core.ICache)">ServiceBrokerService(IServiceRepository, IDynamicService, ICachedService, ITaskScheduler, ICache)</h4>
+  <h4 id="ServiceBroker_Example_ServiceBrokerService__ctor_ServiceBroker_Example_Core_IServiceRepository_ServiceBroker_Example_Core_IDynamicService_ServiceBroker_Example_Core_ICachedService_ServiceBroker_Example_Core_IStaticService_ServiceBroker_Example_Core_ITaskScheduler_ServiceBroker_Example_Core_ICache_" data-uid="ServiceBroker.Example.ServiceBrokerService.#ctor(ServiceBroker.Example.Core.IServiceRepository,ServiceBroker.Example.Core.IDynamicService,ServiceBroker.Example.Core.ICachedService,ServiceBroker.Example.Core.IStaticService,ServiceBroker.Example.Core.ITaskScheduler,ServiceBroker.Example.Core.ICache)">ServiceBrokerService(IServiceRepository, IDynamicService, ICachedService, IStaticService, ITaskScheduler, ICache)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ServiceBrokerService(IServiceRepository serviceRepository, IDynamicService dynamicService, ICachedService cachedService, ITaskScheduler taskScheduler, ICache cache)</code></pre>
+    <pre><code class="lang-csharp hljs">public ServiceBrokerService(IServiceRepository serviceRepository, IDynamicService dynamicService, ICachedService cachedService, IStaticService staticService, ITaskScheduler taskScheduler, ICache cache)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,6 +158,11 @@
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="ServiceBroker.Example.Core.IStaticService.html">IStaticService</a></td>
+        <td><span class="parametername">staticService</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="ServiceBroker.Example.Core.ITaskScheduler.html">ITaskScheduler</a></td>
         <td><span class="parametername">taskScheduler</span></td>
         <td></td>
@@ -176,7 +181,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_CallService_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.CallService(System.Guid%2CSystem.String%2CSystem.TimeSpan%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L65">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L68">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService_CallService_" data-uid="ServiceBroker.Example.ServiceBrokerService.CallService*"></a>
   <h4 id="ServiceBroker_Example_ServiceBrokerService_CallService_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.ServiceBrokerService.CallService(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallService(Guid, String, TimeSpan, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
@@ -244,7 +249,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_CallServiceAsync_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.CallServiceAsync(System.Guid%2CSystem.String%2CSystem.TimeSpan%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L78">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L81">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService_CallServiceAsync_" data-uid="ServiceBroker.Example.ServiceBrokerService.CallServiceAsync*"></a>
   <h4 id="ServiceBroker_Example_ServiceBrokerService_CallServiceAsync_System_Guid_System_String_System_TimeSpan_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.ServiceBrokerService.CallServiceAsync(System.Guid,System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallServiceAsync(Guid, String, TimeSpan, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
@@ -312,7 +317,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_CallServices_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L40">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L43">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService_CallServices_" data-uid="ServiceBroker.Example.ServiceBrokerService.CallServices*"></a>
   <h4 id="ServiceBroker_Example_ServiceBrokerService_CallServices_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_" data-uid="ServiceBroker.Example.ServiceBrokerService.CallServices(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)">CallServices(IEnumerable&lt;Guid&gt;, String, TimeSpan)</h4>
@@ -374,7 +379,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_CallServicesAsync_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L52">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L55">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService_CallServicesAsync_" data-uid="ServiceBroker.Example.ServiceBrokerService.CallServicesAsync*"></a>
   <h4 id="ServiceBroker_Example_ServiceBrokerService_CallServicesAsync_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_" data-uid="ServiceBroker.Example.ServiceBrokerService.CallServicesAsync(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)">CallServicesAsync(IEnumerable&lt;Guid&gt;, String, TimeSpan)</h4>
@@ -433,19 +438,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_GetUserProfile_System_String_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_GetUserProfile_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L111">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L115">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService_GetUserProfile_" data-uid="ServiceBroker.Example.ServiceBrokerService.GetUserProfile*"></a>
-  <h4 id="ServiceBroker_Example_ServiceBrokerService_GetUserProfile_System_String_" data-uid="ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String)">GetUserProfile(String)</h4>
+  <h4 id="ServiceBroker_Example_ServiceBrokerService_GetUserProfile_System_String_System_Boolean_" data-uid="ServiceBroker.Example.ServiceBrokerService.GetUserProfile(System.String,System.Boolean)">GetUserProfile(String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Generates an xml document containing all the data returned from external services</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public XDocument GetUserProfile(string cacheRegion)</code></pre>
+    <pre><code class="lang-csharp hljs">public XDocument GetUserProfile(string cacheRegion, bool forVisualization)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -462,6 +467,11 @@
         <td><span class="parametername">cacheRegion</span></td>
         <td><p>The cache region to look for service and token data under</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">forVisualization</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -486,7 +496,7 @@
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.String%2CSystem.TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L97">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBrokerService.cs/#L100">View Source</a>
   </span>
   <a id="ServiceBroker_Example_ServiceBrokerService_StartBackgroundServiceCalls_" data-uid="ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls*"></a>
   <h4 id="ServiceBroker_Example_ServiceBrokerService_StartBackgroundServiceCalls_System_Collections_Generic_IEnumerable_System_Guid__System_String_System_TimeSpan_" data-uid="ServiceBroker.Example.ServiceBrokerService.StartBackgroundServiceCalls(System.Collections.Generic.IEnumerable{System.Guid},System.String,System.TimeSpan)">StartBackgroundServiceCalls(IEnumerable&lt;Guid&gt;, String, TimeSpan)</h4>

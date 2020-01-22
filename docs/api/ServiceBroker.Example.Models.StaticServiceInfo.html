@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class CachedServiceInfo
+    <title>Class StaticServiceInfo
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class CachedServiceInfo
+    <meta name="title" content="Class StaticServiceInfo
    ">
     <meta name="generator" content="docfx 2.46.0.0">
     
@@ -68,35 +68,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example.Models.CachedServiceInfo">
+            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example.Models.StaticServiceInfo">
   
   
-  <h1 id="ServiceBroker_Example_Models_CachedServiceInfo" data-uid="ServiceBroker.Example.Models.CachedServiceInfo" class="text-break">Class CachedServiceInfo
+  <h1 id="ServiceBroker_Example_Models_StaticServiceInfo" data-uid="ServiceBroker.Example.Models.StaticServiceInfo" class="text-break">Class StaticServiceInfo
   </h1>
-  <div class="markdown level0 summary"><p>Contains information about a service which stores data such that repeated calls do not result in additional requests to the called service.</p>
+  <div class="markdown level0 summary"><p>Contains information about a static service which writes data directly to the cache during another operation, ie. the login system writing claims or properties about the user.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="ServiceBroker.Example.Models.ServiceInfo.html">ServiceInfo</a></div>
-    <div class="level2"><a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html">CalledServiceInfo</a></div>
-    <div class="level3"><span class="xref">CachedServiceInfo</span></div>
+    <div class="level2"><span class="xref">StaticServiceInfo</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html#ServiceBroker_Example_Models_CalledServiceInfo_CircuitBreakerInfo">CalledServiceInfo.CircuitBreakerInfo</a>
-    </div>
-    <div>
-      <a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html#ServiceBroker_Example_Models_CalledServiceInfo_Endpoint">CalledServiceInfo.Endpoint</a>
-    </div>
-    <div>
-      <a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html#ServiceBroker_Example_Models_CalledServiceInfo_Timeout">CalledServiceInfo.Timeout</a>
-    </div>
-    <div>
-      <a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html#ServiceBroker_Example_Models_CalledServiceInfo_AdditionalParameters">CalledServiceInfo.AdditionalParameters</a>
-    </div>
     <div>
       <a class="xref" href="ServiceBroker.Example.Models.ServiceInfo.html#ServiceBroker_Example_Models_ServiceInfo_Id">ServiceInfo.Id</a>
     </div>
@@ -136,10 +123,42 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="ServiceBroker.Example.Models.html">ServiceBroker.Example.Models</a></h6>
   <h6><strong>Assembly</strong>: ServiceBroker.Example.Models.dll</h6>
-  <h5 id="ServiceBroker_Example_Models_CachedServiceInfo_syntax">Syntax</h5>
+  <h5 id="ServiceBroker_Example_Models_StaticServiceInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CachedServiceInfo : CalledServiceInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public class StaticServiceInfo : ServiceInfo</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_StaticServiceInfo_Data.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.StaticServiceInfo.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/StaticServiceInfo.cs/#L12">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_Models_StaticServiceInfo_Data_" data-uid="ServiceBroker.Example.Models.StaticServiceInfo.Data*"></a>
+  <h4 id="ServiceBroker_Example_Models_StaticServiceInfo_Data" data-uid="ServiceBroker.Example.Models.StaticServiceInfo.Data">Data</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Data { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -148,10 +167,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_CachedServiceInfo.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.CachedServiceInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_StaticServiceInfo.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.StaticServiceInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/CachedServiceInfo.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/StaticServiceInfo.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

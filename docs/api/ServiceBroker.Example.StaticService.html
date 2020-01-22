@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ServiceBase
+    <title>Class StaticService
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ServiceBase
+    <meta name="title" content="Class StaticService
    ">
     <meta name="generator" content="docfx 2.46.0.0">
     
@@ -68,23 +68,23 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example.ServiceBase">
+            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example.StaticService">
   
   
-  <h1 id="ServiceBroker_Example_ServiceBase" data-uid="ServiceBroker.Example.ServiceBase" class="text-break">Class ServiceBase
+  <h1 id="ServiceBroker_Example_StaticService" data-uid="ServiceBroker.Example.StaticService" class="text-break">Class StaticService
   </h1>
-  <div class="markdown level0 summary"><p>Base implementation for all service types</p>
+  <div class="markdown level0 summary"><p>A service that always returns the same answer no matter which user the service is called for</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ServiceBase</span></div>
-      <div class="level2"><a class="xref" href="ServiceBroker.Example.CalledServiceBase.html">CalledServiceBase</a></div>
-      <div class="level2"><a class="xref" href="ServiceBroker.Example.StaticService.html">StaticService</a></div>
+    <div class="level1"><a class="xref" href="ServiceBroker.Example.ServiceBase.html">ServiceBase</a></div>
+    <div class="level2"><span class="xref">StaticService</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="ServiceBroker.Example.Core.IStaticService.html">IStaticService</a></div>
     <div><a class="xref" href="ServiceBroker.Example.Core.IServiceBase.html">IServiceBase</a></div>
   </div>
   <div class="inheritedMembers">
@@ -113,27 +113,66 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="ServiceBroker.Example.html">ServiceBroker.Example</a></h6>
   <h6><strong>Assembly</strong>: ServiceBroker.Example.dll</h6>
-  <h5 id="ServiceBroker_Example_ServiceBase_syntax">Syntax</h5>
+  <h5 id="ServiceBroker_Example_StaticService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ServiceBase : IServiceBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class StaticService : ServiceBase, IStaticService, IServiceBase</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_StaticService__ctor_ServiceBroker_Example_Core_ICache_ServiceBroker_Example_Core_ITokenService_.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.StaticService.%23ctor(ServiceBroker.Example.Core.ICache%2CServiceBroker.Example.Core.ITokenService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/StaticService.cs/#L17">View Source</a>
+  </span>
+  <a id="ServiceBroker_Example_StaticService__ctor_" data-uid="ServiceBroker.Example.StaticService.#ctor*"></a>
+  <h4 id="ServiceBroker_Example_StaticService__ctor_ServiceBroker_Example_Core_ICache_ServiceBroker_Example_Core_ITokenService_" data-uid="ServiceBroker.Example.StaticService.#ctor(ServiceBroker.Example.Core.ICache,ServiceBroker.Example.Core.ITokenService)">StaticService(ICache, ITokenService)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StaticService(ICache cache, ITokenService tokenService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="ServiceBroker.Example.Core.ICache.html">ICache</a></td>
+        <td><span class="parametername">cache</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="ServiceBroker.Example.Core.ITokenService.html">ITokenService</a></td>
+        <td><span class="parametername">tokenService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo%2CSystem.String%2CSystem.Threading.CancellationToken%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_StaticService_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.StaticService.CallService(ServiceBroker.Example.Models.ServiceInfo%2CSystem.String%2CSystem.Threading.CancellationToken%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBase.cs/#L22">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/StaticService.cs/#L31">View Source</a>
   </span>
-  <a id="ServiceBroker_Example_ServiceBase_CallService_" data-uid="ServiceBroker.Example.ServiceBase.CallService*"></a>
-  <h4 id="ServiceBroker_Example_ServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.ServiceBase.CallService(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallService(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Retrieves data from the service specified in the service info parameter</p>
+  <a id="ServiceBroker_Example_StaticService_CallService_" data-uid="ServiceBroker.Example.StaticService.CallService*"></a>
+  <h4 id="ServiceBroker_Example_StaticService_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.StaticService.CallService(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallService(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Returns the configured data for the service</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Task&lt;ServiceResponse&gt; CallService(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; additionalParameters)</code></pre>
+    <pre><code class="lang-csharp hljs">public override Task&lt;ServiceResponse&gt; CallService(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; additionalParameters)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,25 +187,25 @@
       <tr>
         <td><a class="xref" href="ServiceBroker.Example.Models.ServiceInfo.html">ServiceInfo</a></td>
         <td><span class="parametername">serviceInfo</span></td>
-        <td><p>Information about the service to call</p>
+        <td><p>The service to be called</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">cacheRegion</span></td>
-        <td><p>The cache region to use for cache lookups</p>
+        <td><p>The cache region to store/retrieve values from if applicable</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td><p>Cancellation token to cancel the request</p>
+        <td><p>Cancellation token used to cancel the request to the service.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><span class="parametername">additionalParameters</span></td>
-        <td><p>Additional post parameters to include in the request body</p>
+        <td><p>Additional parameters to include in the request if they have a value available in the cache.</p>
 </td>
       </tr>
     </tbody>
@@ -182,12 +221,16 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.ServiceResponse.html">ServiceResponse</a>&gt;</td>
-        <td><p>Service response with the result of the data retrieval</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">ServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a></div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ServiceBroker.Example.Core.IStaticService.html">IStaticService</a>
+  </div>
   <div>
       <a class="xref" href="ServiceBroker.Example.Core.IServiceBase.html">IServiceBase</a>
   </div>
@@ -199,10 +242,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_ServiceBase.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.ServiceBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_StaticService.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.StaticService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/ServiceBase.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/StaticService.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

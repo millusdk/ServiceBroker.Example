@@ -73,15 +73,15 @@
   
   <h1 id="ServiceBroker_Example_Models_ServiceInfo" data-uid="ServiceBroker.Example.Models.ServiceInfo" class="text-break">Class ServiceInfo
   </h1>
-  <div class="markdown level0 summary"><p>Information about an external service</p>
+  <div class="markdown level0 summary"><p>Information about a service</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ServiceInfo</span></div>
-      <div class="level2"><a class="xref" href="ServiceBroker.Example.Models.CachedServiceInfo.html">CachedServiceInfo</a></div>
-      <div class="level2"><a class="xref" href="ServiceBroker.Example.Models.DynamicServiceInfo.html">DynamicServiceInfo</a></div>
+      <div class="level2"><a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html">CalledServiceInfo</a></div>
+      <div class="level2"><a class="xref" href="ServiceBroker.Example.Models.StaticServiceInfo.html">StaticServiceInfo</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -117,37 +117,6 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_AdditionalParameters.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/ServiceInfo.cs/#L49">View Source</a>
-  </span>
-  <a id="ServiceBroker_Example_Models_ServiceInfo_AdditionalParameters_" data-uid="ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters*"></a>
-  <h4 id="ServiceBroker_Example_Models_ServiceInfo_AdditionalParameters" data-uid="ServiceBroker.Example.Models.ServiceInfo.AdditionalParameters">AdditionalParameters</h4>
-  <div class="markdown level1 summary"><p>Additional parameters to include as post parameters to the request</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ParameterInfo&gt; AdditionalParameters { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.ParameterInfo.html">ParameterInfo</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_CacheKey.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.CacheKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -179,50 +148,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_CircuitBreakerInfo.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/ServiceInfo.cs/#L29">View Source</a>
-  </span>
-  <a id="ServiceBroker_Example_Models_ServiceInfo_CircuitBreakerInfo_" data-uid="ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo*"></a>
-  <h4 id="ServiceBroker_Example_Models_ServiceInfo_CircuitBreakerInfo" data-uid="ServiceBroker.Example.Models.ServiceInfo.CircuitBreakerInfo">CircuitBreakerInfo</h4>
-  <div class="markdown level1 summary"><p>Contains information about how to handle circuit breaker functionality for the service</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CircuitBreakerInfo CircuitBreakerInfo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="ServiceBroker.Example.Models.CircuitBreakerInfo.html">CircuitBreakerInfo</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_Endpoint.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.Endpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_ExcludeFromVisibleUserProfile.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.ExcludeFromVisibleUserProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/ServiceInfo.cs/#L34">View Source</a>
   </span>
-  <a id="ServiceBroker_Example_Models_ServiceInfo_Endpoint_" data-uid="ServiceBroker.Example.Models.ServiceInfo.Endpoint*"></a>
-  <h4 id="ServiceBroker_Example_Models_ServiceInfo_Endpoint" data-uid="ServiceBroker.Example.Models.ServiceInfo.Endpoint">Endpoint</h4>
-  <div class="markdown level1 summary"><p>The endpoint to call</p>
+  <a id="ServiceBroker_Example_Models_ServiceInfo_ExcludeFromVisibleUserProfile_" data-uid="ServiceBroker.Example.Models.ServiceInfo.ExcludeFromVisibleUserProfile*"></a>
+  <h4 id="ServiceBroker_Example_Models_ServiceInfo_ExcludeFromVisibleUserProfile" data-uid="ServiceBroker.Example.Models.ServiceInfo.ExcludeFromVisibleUserProfile">ExcludeFromVisibleUserProfile</h4>
+  <div class="markdown level1 summary"><p>Indicates if the data from the service should be hidden from visualizations of the user profile</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Endpoint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ExcludeFromVisibleUserProfile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +172,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -248,7 +186,7 @@
   </span>
   <a id="ServiceBroker_Example_Models_ServiceInfo_Id_" data-uid="ServiceBroker.Example.Models.ServiceInfo.Id*"></a>
   <h4 id="ServiceBroker_Example_Models_ServiceInfo_Id" data-uid="ServiceBroker.Example.Models.ServiceInfo.Id">Id</h4>
-  <div class="markdown level1 summary"><p>The id of the external service</p>
+  <div class="markdown level1 summary"><p>The id of the service</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -303,45 +241,14 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_Timeout.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.Timeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/ServiceInfo.cs/#L39">View Source</a>
-  </span>
-  <a id="ServiceBroker_Example_Models_ServiceInfo_Timeout_" data-uid="ServiceBroker.Example.Models.ServiceInfo.Timeout*"></a>
-  <h4 id="ServiceBroker_Example_Models_ServiceInfo_Timeout" data-uid="ServiceBroker.Example.Models.ServiceInfo.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"><p>How log to wait before timing the call out</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TimeSpan Timeout { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Models_ServiceInfo_Tokens.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Models.ServiceInfo.Tokens%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/ServiceInfo.cs/#L44">View Source</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Models/ServiceInfo.cs/#L29">View Source</a>
   </span>
   <a id="ServiceBroker_Example_Models_ServiceInfo_Tokens_" data-uid="ServiceBroker.Example.Models.ServiceInfo.Tokens*"></a>
   <h4 id="ServiceBroker_Example_Models_ServiceInfo_Tokens" data-uid="ServiceBroker.Example.Models.ServiceInfo.Tokens">Tokens</h4>
-  <div class="markdown level1 summary"><p>The tokens to evaluate on the response from the extrenal service</p>
+  <div class="markdown level1 summary"><p>The tokens to evaluate on the response from the service</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

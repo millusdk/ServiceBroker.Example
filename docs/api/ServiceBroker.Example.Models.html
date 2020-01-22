@@ -78,16 +78,18 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="ServiceBroker.Example.Models.CachedServiceInfo.html">CachedServiceInfo</a></h4>
-      <section><p>Contains information about a service which stores data such that repeated calls do not result in additional requests to the external service.</p>
+      <section><p>Contains information about a service which stores data such that repeated calls do not result in additional requests to the called service.</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.CacheEntry-1.html">CacheEntry&lt;T&gt;</a></h4>
       <section><p>An entry in the class</p>
 </section>
+      <h4><a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html">CalledServiceInfo</a></h4>
+      <section></section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.CircuitBreakerInfo.html">CircuitBreakerInfo</a></h4>
       <section><p>Contains information needed by the circuit breaker</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.DynamicServiceInfo.html">DynamicServiceInfo</a></h4>
-      <section><p>Contains information about a dynamic service, where every call results in a request to the external service</p>
+      <section><p>Contains information about a dynamic service, where every call results in a request to the called service</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.HttpClientResponse.html">HttpClientResponse</a></h4>
       <section><p>Represents a response from an HTTP call</p>
@@ -99,10 +101,13 @@
       <section><p>A response from the service broker service</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.ServiceInfo.html">ServiceInfo</a></h4>
-      <section><p>Information about an external service</p>
+      <section><p>Information about a service</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.ServiceResponse.html">ServiceResponse</a></h4>
       <section><p>Represents the response from a service</p>
+</section>
+      <h4><a class="xref" href="ServiceBroker.Example.Models.StaticServiceInfo.html">StaticServiceInfo</a></h4>
+      <section><p>Contains information about a static service which writes data directly to the cache during another operation, ie. the login system writing claims or properties about the user.</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.TokenInfo.html">TokenInfo</a></h4>
       <section><p>Represents a token</p>
@@ -119,7 +124,7 @@
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="ServiceBroker.Example.Models.ServiceResponseStatus.html">ServiceResponseStatus</a></h4>
-      <section><p>The status of the response from the external service</p>
+      <section><p>The status of the response from the service</p>
 </section>
       <h4><a class="xref" href="ServiceBroker.Example.Models.TokenResponseStatus.html">TokenResponseStatus</a></h4>
       <section><p>The status of the evaluation of a token</p>

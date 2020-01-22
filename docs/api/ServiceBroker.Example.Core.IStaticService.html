@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace ServiceBroker.Example
+    <title>Interface IStaticService
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace ServiceBroker.Example
+    <meta name="title" content="Interface IStaticService
    ">
     <meta name="generator" content="docfx 2.46.0.0">
     
@@ -68,36 +68,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example">
+            <article class="content wrap" id="_content" data-uid="ServiceBroker.Example.Core.IStaticService">
   
-  <h1 id="ServiceBroker_Example" data-uid="ServiceBroker.Example" class="text-break">Namespace ServiceBroker.Example
+  
+  <h1 id="ServiceBroker_Example_Core_IStaticService" data-uid="ServiceBroker.Example.Core.IStaticService" class="text-break">Interface IStaticService
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A service that always returns the same answer no matter which user the service is called for</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="ServiceBroker.Example.CachedService.html">CachedService</a></h4>
-      <section><p>A called service wrapper which saves the values returned from the called service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the called service.</p>
-</section>
-      <h4><a class="xref" href="ServiceBroker.Example.CalledServiceBase.html">CalledServiceBase</a></h4>
-      <section><p>An abstract service used as the base implementation for the different service types</p>
-</section>
-      <h4><a class="xref" href="ServiceBroker.Example.DynamicService.html">DynamicService</a></h4>
-      <section><p>A called service wrapper, where the called service should be called every time wrapper is called.</p>
-</section>
-      <h4><a class="xref" href="ServiceBroker.Example.ServiceBase.html">ServiceBase</a></h4>
-      <section><p>Base implementation for all service types</p>
-</section>
-      <h4><a class="xref" href="ServiceBroker.Example.ServiceBrokerService.html">ServiceBrokerService</a></h4>
-      <section><p>A service broker wrapping calls to multiple external services, running them in parallel, handling timeouts for the service calls, and returning a combined result.</p>
-</section>
-      <h4><a class="xref" href="ServiceBroker.Example.StaticService.html">StaticService</a></h4>
-      <section><p>A service that always returns the same answer no matter which user the service is called for</p>
-</section>
-      <h4><a class="xref" href="ServiceBroker.Example.TokenService.html">TokenService</a></h4>
-      <section><p>A service handling parsing and evaluating tokens.</p>
-</section>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ServiceBroker.Example.Core.IServiceBase.html#ServiceBroker_Example_Core_IServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">IServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ServiceBroker.Example.Core.html">ServiceBroker.Example.Core</a></h6>
+  <h6><strong>Assembly</strong>: ServiceBroker.Example.Core.dll</h6>
+  <h5 id="ServiceBroker_Example_Core_IStaticService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IStaticService : IServiceBase</code></pre>
+  </div>
 </article>
           </div>
           
@@ -105,6 +95,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_Core_IStaticService.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.Core.IStaticService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example.Core/IStaticService.cs/#L6" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -73,14 +73,15 @@
   
   <h1 id="ServiceBroker_Example_DynamicService" data-uid="ServiceBroker.Example.DynamicService" class="text-break">Class DynamicService
   </h1>
-  <div class="markdown level0 summary"><p>An external service wrapper, where the external service should be called every time wrapper is called.</p>
+  <div class="markdown level0 summary"><p>A called service wrapper, where the called service should be called every time wrapper is called.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="ServiceBroker.Example.ServiceBase.html">ServiceBase</a></div>
-    <div class="level2"><span class="xref">DynamicService</span></div>
+    <div class="level2"><a class="xref" href="ServiceBroker.Example.CalledServiceBase.html">CalledServiceBase</a></div>
+    <div class="level3"><span class="xref">DynamicService</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -90,19 +91,19 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_Cache">ServiceBase.Cache</a>
+      <a class="xref" href="ServiceBroker.Example.CalledServiceBase.html#ServiceBroker_Example_CalledServiceBase_Cache">CalledServiceBase.Cache</a>
     </div>
     <div>
-      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_Log">ServiceBase.Log</a>
+      <a class="xref" href="ServiceBroker.Example.CalledServiceBase.html#ServiceBroker_Example_CalledServiceBase_Log">CalledServiceBase.Log</a>
     </div>
     <div>
-      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetPostParameters_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">ServiceBase.GetPostParameters(ServiceInfo, String, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
+      <a class="xref" href="ServiceBroker.Example.CalledServiceBase.html#ServiceBroker_Example_CalledServiceBase_GetPostParameters_ServiceBroker_Example_Models_CalledServiceInfo_System_String_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">CalledServiceBase.GetPostParameters(CalledServiceInfo, String, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_GetCircuitBreakerPolicy_ServiceBroker_Example_Models_ServiceInfo_">ServiceBase.GetCircuitBreakerPolicy(ServiceInfo)</a>
+      <a class="xref" href="ServiceBroker.Example.CalledServiceBase.html#ServiceBroker_Example_CalledServiceBase_GetCircuitBreakerPolicy_ServiceBroker_Example_Models_CalledServiceInfo_">CalledServiceBase.GetCircuitBreakerPolicy(CalledServiceInfo)</a>
     </div>
     <div>
-      <a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">ServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
+      <a class="xref" href="ServiceBroker.Example.CalledServiceBase.html#ServiceBroker_Example_CalledServiceBase_CallService_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">CalledServiceBase.CallService(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object)</span>
@@ -130,7 +131,7 @@
   <h6><strong>Assembly</strong>: ServiceBroker.Example.dll</h6>
   <h5 id="ServiceBroker_Example_DynamicService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DynamicService : ServiceBase, IDynamicService, IServiceBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class DynamicService : CalledServiceBase, IDynamicService, IServiceBase</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -180,19 +181,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_DynamicService_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo%2CSystem.String%2CSystem.Threading.CancellationToken%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/millusdk/ServiceBroker.Example/new/master/apiSpec/new?filename=ServiceBroker_Example_DynamicService_CallServiceInternal_ServiceBroker_Example_Models_CalledServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___.md&amp;value=---%0Auid%3A%20ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.CalledServiceInfo%2CSystem.String%2CSystem.Threading.CancellationToken%2CSystem.Collections.Generic.IEnumerable%7BSystem.Collections.Generic.KeyValuePair%7BSystem.String%2CSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/millusdk/ServiceBroker.Example/blob/master/src/ServiceBroker.Example/DynamicService.cs/#L35">View Source</a>
   </span>
   <a id="ServiceBroker_Example_DynamicService_CallServiceInternal_" data-uid="ServiceBroker.Example.DynamicService.CallServiceInternal*"></a>
-  <h4 id="ServiceBroker_Example_DynamicService_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.ServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Calls the external service and returns the result.</p>
+  <h4 id="ServiceBroker_Example_DynamicService_CallServiceInternal_ServiceBroker_Example_Models_CalledServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___" data-uid="ServiceBroker.Example.DynamicService.CallServiceInternal(ServiceBroker.Example.Models.CalledServiceInfo,System.String,System.Threading.CancellationToken,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">CallServiceInternal(CalledServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Calls the dynamic service and returns the result.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task&lt;ServiceResponse&gt; CallServiceInternal(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; additionalParameters)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Task&lt;ServiceResponse&gt; CallServiceInternal(CalledServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt; additionalParameters)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +206,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="ServiceBroker.Example.Models.ServiceInfo.html">ServiceInfo</a></td>
+        <td><a class="xref" href="ServiceBroker.Example.Models.CalledServiceInfo.html">CalledServiceInfo</a></td>
         <td><span class="parametername">serviceInfo</span></td>
         <td><p>Information about the service to call</p>
 </td>
@@ -241,13 +242,13 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="ServiceBroker.Example.Models.ServiceResponse.html">ServiceResponse</a>&gt;</td>
-        <td><p>A service response representing the result of the call to the external service</p>
+        <td><p>A service response representing the result of the call to the dynamic service</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="ServiceBroker.Example.ServiceBase.html#ServiceBroker_Example_ServiceBase_CallServiceInternal_ServiceBroker_Example_Models_ServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">ServiceBase.CallServiceInternal(ServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a></div>
+  <div><a class="xref" href="ServiceBroker.Example.CalledServiceBase.html#ServiceBroker_Example_CalledServiceBase_CallServiceInternal_ServiceBroker_Example_Models_CalledServiceInfo_System_String_System_Threading_CancellationToken_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_String_System_String___">CalledServiceBase.CallServiceInternal(CalledServiceInfo, String, CancellationToken, IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="ServiceBroker.Example.Core.IDynamicService.html">IDynamicService</a>
