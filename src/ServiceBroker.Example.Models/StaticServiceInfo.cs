@@ -9,5 +9,6 @@ namespace ServiceBroker.Example.Models
     /// </summary>
     public class StaticServiceInfo : ServiceInfo
     {
+        public string Data { get; set; }
     }
 }
