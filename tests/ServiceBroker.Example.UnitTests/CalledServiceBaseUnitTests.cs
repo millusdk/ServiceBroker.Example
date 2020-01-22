@@ -12,16 +12,16 @@ using ServiceBroker.Example.Models;
 namespace ServiceBroker.Example.UnitTests
 {
     [TestClass]
-    public class ServiceBaseUnitTests
+    public class CalledServiceBaseUnitTests
     {
         [TestMethod]
         public void NullParametersNoCacheTest()
         {
             var cache = Substitute.For<ICache>();
 
-            var sut = new ServiceBaseInstance(cache);
+            var sut = new CalledServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(new ServiceInfo(), "cacheRegion", null);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(new CalledServiceInfo(), "cacheRegion", null);
 
             Assert.IsFalse(actual.Any());
         }
@@ -31,9 +31,9 @@ namespace ServiceBroker.Example.UnitTests
         {
             var cache = Substitute.For<ICache>();
 
-            var sut = new ServiceBaseInstance(cache);
+            var sut = new CalledServiceBaseInstance(cache);
 
-            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(new ServiceInfo(), "cacheRegion", new KeyValuePair<string, string>[0]);
+            IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(new CalledServiceInfo(), "cacheRegion", new KeyValuePair<string, string>[0]);
 
             Assert.IsFalse(actual.Any());
         }
@@ -43,7 +43,7 @@ namespace ServiceBroker.Example.UnitTests
         {
             var cacheRegion = "cacheRegion";
             var userIdentifier = "User";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 AdditionalParameters = new ParameterInfo[0]
             };
@@ -52,7 +52,7 @@ namespace ServiceBroker.Example.UnitTests
 
             cache.Get<string>(cacheRegion, Constants.UserIdentifierCacheKey).Returns(new CacheEntry<string> { Value = userIdentifier });
 
-            var sut = new ServiceBaseInstance(cache);
+            var sut = new CalledServiceBaseInstance(cache);
 
             IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(serviceInfo, cacheRegion, null);
 
@@ -76,7 +76,7 @@ namespace ServiceBroker.Example.UnitTests
             Guid nonExistingServiceParameterId = Guid.NewGuid();
             var serviceParameterKey = "Key";
             var serviceParameterValue = "Value";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 AdditionalParameters = new[]
                 {
@@ -98,7 +98,7 @@ namespace ServiceBroker.Example.UnitTests
             cache.Get<string>(cacheRegion, Constants.UserIdentifierCacheKey).Returns(new CacheEntry<string> { Value = userIdentifier });
             cache.Get<string>(cacheRegion, serviceParameterId.ToString()).Returns(new CacheEntry<string> { Value = serviceParameterValue });
 
-            var sut = new ServiceBaseInstance(cache);
+            var sut = new CalledServiceBaseInstance(cache);
 
             IEnumerable<KeyValuePair<string, string>> actual = sut.GetPostParameters(serviceInfo, cacheRegion, null);
 
@@ -118,15 +118,30 @@ namespace ServiceBroker.Example.UnitTests
             Assert.AreEqual(serviceParameterValue, parameter.Value);
         }
 
-        private class ServiceBaseInstance : ServiceBase
+        [TestMethod]
+        public async Task CallServiceBadServiceTypeTest()
         {
-            public ServiceBaseInstance(ICache cache) : base(cache)
+            var cacheRegion = "cacheRegion";
+            var serviceInfo = new ServiceInfo();
+
+            var cache = Substitute.For<ICache>();
+
+            var sut = new CalledServiceBaseInstance(cache);
+
+            var actual = await sut.CallService(serviceInfo, cacheRegion, CancellationToken.None, new KeyValuePair<string, string>[0]);
+
+            Assert.IsNull(actual);
+        }
+
+        private class CalledServiceBaseInstance : CalledServiceBase
+        {
+            public CalledServiceBaseInstance(ICache cache) : base(cache)
             {
             }
 
-            protected override Task<ServiceResponse> CallServiceInternal(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable<KeyValuePair<string, string>> additionalParameters)
+            protected override Task<ServiceResponse> CallServiceInternal(CalledServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken, IEnumerable<KeyValuePair<string, string>> additionalParameters)
             {
-                throw new NotImplementedException();
+                return Task.FromResult(new ServiceResponse());
             }
         }
     }

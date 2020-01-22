@@ -18,16 +18,19 @@ namespace ServiceBroker.Example
         private readonly IServiceRepository _serviceRepository;
         private readonly IDynamicService _dynamicService;
         private readonly ICachedService _cachedService;
+        private readonly IStaticService _staticService;
         private readonly ITaskScheduler _taskScheduler;
         private readonly ICache _cache;
 
-        public ServiceBrokerService(IServiceRepository serviceRepository, IDynamicService dynamicService, ICachedService cachedService, ITaskScheduler taskScheduler, ICache cache)
+        public ServiceBrokerService(IServiceRepository serviceRepository, IDynamicService dynamicService,
+            ICachedService cachedService, IStaticService staticService, ITaskScheduler taskScheduler, ICache cache)
         {
             _serviceRepository = serviceRepository;
             _dynamicService = dynamicService;
             _cachedService = cachedService;
             _taskScheduler = taskScheduler;
             _cache = cache;
+            _staticService = staticService;
         }
 
         /// <summary>
@@ -107,30 +110,36 @@ namespace ServiceBroker.Example
         /// Generates an xml document containing all the data returned from external services
         /// </summary>
         /// <param name="cacheRegion">The cache region to look for service and token data under</param>
+        /// <param name="forVisualization"></param>
         /// <returns>The user profile containing the responses from the services</returns>
-        public XDocument GetUserProfile(string cacheRegion)
+        public XDocument GetUserProfile(string cacheRegion, bool forVisualization)
         {
             var doc = new XDocument();
             doc.Add(new XElement("user"));
 
-            IEnumerable<CachedServiceInfo> cachedServices = _serviceRepository.GetCachedServices();
+            IEnumerable<ServiceInfo> cachedServices = _serviceRepository.GetCachedServices();
+            IEnumerable<ServiceInfo> staticServices = _serviceRepository.GetStaticServices();
+
+            IEnumerable<ServiceInfo> services = cachedServices.Union(staticServices);
+            IEnumerable<ServiceInfo> filteredServices = services.Where(service => !(forVisualization && !service.ExcludeFromVisibleUserProfile));
+            IOrderedEnumerable<ServiceInfo> orderedServices = filteredServices.OrderBy(service => service.Name);
 
             var tokens = new XElement("tokens");
 
-            foreach (CachedServiceInfo cachedService in cachedServices)
+            foreach (ServiceInfo service in orderedServices)
             {
-                CacheEntry<string> cacheEntry = _cache.Get<string>(cacheRegion, cachedService.CacheKey);
+                CacheEntry<string> cacheEntry = _cache.Get<string>(cacheRegion, service.CacheKey);
 
                 if (cacheEntry != null && cacheEntry.Value != null)
                 {
-                    var serviceNode = new XElement(cachedService.Name);
+                    var serviceNode = new XElement(service.Name);
 
                     LoadValue(cacheEntry.Value, serviceNode);
 
                     // ReSharper disable once PossibleNullReferenceException
                     doc.Root.Add(serviceNode);
 
-                    foreach (TokenInfo token in cachedService.Tokens)
+                    foreach (TokenInfo token in service.Tokens)
                     {
                         CacheEntry<string> tokenCacheEntry = _cache.Get<string>(cacheRegion, token.CacheKey);
 
@@ -259,6 +268,9 @@ namespace ServiceBroker.Example
                         }
                     case CachedServiceInfo cachedServiceInfo:
                         task = _cachedService.CallService(cachedServiceInfo, cacheRegion, cancellationToken, additionalParams);
+                        break;
+                    case StaticServiceInfo staticServiceInfo:
+                        task = _staticService.CallService(staticServiceInfo, cacheRegion, cancellationToken, additionalParams);
                         break;
                 }
 

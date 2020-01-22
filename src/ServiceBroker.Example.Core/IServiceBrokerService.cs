@@ -61,7 +61,8 @@ namespace ServiceBroker.Example.Core
         /// Generates an xml document containing all the data returned from external services
         /// </summary>
         /// <param name="cacheRegion">The cache region to look for service and token data under</param>
+        /// <param name="forVisualization"></param>
         /// <returns>The user profile containing the responses from the services</returns>
-        XDocument GetUserProfile(string cacheRegion);
+        XDocument GetUserProfile(string cacheRegion, bool forVisualization);
     }
 }

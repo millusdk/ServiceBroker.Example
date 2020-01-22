@@ -4,12 +4,12 @@ using System.Collections.Generic;
 namespace ServiceBroker.Example.Models
 {
     /// <summary>
-    /// Information about an external service
+    /// Information about a service
     /// </summary>
     public class ServiceInfo
     {
         /// <summary>
-        /// The id of the external service
+        /// The id of the service
         /// </summary>
         public Guid Id { get; set; }
 
@@ -24,28 +24,13 @@ namespace ServiceBroker.Example.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// Contains information about how to handle circuit breaker functionality for the service
-        /// </summary>
-        public CircuitBreakerInfo CircuitBreakerInfo { get; set; } = new CircuitBreakerInfo();
-
-        /// <summary>
-        /// The endpoint to call
-        /// </summary>
-        public string Endpoint { get; set; }
-
-        /// <summary>
-        /// How log to wait before timing the call out
-        /// </summary>
-        public TimeSpan Timeout { get; set; }
-
-        /// <summary>
-        /// The tokens to evaluate on the response from the extrenal service
+        /// The tokens to evaluate on the response from the service
         /// </summary>
         public IEnumerable<TokenInfo> Tokens { get; set; }
 
         /// <summary>
-        /// Additional parameters to include as post parameters to the request
+        /// Indicates if the data from the service should be hidden from visualizations of the user profile
         /// </summary>
-        public IEnumerable<ParameterInfo> AdditionalParameters { get; set; }
+        public bool ExcludeFromVisibleUserProfile { get; set; }
     }
 }

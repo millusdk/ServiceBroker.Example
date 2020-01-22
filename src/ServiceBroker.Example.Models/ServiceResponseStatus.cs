@@ -1,7 +1,7 @@
 ﻿namespace ServiceBroker.Example.Models
 {
     /// <summary>
-    /// The status of the response from the external service
+    /// The status of the response from the service
     /// </summary>
     public enum ServiceResponseStatus
     {

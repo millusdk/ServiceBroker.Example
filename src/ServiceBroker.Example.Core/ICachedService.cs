@@ -1,7 +1,7 @@
 ﻿namespace ServiceBroker.Example.Core
 {
     /// <summary>
-    /// An external service wrapper which saves the values returned from the external service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the external service.
+    /// A called service wrapper which saves the values returned from the called service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the external service.
     /// </summary>
     public interface ICachedService : IServiceBase
     {

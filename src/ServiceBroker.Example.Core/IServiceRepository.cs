@@ -21,5 +21,11 @@ namespace ServiceBroker.Example.Core
         /// </summary>
         /// <returns>A list of all cached services</returns>
         IEnumerable<CachedServiceInfo> GetCachedServices();
+
+        /// <summary>
+        /// Retrieves all static services and tokens from the database.
+        /// </summary>
+        /// <returns>A list of all static services</returns>
+        IEnumerable<StaticServiceInfo> GetStaticServices();
     }
 }

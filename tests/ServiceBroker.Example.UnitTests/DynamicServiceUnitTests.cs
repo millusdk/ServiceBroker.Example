@@ -50,7 +50,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task ServiceTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -85,7 +85,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task ServiceExceptionTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -114,7 +114,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task ServiceTimeoutTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -153,7 +153,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task ServiceCircuitBreakerTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -196,7 +196,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task CancelledServiceTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),

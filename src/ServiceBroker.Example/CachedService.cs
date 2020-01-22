@@ -12,9 +12,9 @@ using ServiceBroker.Example.Models;
 namespace ServiceBroker.Example
 {
     /// <summary>
-    /// An external service wrapper which saves the values returned from the external service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the external service.
+    /// A called service wrapper which saves the values returned from the called service in the cache, such that consecutive calls within the same cache region reads data from the cache rather than call the called service.
     /// </summary>
-    public class CachedService : ServiceBase, ICachedService
+    public class CachedService : CalledServiceBase, ICachedService
     {
         private readonly IHttpClientWrapper _httpClientWrapper;
         private readonly ITokenService _tokenService;
@@ -28,14 +28,14 @@ namespace ServiceBroker.Example
         }
 
         /// <summary>
-        /// This method performs the call to the external service if no value is available in the cache.
+        /// This method performs the call to the cached service if no value is available in the cache.
         /// </summary>
         /// <param name="serviceInfo">Information about the service to call</param>
         /// <param name="cacheRegion">The cache region to look for an existing response and to look for values for post parameters under in</param>
         /// <param name="cancellationToken">Cancellation token to cancel the request</param>
         /// <param name="additionalParameters">Additional post parameters to include in the request body</param>
-        /// <returns>A service response representing the result of the call to the external service</returns>
-        protected override async Task<ServiceResponse> CallServiceInternal(ServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken,
+        /// <returns>A service response representing the result of the call to the cached service</returns>
+        protected override async Task<ServiceResponse> CallServiceInternal(CalledServiceInfo serviceInfo, string cacheRegion, CancellationToken cancellationToken,
             IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             SemaphoreSlim semaphore = _semaphores.GetOrAdd($"{cacheRegion}-{serviceInfo.CacheKey}", _ => new SemaphoreSlim(1, 1));

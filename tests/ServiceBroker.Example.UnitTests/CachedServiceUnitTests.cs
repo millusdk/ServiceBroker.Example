@@ -16,7 +16,7 @@ namespace ServiceBroker.Example.UnitTests
         [TestMethod]
         public async Task ServiceTest()
         {
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -52,7 +52,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task CachingTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -97,7 +97,7 @@ namespace ServiceBroker.Example.UnitTests
         public async Task SemaphoreTest()
         {
             var cacheRegion = "cacheRegion";
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),
@@ -139,7 +139,7 @@ namespace ServiceBroker.Example.UnitTests
         [TestMethod]
         public async Task CancelledServiceTest()
         {
-            var serviceInfo = new ServiceInfo
+            var serviceInfo = new CalledServiceInfo
             {
                 Name = "Service",
                 Id = Guid.NewGuid(),

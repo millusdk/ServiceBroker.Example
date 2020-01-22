@@ -23,10 +23,11 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = await sut.CallServicesAsync(new Guid[0], "region", TimeSpan.Zero);
 
@@ -39,10 +40,11 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = await sut.CallServicesAsync(null, "region", TimeSpan.Zero);
 
@@ -63,6 +65,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -74,7 +77,7 @@ namespace ServiceBroker.Example.UnitTests
                     return new ServiceResponse();
                 }));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = await sut.CallServicesAsync(serviceAndTokenIds, cacheRegion, TimeSpan.Zero);
 
@@ -103,6 +106,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -110,7 +114,7 @@ namespace ServiceBroker.Example.UnitTests
             dynamicService.CallService(serviceInfo, cacheRegion, CancellationToken.None, null)
                 .ReturnsForAnyArgs(Task.FromException<ServiceResponse>(new Exception()));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = await sut.CallServicesAsync(serviceAndTokenIds, cacheRegion, TimeSpan.Zero);
 
@@ -140,6 +144,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -150,7 +155,7 @@ namespace ServiceBroker.Example.UnitTests
                     Value = serviceResponse
                 }));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = await sut.CallServicesAsync(serviceAndTokenIds, cacheRegion, TimeSpan.FromMilliseconds(10));
 
@@ -173,10 +178,11 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = sut.CallServices(new Guid[0], "region", TimeSpan.Zero);
 
@@ -189,10 +195,11 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = sut.CallServices(null, "region", TimeSpan.Zero);
 
@@ -213,6 +220,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -224,7 +232,7 @@ namespace ServiceBroker.Example.UnitTests
                     return new ServiceResponse();
                 }));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = sut.CallServices(serviceAndTokenIds, cacheRegion, TimeSpan.Zero);
 
@@ -253,6 +261,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -260,7 +269,7 @@ namespace ServiceBroker.Example.UnitTests
             dynamicService.CallService(serviceInfo, cacheRegion, CancellationToken.None, null)
                 .ReturnsForAnyArgs(Task.FromException<ServiceResponse>(new Exception()));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = sut.CallServices(serviceAndTokenIds, cacheRegion, TimeSpan.Zero);
 
@@ -290,6 +299,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -300,7 +310,7 @@ namespace ServiceBroker.Example.UnitTests
                     Value = serviceResponse
                 }));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = sut.CallServices(serviceAndTokenIds, cacheRegion, TimeSpan.FromMilliseconds(10));
 
@@ -329,6 +339,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -339,7 +350,7 @@ namespace ServiceBroker.Example.UnitTests
                     Value = serviceResponse
                 }));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = sut.CallServices(serviceAndTokenIds, cacheRegion, TimeSpan.FromMilliseconds(10));
 
@@ -373,6 +384,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -383,7 +395,7 @@ namespace ServiceBroker.Example.UnitTests
                     Value = serviceResponse
                 }));
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceResponse actual = sut.CallService(serviceId, cacheRegion, TimeSpan.FromMilliseconds(10), additionalParameters);
 
@@ -408,12 +420,13 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
             serviceRepository.GetServicesAndTokens(serviceAndTokenIds).ReturnsForAnyArgs(new ServiceInfo[0]);
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceResponse actual = sut.CallService(serviceId, cacheRegion, TimeSpan.FromMilliseconds(10), new List<KeyValuePair<string, string>>());
 
@@ -439,12 +452,13 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = new TaskSchedulerMock();
             var cache = Substitute.For<ICache>();
 
             serviceRepository.GetServicesAndTokens(serviceAndTokenIds).Returns(new[] { serviceInfo });
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             sut.StartBackgroundServiceCalls(serviceAndTokenIds, cacheRegion, TimeSpan.FromSeconds(10));
 
@@ -503,6 +517,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceRepository = Substitute.For<IServiceRepository>();
             var dynamicService = Substitute.For<IDynamicService>();
             var cachedService = Substitute.For<ICachedService>();
+            var staticService = Substitute.For<IStaticService>();
             var taskScheduler = Substitute.For<ITaskScheduler>();
             var cache = Substitute.For<ICache>();
 
@@ -511,9 +526,9 @@ namespace ServiceBroker.Example.UnitTests
 
             serviceRepository.GetCachedServices().ReturnsForAnyArgs(new[] { cachedService1Info,  cachedService2Info });
 
-            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var sut = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
-            XDocument profile = sut.GetUserProfile(cacheRegion);
+            XDocument profile = sut.GetUserProfile(cacheRegion, false);
 
             Assert.IsNotNull(profile.Root);
 

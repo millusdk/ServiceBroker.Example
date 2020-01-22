@@ -11,9 +11,9 @@ using Polly.Wrap;
 namespace ServiceBroker.Example
 {
     /// <summary>
-    /// An external service wrapper, where the external service should be called every time wrapper is called.
+    /// A called service wrapper, where the called service should be called every time wrapper is called.
     /// </summary>
-    public class DynamicService : ServiceBase, IDynamicService
+    public class DynamicService : CalledServiceBase, IDynamicService
     {
         private readonly IHttpClientWrapper _httpClientWrapper;
         private readonly ITokenService _tokenService;
@@ -25,14 +25,14 @@ namespace ServiceBroker.Example
         }
 
         /// <summary>
-        /// Calls the external service and returns the result.
+        /// Calls the dynamic service and returns the result.
         /// </summary>
         /// <param name="serviceInfo">Information about the service to call</param>
         /// <param name="cacheRegion">The cache region to look for values for post parameters under in</param>
         /// <param name="cancellationToken">Cancellation token to cancel the request</param>
         /// <param name="additionalParameters">Additional post parameters to include in the request body</param>
-        /// <returns>A service response representing the result of the call to the external service</returns>
-        protected override async Task<ServiceResponse> CallServiceInternal(ServiceInfo serviceInfo, string cacheRegion,
+        /// <returns>A service response representing the result of the call to the dynamic service</returns>
+        protected override async Task<ServiceResponse> CallServiceInternal(CalledServiceInfo serviceInfo, string cacheRegion,
             CancellationToken cancellationToken, IEnumerable<KeyValuePair<string, string>> additionalParameters)
         {
             var serviceResponse = new ServiceResponse

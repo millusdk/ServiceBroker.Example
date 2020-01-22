@@ -8,7 +8,7 @@ namespace ServiceBroker.Example.Models
     public class ServiceBrokerResponse
     {
         /// <summary>
-        /// The service responses from the external services
+        /// The service responses from the services
         /// </summary>
         public IEnumerable<ServiceResponse> ServiceResponses { get; set; }
     }

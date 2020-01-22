@@ -58,7 +58,8 @@ namespace ServiceBroker.Example.FunctionalTests
             var tokenService = new TokenService(cache);
             var dynamicService = new DynamicService(cache, httpClientWrapper, tokenService);
             var cachedService = new CachedService(cache, httpClientWrapper, tokenService);
-            var serviceBroker = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var staticService = new StaticService();
+            var serviceBroker = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = serviceBroker.CallServices(serviceIds, cacheRegion, timeSpan);
 
@@ -169,7 +170,8 @@ namespace ServiceBroker.Example.FunctionalTests
             var tokenService = new TokenService(cache);
             var dynamicService = new DynamicService(cache, httpClientWrapper, tokenService);
             var cachedService = new CachedService(cache, httpClientWrapper, tokenService);
-            var serviceBroker = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var staticService = new StaticService();
+            var serviceBroker = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = serviceBroker.CallServices(serviceIds, cacheRegion, timeSpan);
 
@@ -248,7 +250,8 @@ namespace ServiceBroker.Example.FunctionalTests
             var tokenService = new TokenService(cache);
             var dynamicService = new DynamicService(cache, httpClientWrapper, tokenService);
             var cachedService = new CachedService(cache, httpClientWrapper, tokenService);
-            var serviceBroker = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, taskScheduler, cache);
+            var staticService = new StaticService();
+            var serviceBroker = new ServiceBrokerService(serviceRepository, dynamicService, cachedService, staticService, taskScheduler, cache);
 
             ServiceBrokerResponse actual = serviceBroker.CallServices(serviceIds, cacheRegion, timeSpan);
             serviceBroker.CallServices(serviceIds, cacheRegion, timeSpan);
