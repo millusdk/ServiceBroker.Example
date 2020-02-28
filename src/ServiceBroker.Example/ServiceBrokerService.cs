@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -187,23 +186,26 @@ namespace ServiceBroker.Example
 
             IEnumerable<ServiceInfo> services = _serviceRepository.GetServicesAndTokens(serviceAndTokenIds);
 
-            var cancellationTokenSource = new CancellationTokenSource();
-
-            IEnumerable<Task<ServiceResponse>> serviceTasks = GetServiceTasks(services, cacheRegion, cancellationTokenSource.Token, additionalParameters).ToArray();
-
-            Task<ServiceResponse[]> combinedTask = Task.WhenAll(serviceTasks);
-            Task sleepTask = Task.Delay(timeout, cancellationTokenSource.Token);
-
-            await Task.WhenAny(combinedTask, sleepTask);
-
-            cancellationTokenSource.Cancel(true);
-
-            IEnumerable<ServiceResponse> serviceResponses = GetServiceResponses(serviceTasks).ToArray();
-
-            return new ServiceBrokerResponse
+            using (var cancellationTokenSource = new CancellationTokenSource())
             {
-                ServiceResponses = serviceResponses
-            };
+
+                IEnumerable<Task<ServiceResponse>> serviceTasks = GetServiceTasks(services, cacheRegion,
+                    cancellationTokenSource.Token, additionalParameters).ToArray();
+
+                Task<ServiceResponse[]> combinedTask = Task.WhenAll(serviceTasks);
+                Task sleepTask = Task.Delay(timeout, cancellationTokenSource.Token);
+
+                await Task.WhenAny(combinedTask, sleepTask);
+
+                cancellationTokenSource.Cancel(true);
+
+                IEnumerable<ServiceResponse> serviceResponses = GetServiceResponses(serviceTasks).ToArray();
+
+                return new ServiceBrokerResponse
+                {
+                    ServiceResponses = serviceResponses
+                };
+            }
         }
 
         private static IEnumerable<ServiceResponse> GetServiceResponses(IEnumerable<Task<ServiceResponse>> serviceTasks)

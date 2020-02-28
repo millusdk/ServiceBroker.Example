@@ -46,8 +46,6 @@ namespace ServiceBroker.Example.UnitTests
         [TestMethod]
         public async Task WrongServiceTypeTest()
         {
-            var tokenId = Guid.NewGuid();
-
             var serviceInfo = new ServiceInfo
             {
                 Name = "Service",

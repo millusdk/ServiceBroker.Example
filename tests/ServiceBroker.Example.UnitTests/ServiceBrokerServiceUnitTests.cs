@@ -379,6 +379,7 @@ namespace ServiceBroker.Example.UnitTests
             var serviceAndTokenIds = new List<Guid> { serviceId };
             var cacheRegion = "region";
             var serviceResponse = "Service response";
+            // ReSharper disable once CollectionNeverUpdated.Local
             var additionalParameters = new List<KeyValuePair<string, string>>();
 
             var serviceRepository = Substitute.For<IServiceRepository>();
@@ -409,11 +410,7 @@ namespace ServiceBroker.Example.UnitTests
         [TestMethod]
         public void CallServiceFaultyServiceTest()
         {
-            Guid serviceId = Guid.NewGuid();
-            var serviceInfo = new DynamicServiceInfo
-            {
-                Id = serviceId,
-            };
+            var serviceId = Guid.NewGuid();
             var serviceAndTokenIds = new List<Guid> { serviceId };
             var cacheRegion = "region";
 

@@ -168,7 +168,7 @@ namespace ServiceBroker.Example
                 return null;
             }
 
-            if (string.IsNullOrEmpty(calledServiceInfo?.Endpoint))
+            if (string.IsNullOrEmpty(calledServiceInfo.Endpoint))
             {
                 return null;
             }

@@ -35,7 +35,7 @@ namespace ServiceBroker.Example
                 return Task.FromResult<ServiceResponse>(null);
             }
 
-            if (string.IsNullOrEmpty(staticServiceInfo?.Data))
+            if (string.IsNullOrEmpty(staticServiceInfo.Data))
             {
                 return Task.FromResult<ServiceResponse>(null);
             }
